@@ -1,0 +1,68 @@
+---
+type: crt.MessageComposerSelector
+selector: crt-message-composer-selector
+group: "Чати / Omnichannel / повідомлення"
+usage_in_configs: 2
+tags: [creatio, freedom-ui, view-element]
+generated: 2026-09-16
+---
+# crt.MessageComposerSelector
+
+Angular-селектор: `<crt-message-composer-selector>`  
+Група: **Чати / Omnichannel / повідомлення**  
+Слоти вкладених елементів (`contentSlots`): `items`  
+reuseStrategy: `Reuse`  
+Зустрічається в реальних конфігах: **2** раз(ів)  
+`classes`: ❌ приймається, але **не застосовується** до DOM · `styles`: ❌ приймається, але **не застосовується** до DOM — див. [[Common view-element properties#Хто реально рендерить classes і styles]]
+
+Див. також [[Common view-element properties|спільні властивості всіх елементів]] (`name`, `visible`, `visibilityStrategyMode`, `layoutConfig`, `classes`, `styles`, `bindTo`, `_designOptions`).
+
+## Вхідні параметри (inputs)
+
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+
+| Властивість | Default | Значення | N | Примітка |
+|---|---|---|---|---|
+| `composerEvent` |  |  |  |  |
+| `defaultChannel` |  | `null` | 2 |  |
+| `items` |  | `[]` | 2 |  |
+| `preserveContent` | `true` |  |  |  |
+| `selectedComposerChannelIndex` |  |  |  |  |
+
+Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
+
+## Вихідні події (outputs)
+
+У конфігурації сторінки подія задається об'єктом `{"request": "crt.XRequest", "params": {...}}` (виконується через HandlerChain) або зв'язується двосторонньо як атрибут (`selectedTabChange` ↔ `selectedTab`). Параметри можуть містити макрос `@event.detail` / `@event` (payload події) та `useRelativeContext: true` (контекст = view-модель елемента, а не сторінки).
+
+| Подія | Спостережувані `request` у конфігах | Примітка |
+|---|---|---|
+| `composerEventChange` |  |  |
+| `selectedComposerChannelIndexChange` |  |  |
+
+## Приховані / фреймворкові властивості
+
+Властивості, які **не є inputs компонента**, але зустрічаються в реальних конфігах: їх читають препроцесори метаданих (`crtOnMetaDataInit` / `crtOnModelInit`), компілятор view (`crtIf`, `layoutConfig`) або дизайнер. Без них конфіг теж валідний, але поведінка буде «за замовчуванням».
+
+| Властивість | N | Значення | Що робить |
+|---|---|---|---|
+| `visible` | 2 | `false` | спільна → [[Common view-element properties#visible]] |
+
+## Метадані дизайнера (Page Designer)
+
+Що Page Designer підставляє за замовчуванням при додаванні елемента (`defaultPropertyValues`), які властивості є колекціями (`collectionPropertyNames`) і яка панель властивостей використовується.
+
+```js
+{toolbarConfig:{position:250,defaultPropertyValues:{items:[],name:"MessageComposer_"+v.N},icon:e(62127)},propertiesPanelComponentTypeName:"crt.MessageComposerPropertiesPanel",viewElementGroupType:b.J.Components,typeCaption:"Components.MessageComposer.Caption"}
+```
+
+## Приклад з реальної схеми
+
+Джерело: `_bundle_8x_schema_1.js.завантаження`
+
+```json
+{type:"crt.MessageComposerSelector",items:[],classes:["view-element"],visible:false,defaultChannel:null}
+```
+
+---
+*Згенеровано з коду Shell Creatio 8.3.4.2753 (3789.hash=c07acffd1a475b43.js) + 8 згадок у конфігах. Мінімізовані імена класів не наводяться.*
