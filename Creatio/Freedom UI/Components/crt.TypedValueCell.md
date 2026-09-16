@@ -2,7 +2,6 @@
 type: crt.TypedValueCell
 selector: crt-typed-value-cell
 group: "Комірки гріда"
-usage_in_configs: 2
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -11,20 +10,19 @@ generated: 2026-09-16
 Angular-селектор: `<crt-typed-value-cell>`  
 Група: **Комірки гріда**  
 reuseStrategy: `Reuse`  
-Зустрічається в реальних конфігах: **2** раз(ів)  
 `classes`: ❌ приймається, але **не застосовується** до DOM · `styles`: ❌ приймається, але **не застосовується** до DOM — див. [[Common view-element properties#Хто реально рендерить classes і styles]]
 
 Див. також [[Common view-element properties|спільні властивості всіх елементів]] (`name`, `visible`, `visibilityStrategyMode`, `layoutConfig`, `classes`, `styles`, `bindTo`, `_designOptions`).
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `dataValueType` |  | `<binding>` | 2 |  |
-| `value` |  |  |  |  |
-| `valueAttribute` |  |  | 2 |  |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `dataValueType` |  | `<binding>` |  |
+| `value` |  |  |  |
+| `valueAttribute` |  |  |  |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -40,7 +38,6 @@ reuseStrategy: `Reuse`
 
 ## Приклад з реальної схеми
 
-Джерело: `_bundle_8x_schema_18.js.завантаження`
 
 ```json
 {type:"crt.TypedValueCell",dataValueType:"$SelectedFormFieldsCollection.Type",valueAttribute:"SelectedFormFieldsCollection.DefaultValue"}

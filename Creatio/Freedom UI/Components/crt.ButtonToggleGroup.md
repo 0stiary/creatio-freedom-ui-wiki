@@ -2,7 +2,6 @@
 type: crt.ButtonToggleGroup
 selector: crt-button-toggle-group
 group: "Базові компоненти"
-usage_in_configs: 16
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -13,30 +12,29 @@ generated: 2026-09-16
 Angular-селектор: `<crt-button-toggle-group>`  
 Група: **Базові компоненти**  
 reuseStrategy: `Reuse`  
-Зустрічається в реальних конфігах: **16** раз(ів)  
 `classes`: ❌ приймається, але **не застосовується** до DOM · `styles`: ❌ приймається, але **не застосовується** до DOM — див. [[Common view-element properties#Хто реально рендерить classes і styles]]
 
 Див. також [[Common view-element properties|спільні властивості всіх елементів]] (`name`, `visible`, `visibilityStrategyMode`, `layoutConfig`, `classes`, `styles`, `bindTo`, `_designOptions`).
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `allowUntoggle` | `true` | `false` | 8 | чи можна зняти вибір повторним кліком |
-| `badgeConfig` |  |  |  | (успадковано від базового класу) |
-| `contentAlign` |  | `"center"` | 6 | (успадковано від базового класу) |
-| `direction` |  | `"column"` | 6 | (успадковано від базового класу) |
-| `disabled` |  |  |  | (успадковано від базового класу) |
-| `fitContent` | `true` | `true` | 7 | (успадковано від базового класу) |
-| `gap` |  | `"small"`, `"none"` | 6 | (успадковано від базового класу) |
-| `iconSize` |  | `"extra-large"` | 6 | (успадковано від базового класу) |
-| `menuButtonsMode` | `false` |  |  | (успадковано від базового класу) |
-| `size` |  | `"extra-large"`, `"small"` | 8 | `small` / `medium` / `large` |
-| `toggleViewMode` |  | `"button"` | 5 | `button` / `dropdown` (у dropdown `allowUntoggle` примусово false) |
-| `value` |  |  |  | `{value: name}` вибраного елемента |
-| `items` |  |  |  | масив `crt.ButtonToggleGroupItem` або біндінг |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `allowUntoggle` | `true` | `false` | чи можна зняти вибір повторним кліком |
+| `badgeConfig` |  |  | (успадковано від базового класу) |
+| `contentAlign` |  | `"center"` | (успадковано від базового класу) |
+| `direction` |  | `"column"` | (успадковано від базового класу) |
+| `disabled` |  |  | (успадковано від базового класу) |
+| `fitContent` | `true` | `true` | (успадковано від базового класу) |
+| `gap` |  | `"small"`, `"none"` | (успадковано від базового класу) |
+| `iconSize` |  | `"extra-large"` | (успадковано від базового класу) |
+| `menuButtonsMode` | `false` |  | (успадковано від базового класу) |
+| `size` |  | `"extra-large"`, `"small"` | `small` / `medium` / `large` |
+| `toggleViewMode` |  | `"button"` | `button` / `dropdown` (у dropdown `allowUntoggle` примусово false) |
+| `value` |  |  | `{value: name}` вибраного елемента |
+| `items` |  |  | масив `crt.ButtonToggleGroupItem` або біндінг |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -52,22 +50,22 @@ reuseStrategy: `Reuse`
 
 Властивості, які **не є inputs компонента**, але зустрічаються в реальних конфігах: їх читають препроцесори метаданих (`crtOnMetaDataInit` / `crtOnModelInit`), компілятор view (`crtIf`, `layoutConfig`) або дизайнер. Без них конфіг теж валідний, але поведінка буде «за замовчуванням».
 
-| Властивість | N | Значення | Що робить |
-|---|---|---|---|
-| `for` | 16 | `"CardToggleTabPanel"`, `"LegacySidePanelItemsTabPanel"`, `"CommunicationsPanelItemsTabPanel"`, `"NotificationsPanelItemsTabPanel"`, `"MainTabPanel"`, `"TabPanel_5mknqd5"`, `"UsrFilters_TabPanel"` | **прихована**: ім'я `crt.TabPanel` (mode toggle). Препроцесор: `items = "$<Name>_Items"`, `value = "$<Name>_SelectedItem"`, панелі ставить `selectedTab`/`visible`; `allowUntoggle = TabPanel.allowToggleClose` |
-| `tooltipPosition` | 6 |  |  |
-| `layoutConfig` | 1 | `{}` | спільна → [[Common view-element properties#layoutConfig]] |
+| Властивість | Значення | Що робить |
+|---|---|---|
+| `for` | `"CardToggleTabPanel"`, `"LegacySidePanelItemsTabPanel"`, `"CommunicationsPanelItemsTabPanel"`, `"NotificationsPanelItemsTabPanel"`, `"MainTabPanel"`, `"TabPanel_5mknqd5"`, `"UsrFilters_TabPanel"` | **прихована**: ім'я `crt.TabPanel` (mode toggle). Препроцесор: `items = "$<Name>_Items"`, `value = "$<Name>_SelectedItem"`, панелі ставить `selectedTab`/`visible`; `allowUntoggle = TabPanel.allowToggleClose` |
+| `tooltipPosition` |  |  |
+| `layoutConfig` | `{}` | спільна → [[Common view-element properties#layoutConfig]] |
 
 ## Структура вкладених об'єктів
 
-Шляхи всередині складних властивостей, як їх реально заповнюють (N = частота; `[]` = елемент масиву).
+Шляхи всередині складних властивостей, як їх реально заповнюють (`[]` = елемент масиву).
 
-| Шлях | N | Значення | Примітка |
-|---|---|---|---|
-| `tooltipPosition.originX` | 6 | `"end"` |  |
-| `tooltipPosition.originY` | 6 | `"center"` |  |
-| `tooltipPosition.overlayX` | 6 | `"start"` |  |
-| `tooltipPosition.overlayY` | 6 | `"center"` |  |
+| Шлях | Значення | Примітка |
+|---|---|---|
+| `tooltipPosition.originX` | `"end"` |  |
+| `tooltipPosition.originY` | `"center"` |  |
+| `tooltipPosition.overlayX` | `"start"` |  |
+| `tooltipPosition.overlayY` | `"center"` |  |
 
 ## Метадані дизайнера (Page Designer)
 
@@ -79,7 +77,6 @@ reuseStrategy: `Reuse`
 
 ## Приклад з реальної схеми
 
-Джерело: `UsrOpenCaseSection_ListPage.js`
 
 ```json
 {

@@ -2,7 +2,6 @@
 type: crt.TabPanel
 selector: crt-tab-panel-container
 group: "Layout"
-usage_in_configs: 28
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -14,22 +13,21 @@ Angular-селектор: `<crt-tab-panel-container>`
 Група: **Layout**  
 Слоти вкладених елементів (`contentSlots`): `items`  
 reuseStrategy: `Reuse`  
-Зустрічається в реальних конфігах: **28** раз(ів)  
 `classes`: ❌ приймається, але **не застосовується** до DOM · `styles`: ❌ приймається, але **не застосовується** до DOM — див. [[Common view-element properties#Хто реально рендерить classes і styles]]
 
 Див. також [[Common view-element properties|спільні властивості всіх елементів]] (`name`, `visible`, `visibilityStrategyMode`, `layoutConfig`, `classes`, `styles`, `bindTo`, `_designOptions`).
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `headerBackgroundColor` |  | `"auto"` | 22 | фон хедера |
-| `selectedTab` |  |  | 10 | `{ value: "TabName" }` або біндінг `"$Attr"`; при `ButtonToggleGroup.for` перезаписується на `$<Name>_SelectedItem` |
-| `selectedTabIndex` |  |  |  | індекс активної вкладки; зберігається у профіль користувача (вимикається фічею `DisableSaveToProfileSelectedTabIndex`) |
-| `styleType` |  | `default`, `fullyColored` · `"default"` | 22 | `default` / `fullyColored` |
-| `underlineSelectedTabColor` |  | `"auto"` | 22 | колір підкреслення активної вкладки |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `headerBackgroundColor` |  | `"auto"` | фон хедера |
+| `selectedTab` |  |  | `{ value: "TabName" }` або біндінг `"$Attr"`; при `ButtonToggleGroup.for` перезаписується на `$<Name>_SelectedItem` |
+| `selectedTabIndex` |  |  | індекс активної вкладки; зберігається у профіль користувача (вимикається фічею `DisableSaveToProfileSelectedTabIndex`) |
+| `styleType` |  | `default`, `fullyColored` · `"default"` | `default` / `fullyColored` |
+| `underlineSelectedTabColor` |  | `"auto"` | колір підкреслення активної вкладки |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -46,20 +44,20 @@ reuseStrategy: `Reuse`
 
 Властивості, які **не є inputs компонента**, але зустрічаються в реальних конфігах: їх читають препроцесори метаданих (`crtOnMetaDataInit` / `crtOnModelInit`), компілятор view (`crtIf`, `layoutConfig`) або дизайнер. Без них конфіг теж валідний, але поведінка буде «за замовчуванням».
 
-| Властивість | N | Значення | Що робить |
-|---|---|---|---|
-| `items` | 28 | `[]` | масив `crt.TabContainer` (слот) |
-| `mode` | 26 | `"toggle"`, `"tab"` | `"tab"` — класичні вкладки з хедером; `"toggle"` — панель без хедера, перемикається зовнішнім `crt.ButtonToggleGroup { for }` |
-| `bodyBackgroundColor` | 24 | `"primary-contrast-500"`, `"primary-contrast-100"` | колір тіла вкладок → `backgroundColor` кожного `crt.ToggleContainerItem` |
-| `selectedTabTitleColor` | 22 | `"auto"` | колір активного заголовка |
-| `tabTitleColor` | 22 | `"auto"` | колір заголовків (→ `TabPanelHeaderItem.titleColor`) |
-| `allowToggleClose` | 18 | `true`, `false` | toggle-режим: чи можна закрити панель повторним кліком (default `true`); → `ToggleContainerItem.allowToggleClose` і `ButtonToggleGroup.allowUntoggle` |
-| `fitContent` | 15 | `true`, `false` |  |
-| `stretch` | 13 | `true` |  |
-| `layoutConfig` | 10 | `{}` | спільна → [[Common view-element properties#layoutConfig]] |
-| `isToggleTabHeaderVisible` | 8 | `true`, `false` | **прихована**, toggle-режим, default `true`: показувати `tools` вкладки як заголовок |
-| `visible` | 8 | `true` | спільна → [[Common view-element properties#visible]] |
-| `visibilityStrategyMode` | 2 | `"hide"` | **прихована**: `"hide"` — при закритті toggle-панелі (`visible=false`) DOM ховається, а не знищується (потрібна фіча `UseHideVisibilityStrategy`) |
+| Властивість | Значення | Що робить |
+|---|---|---|
+| `items` | `[]` | масив `crt.TabContainer` (слот) |
+| `mode` | `"toggle"`, `"tab"` | `"tab"` — класичні вкладки з хедером; `"toggle"` — панель без хедера, перемикається зовнішнім `crt.ButtonToggleGroup { for }` |
+| `bodyBackgroundColor` | `"primary-contrast-500"`, `"primary-contrast-100"` | колір тіла вкладок → `backgroundColor` кожного `crt.ToggleContainerItem` |
+| `selectedTabTitleColor` | `"auto"` | колір активного заголовка |
+| `tabTitleColor` | `"auto"` | колір заголовків (→ `TabPanelHeaderItem.titleColor`) |
+| `allowToggleClose` | `true`, `false` | toggle-режим: чи можна закрити панель повторним кліком (default `true`); → `ToggleContainerItem.allowToggleClose` і `ButtonToggleGroup.allowUntoggle` |
+| `fitContent` | `true`, `false` |  |
+| `stretch` | `true` |  |
+| `layoutConfig` | `{}` | спільна → [[Common view-element properties#layoutConfig]] |
+| `isToggleTabHeaderVisible` | `true`, `false` | **прихована**, toggle-режим, default `true`: показувати `tools` вкладки як заголовок |
+| `visible` | `true` | спільна → [[Common view-element properties#visible]] |
+| `visibilityStrategyMode` | `"hide"` | **прихована**: `"hide"` — при закритті toggle-панелі (`visible=false`) DOM ховається, а не знищується (потрібна фіча `UseHideVisibilityStrategy`) |
 
 Додатково (з коду препроцесорів, у конфігах не зустрілись):
 
@@ -68,18 +66,18 @@ reuseStrategy: `Reuse`
 
 ## Структура вкладених об'єктів
 
-Шляхи всередині складних властивостей, як їх реально заповнюють (N = частота; `[]` = елемент масиву).
+Шляхи всередині складних властивостей, як їх реально заповнюють (`[]` = елемент масиву).
 
-| Шлях | N | Значення | Примітка |
-|---|---|---|---|
-| `layoutConfig.maxWidth` | 5 | `368`, `550` |  |
-| `layoutConfig.minWidth` | 5 | `368`, `400` |  |
-| `layoutConfig.colSpan` | 2 | `7`, `1` |  |
-| `layoutConfig.column` | 2 | `1` |  |
-| `layoutConfig.row` | 2 | `2`, `1` |  |
-| `layoutConfig.rowSpan` | 2 | `1` |  |
-| `layoutConfig.width` | 1 | `368` |  |
-| `selectedTab.value` | 10 | `"FeedsTab"`, `"ReminderTab"`, `"ListTabContainer"`, `"FieldMappingTabContainer"`, `"AdAccountsTabContainer"`, `"UsrFilters_TabContainer"` |  |
+| Шлях | Значення | Примітка |
+|---|---|---|
+| `layoutConfig.maxWidth` | `368`, `550` |  |
+| `layoutConfig.minWidth` | `368`, `400` |  |
+| `layoutConfig.colSpan` | `7`, `1` |  |
+| `layoutConfig.column` | `1` |  |
+| `layoutConfig.row` | `2`, `1` |  |
+| `layoutConfig.rowSpan` | `1` |  |
+| `layoutConfig.width` | `368` |  |
+| `selectedTab.value` | `"FeedsTab"`, `"ReminderTab"`, `"ListTabContainer"`, `"FieldMappingTabContainer"`, `"AdAccountsTabContainer"`, `"UsrFilters_TabContainer"` |  |
 
 ## Метадані дизайнера (Page Designer)
 
@@ -91,7 +89,6 @@ reuseStrategy: `Reuse`
 
 ## Приклад з реальної схеми
 
-Джерело: `Contracts_FormPage.js`
 
 ```json
 {

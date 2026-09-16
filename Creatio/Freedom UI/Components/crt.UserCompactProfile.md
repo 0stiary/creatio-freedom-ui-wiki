@@ -2,7 +2,6 @@
 type: crt.UserCompactProfile
 selector: crt-user-compact-profile
 group: "Бізнес-компоненти"
-usage_in_configs: 0
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -18,19 +17,19 @@ reuseStrategy: `Reuse`
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `firstName` |  |  |  |  |
-| `firstNameValidationInfo` |  |  |  |  |
-| `lastName` |  |  |  |  |
-| `middleName` |  |  |  |  |
-| `dialogTitle` |  |  |  | (успадковано від базового класу) |
-| `photo` |  |  |  | (успадковано від базового класу) |
-| `photoTitle` |  |  |  | (успадковано від базового класу) |
-| `readonly` |  |  |  | (успадковано від базового класу) |
-| `referenceColumn` |  |  |  | (успадковано від базового класу) |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `firstName` |  |  |  |
+| `firstNameValidationInfo` |  |  |  |
+| `lastName` |  |  |  |
+| `middleName` |  |  |  |
+| `dialogTitle` |  |  | (успадковано від базового класу) |
+| `photo` |  |  | (успадковано від базового класу) |
+| `photoTitle` |  |  | (успадковано від базового класу) |
+| `readonly` |  |  | (успадковано від базового класу) |
+| `referenceColumn` |  |  | (успадковано від базового класу) |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -59,7 +58,6 @@ reuseStrategy: `Reuse`
 
 ## Приклад з реальної схеми
 
-Джерело: `6316.hash=ba7a97bcc1acf044.js`
 
 ```json
 {type:"crt.UserCompactProfile",contentSlots:["dialogItems"],reuseStrategy:U.B.Reuse}

@@ -2,7 +2,6 @@
 type: crt.MessageEditor
 selector: crt-message-editor
 group: "Чати / Omnichannel / повідомлення"
-usage_in_configs: 1
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -12,18 +11,17 @@ Angular-селектор: `<crt-message-editor>`
 Група: **Чати / Omnichannel / повідомлення**  
 Слоти вкладених елементів (`contentSlots`): `items`  
 reuseStrategy: `Reuse`  
-Зустрічається в реальних конфігах: **1** раз(ів)  
 `classes`: ❌ приймається, але **не застосовується** до DOM · `styles`: ❌ приймається, але **не застосовується** до DOM — див. [[Common view-element properties#Хто реально рендерить classes і styles]]
 
 Див. також [[Common view-element properties|спільні властивості всіх елементів]] (`name`, `visible`, `visibilityStrategyMode`, `layoutConfig`, `classes`, `styles`, `bindTo`, `_designOptions`).
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `items` |  |  | 1 |  |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `items` |  |  |  |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -39,15 +37,15 @@ reuseStrategy: `Reuse`
 
 ## Структура вкладених об'єктів
 
-Шляхи всередині складних властивостей, як їх реально заповнюють (N = частота; `[]` = елемент масиву).
+Шляхи всередині складних властивостей, як їх реально заповнюють (`[]` = елемент масиву).
 
-| Шлях | N | Значення | Примітка |
-|---|---|---|---|
-| `items[].inputs` | 1 |  |  |
-| `items[].inputs[].name` | 1 | `"MessageEditorInput_"+s.N` |  |
-| `items[].inputs[].type` | 1 | `"crt.MessageEditorInput"` |  |
-| `items[].name` | 1 | `"MessageEditorBody_"+s.N` |  |
-| `items[].type` | 1 | `"crt.MessageEditorBody"` |  |
+| Шлях | Значення | Примітка |
+|---|---|---|
+| `items[].inputs` |  |  |
+| `items[].inputs[].name` | `"MessageEditorInput_"+s.N` |  |
+| `items[].inputs[].type` | `"crt.MessageEditorInput"` |  |
+| `items[].name` | `"MessageEditorBody_"+s.N` |  |
+| `items[].type` | `"crt.MessageEditorBody"` |  |
 
 ## Метадані дизайнера (Page Designer)
 
@@ -59,7 +57,6 @@ reuseStrategy: `Reuse`
 
 ## Приклад з реальної схеми
 
-Джерело: `2656.hash=2360e964a8a68b73.js`
 
 ```json
 {name:"MessageEditor_"+s.N,type:"crt.MessageEditor",items:[{name:"MessageEditorBody_"+s.N,type:"crt.MessageEditorBody",inputs:[{name:"MessageEditorInput_"+s.N,type:"crt.MessageEditorInput"}]}]}

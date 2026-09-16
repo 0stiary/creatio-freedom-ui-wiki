@@ -2,7 +2,6 @@
 type: crt.RouterOutlet
 selector: crt-router-outlet
 group: "Shell / службові"
-usage_in_configs: 2
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -11,17 +10,16 @@ generated: 2026-09-16
 Angular-селектор: `<crt-router-outlet>`  
 Група: **Shell / службові**  
 reuseStrategy: `Reuse`  
-Зустрічається в реальних конфігах: **2** раз(ів)  
 `classes`: ❌ приймається, але **не застосовується** до DOM · `styles`: ❌ приймається, але **не застосовується** до DOM — див. [[Common view-element properties#Хто реально рендерить classes і styles]]
 
 Див. також [[Common view-element properties|спільні властивості всіх елементів]] (`name`, `visible`, `visibilityStrategyMode`, `layoutConfig`, `classes`, `styles`, `bindTo`, `_designOptions`).
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -41,15 +39,14 @@ reuseStrategy: `Reuse`
 
 ## Структура вкладених об'єктів
 
-Шляхи всередині складних властивостей, як їх реально заповнюють (N = частота; `[]` = елемент масиву).
+Шляхи всередині складних властивостей, як їх реально заповнюють (`[]` = елемент масиву).
 
-| Шлях | N | Значення | Примітка |
-|---|---|---|---|
-| `contentBackgroundChanged.request` | 2 |  |  |
+| Шлях | Значення | Примітка |
+|---|---|---|
+| `contentBackgroundChanged.request` |  |  |
 
 ## Приклад з реальної схеми
 
-Джерело: `_bundle_8x_schema_0.js.завантаження`
 
 ```json
 {type:"crt.RouterOutlet",contentBackgroundChanged:{request:"crt.ContentDisplayedStateChangedRequest"}}

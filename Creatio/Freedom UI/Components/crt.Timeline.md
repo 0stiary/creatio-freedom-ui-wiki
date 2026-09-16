@@ -2,7 +2,6 @@
 type: crt.Timeline
 selector: crt-timeline
 group: "Timeline / Feed / Файли"
-usage_in_configs: 6
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -13,25 +12,24 @@ generated: 2026-09-16
 Angular-селектор: `<crt-timeline>`  
 Група: **Timeline / Feed / Файли**  
 Слоти вкладених елементів (`contentSlots`): `tools`, `customFilters`  
-Зустрічається в реальних конфігах: **6** раз(ів)  
 `classes`: ❌ приймається, але **не застосовується** до DOM · `styles`: ❌ приймається, але **не застосовується** до DOM — див. [[Common view-element properties#Хто реально рендерить classes і styles]]
 
 Див. також [[Common view-element properties|спільні властивості всіх елементів]] (`name`, `visible`, `visibilityStrategyMode`, `layoutConfig`, `classes`, `styles`, `bindTo`, `_designOptions`).
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `customFilters` |  | `[]` | 4 | слот (lazy) |
-| `filterValues` |  | `<binding>` | 2 |  |
-| `isTileReadOnly` |  |  |  |  |
-| `masterEntity` |  |  |  |  |
-| `masterEntitySchemaName` |  | `"Account"` | 4 | об'єкт запису |
-| `masterSchemaId` |  | `<binding>` | 6 |  |
-| `quickFilterByOwnerConfig` |  |  |  |  |
-| `tools` |  | `[]` | 6 | слот (lazy) |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `customFilters` |  | `[]` | слот (lazy) |
+| `filterValues` |  | `<binding>` |  |
+| `isTileReadOnly` |  |  |  |
+| `masterEntity` |  |  |  |
+| `masterEntitySchemaName` |  | `"Account"` | об'єкт запису |
+| `masterSchemaId` |  | `<binding>` |  |
+| `quickFilterByOwnerConfig` |  |  |  |
+| `tools` |  | `[]` | слот (lazy) |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -43,30 +41,30 @@ Angular-селектор: `<crt-timeline>`
 
 Властивості, які **не є inputs компонента**, але зустрічаються в реальних конфігах: їх читають препроцесори метаданих (`crtOnMetaDataInit` / `crtOnModelInit`), компілятор view (`crtIf`, `layoutConfig`) або дизайнер. Без них конфіг теж валідний, але поведінка буде «за замовчуванням».
 
-| Властивість | N | Значення | Що робить |
-|---|---|---|---|
-| `items` | 6 | `[]` |  |
-| `caption` | 6 | `"#ResourceString(Timeline_caption)#"`, `<binding>` |  |
-| `label` | 6 | `"#ResourceString(Timeline_label)#"`, `<binding>` |  |
-| `timelineName` | 6 | `"Timeline"`, `"NewsAndInsightsTimeline"` |  |
-| `filters` | 6 | `[]` |  |
-| `layoutConfig` | 4 |  | спільна → [[Common view-element properties#layoutConfig]] |
-| `hideTools` | 2 | `false` |  |
-| `visible` | 2 | `true` | спільна → [[Common view-element properties#visible]] |
-| `labelPosition` | 2 | `"auto"` |  |
-| `placeholder` | 2 | `""` |  |
-| `tooltip` | 2 | `""` |  |
+| Властивість | Значення | Що робить |
+|---|---|---|
+| `items` | `[]` |  |
+| `caption` | `"#ResourceString(Timeline_caption)#"`, `<binding>` |  |
+| `label` | `"#ResourceString(Timeline_label)#"`, `<binding>` |  |
+| `timelineName` | `"Timeline"`, `"NewsAndInsightsTimeline"` |  |
+| `filters` | `[]` |  |
+| `layoutConfig` |  | спільна → [[Common view-element properties#layoutConfig]] |
+| `hideTools` | `false` |  |
+| `visible` | `true` | спільна → [[Common view-element properties#visible]] |
+| `labelPosition` | `"auto"` |  |
+| `placeholder` | `""` |  |
+| `tooltip` | `""` |  |
 
 ## Структура вкладених об'єктів
 
-Шляхи всередині складних властивостей, як їх реально заповнюють (N = частота; `[]` = елемент масиву).
+Шляхи всередині складних властивостей, як їх реально заповнюють (`[]` = елемент масиву).
 
-| Шлях | N | Значення | Примітка |
-|---|---|---|---|
-| `layoutConfig.colSpan` | 4 | `2` |  |
-| `layoutConfig.column` | 4 | `1` |  |
-| `layoutConfig.row` | 4 | `1` |  |
-| `layoutConfig.rowSpan` | 4 | `1` |  |
+| Шлях | Значення | Примітка |
+|---|---|---|
+| `layoutConfig.colSpan` | `2` |  |
+| `layoutConfig.column` | `1` |  |
+| `layoutConfig.row` | `1` |  |
+| `layoutConfig.rowSpan` | `1` |  |
 
 ## Метадані дизайнера (Page Designer)
 
@@ -78,7 +76,6 @@ Angular-селектор: `<crt-timeline>`
 
 ## Приклад з реальної схеми
 
-Джерело: `_bundle_8x_schema_1.js.завантаження`
 
 ```json
 {type:"crt.Timeline",items:[],tools:[],customFilters:[],hideTools:false,masterSchemaId:"$Id",caption:"#ResourceString(NewsAndInsightsTimeline_caption)#",label:"#ResourceString(NewsAndInsightsTimeline_label)#",filters:[],masterEntitySchemaName:"Account",visible:true,labelPosition:"auto",placeholder:"",tooltip:"",timelineName:"NewsAndInsightsTimeline",filterValues:"$NewsAndInsightsTimeline_AllTileFilters"}

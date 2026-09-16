@@ -2,7 +2,6 @@
 type: crt.FeedItem
 selector: crt-feed-item
 group: "Timeline / Feed / Файли"
-usage_in_configs: 0
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -17,25 +16,25 @@ reuseStrategy: `Reuse`
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `allowExternalPost` |  |  |  |  |
-| `customVisibleItemActionsMenu` |  |  |  |  |
-| `disableLikesComments` | `false` |  |  |  |
-| `disableSelectionOptions` |  |  |  |  |
-| `feedType` |  |  |  |  |
-| `isDraftItem` | `false` |  |  |  |
-| `isEditMode` | `false` |  |  |  |
-| `isTheLastComment` | `false` |  |  |  |
-| `item` |  |  |  |  |
-| `itemActionItems` |  |  |  |  |
-| `readingMode` |  |  |  |  |
-| `schemaName` |  |  |  |  |
-| `showMenuActionItems` | `true` |  |  |  |
-| `useCustomHead` | `false` |  |  |  |
-| `useCustomPhoto` | `false` |  |  |  |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `allowExternalPost` |  |  |  |
+| `customVisibleItemActionsMenu` |  |  |  |
+| `disableLikesComments` | `false` |  |  |
+| `disableSelectionOptions` |  |  |  |
+| `feedType` |  |  |  |
+| `isDraftItem` | `false` |  |  |
+| `isEditMode` | `false` |  |  |
+| `isTheLastComment` | `false` |  |  |
+| `item` |  |  |  |
+| `itemActionItems` |  |  |  |
+| `readingMode` |  |  |  |
+| `schemaName` |  |  |  |
+| `showMenuActionItems` | `true` |  |  |
+| `useCustomHead` | `false` |  |  |
+| `useCustomPhoto` | `false` |  |  |
 
 ## Вихідні події (outputs)
 

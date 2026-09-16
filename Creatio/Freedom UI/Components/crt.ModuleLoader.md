@@ -2,7 +2,6 @@
 type: crt.ModuleLoader
 selector: crt-7x-module
 group: "Shell / службові"
-usage_in_configs: 36
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -13,20 +12,19 @@ generated: 2026-09-16
 Angular-селектор: `<crt-7x-module>`  
 Група: **Shell / службові**  
 reuseStrategy: `Reuse`  
-Зустрічається в реальних конфігах: **36** раз(ів)  
 `classes`: ❌ приймається, але **не застосовується** до DOM · `styles`: ❌ приймається, але **не застосовується** до DOM — див. [[Common view-element properties#Хто реально рендерить classes і styles]]
 
 Див. також [[Common view-element properties|спільні властивості всіх елементів]] (`name`, `visible`, `visibilityStrategyMode`, `layoutConfig`, `classes`, `styles`, `bindTo`, `_designOptions`).
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `doNotRender` |  | `true` | 4 | не рендерити одразу |
-| `instanceConfig` |  |  | 24 | конфіг, що передається у модуль |
-| `module` |  | `"BaseSchemaModuleV2"`, `"CtiPanelLazyLoaderModule"`, `"OauthSettingsModule"`, `"CtiPanelModule"`, `"EmailModule"`, `"OmniChatModule"`, `"AngularAdapterModule"` | 36 | ім'я 7.x модуля/схеми |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `doNotRender` |  | `true` | не рендерити одразу |
+| `instanceConfig` |  |  | конфіг, що передається у модуль |
+| `module` |  | `"BaseSchemaModuleV2"`, `"CtiPanelLazyLoaderModule"`, `"OauthSettingsModule"`, `"CtiPanelModule"`, `"EmailModule"`, `"OmniChatModule"`, `"AngularAdapterModule"` | ім'я 7.x модуля/схеми |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -42,17 +40,16 @@ reuseStrategy: `Reuse`
 
 ## Структура вкладених об'єктів
 
-Шляхи всередині складних властивостей, як їх реально заповнюють (N = частота; `[]` = елемент масиву).
+Шляхи всередині складних властивостей, як їх реально заповнюють (`[]` = елемент масиву).
 
-| Шлях | N | Значення | Примітка |
-|---|---|---|---|
-| `instanceConfig.isSchemaConfigInitialized` | 24 | `true` |  |
-| `instanceConfig.schemaName` | 24 | `"ReminderNotificationsSchema"`, `"ESNNotificationSchema"`, `"VisaNotificationsSchema"`, `"AnniversaryNotificationsSchema"`, `"SystemNotificationsSchema"`, `"ProcessDashboardSchema"` |  |
-| `instanceConfig.useHistoryState` | 24 | `false` |  |
+| Шлях | Значення | Примітка |
+|---|---|---|
+| `instanceConfig.isSchemaConfigInitialized` | `true` |  |
+| `instanceConfig.schemaName` | `"ReminderNotificationsSchema"`, `"ESNNotificationSchema"`, `"VisaNotificationsSchema"`, `"AnniversaryNotificationsSchema"`, `"SystemNotificationsSchema"`, `"ProcessDashboardSchema"` |  |
+| `instanceConfig.useHistoryState` | `false` |  |
 
 ## Приклад з реальної схеми
 
-Джерело: `_bundle_8x_schema_0.js.завантаження`
 
 ```json
 {type:"crt.ModuleLoader",module:"BaseSchemaModuleV2",instanceConfig:{useHistoryState:false,isSchemaConfigInitialized:true,schemaName:"AnniversaryNotificationsSchema"}}

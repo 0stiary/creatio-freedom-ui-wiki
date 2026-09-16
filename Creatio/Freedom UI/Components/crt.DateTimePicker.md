@@ -2,7 +2,6 @@
 type: crt.DateTimePicker
 selector: crt-datetimepicker
 group: "Поля вводу"
-usage_in_configs: 95
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -13,36 +12,35 @@ generated: 2026-09-16
 Angular-селектор: `<crt-datetimepicker>`  
 Група: **Поля вводу**  
 reuseStrategy: `Reuse`  
-Зустрічається в реальних конфігах: **95** раз(ів)  
 `classes`: ❌ приймається, але **не застосовується** до DOM · `styles`: ❌ приймається, але **не застосовується** до DOM — див. [[Common view-element properties#Хто реально рендерить classes і styles]]
 
 Див. також [[Common view-element properties|спільні властивості всіх елементів]] (`name`, `visible`, `visibilityStrategyMode`, `layoutConfig`, `classes`, `styles`, `bindTo`, `_designOptions`).
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `autofocus` |  |  |  |  |
-| `mode` | `"auto"` |  |  | `auto` |
-| `multiYearSelector` | `true` |  |  |  |
-| `pickerType` |  | `"date"`, `"datetime"` | 95 | `date` / `datetime` / `time` |
-| `preventSameDateTimeSelection` | `false` |  |  |  |
-| `readonly` | `false` | `false`, `true`, `<binding>` | 77 |  |
-| `startView` | `"month"` |  |  |  |
-| `timeInterval` | `1` |  |  | крок хвилин |
-| `useSeconds` | `false` |  |  | показувати секунди |
-| `useTwelveHourFormat` |  |  |  |  |
-| `value` |  |  |  |  |
-| `appearance` | `"legacy"` | `legacy` |  | (успадковано від базового класу) |
-| `ariaLabel` | `""` |  |  | (успадковано від базового класу) |
-| `control` |  | `<binding>` | 95 | (успадковано від базового класу) |
-| `disabled` |  |  |  | (успадковано від базового класу) |
-| `label` | `""` | `<binding>`, `"#ResourceString(DecisionDate_label)#"` | 95 | (успадковано від базового класу) |
-| `labelPosition` |  | `"auto"`, `"above"` | 95 | (успадковано від базового класу) |
-| `placeholder` |  | `""` | 83 | (успадковано від базового класу) |
-| `tooltip` |  | `""`, `"#ResourceString(DecisionDate_tooltip)#"` | 83 | (успадковано від базового класу) |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `autofocus` |  |  |  |
+| `mode` | `"auto"` |  | `auto` |
+| `multiYearSelector` | `true` |  |  |
+| `pickerType` |  | `"date"`, `"datetime"` | `date` / `datetime` / `time` |
+| `preventSameDateTimeSelection` | `false` |  |  |
+| `readonly` | `false` | `false`, `true`, `<binding>` |  |
+| `startView` | `"month"` |  |  |
+| `timeInterval` | `1` |  | крок хвилин |
+| `useSeconds` | `false` |  | показувати секунди |
+| `useTwelveHourFormat` |  |  |  |
+| `value` |  |  |  |
+| `appearance` | `"legacy"` | `legacy` | (успадковано від базового класу) |
+| `ariaLabel` | `""` |  | (успадковано від базового класу) |
+| `control` |  | `<binding>` | (успадковано від базового класу) |
+| `disabled` |  |  | (успадковано від базового класу) |
+| `label` | `""` | `<binding>`, `"#ResourceString(DecisionDate_label)#"` | (успадковано від базового класу) |
+| `labelPosition` |  | `"auto"`, `"above"` | (успадковано від базового класу) |
+| `placeholder` |  | `""` | (успадковано від базового класу) |
+| `tooltip` |  | `""`, `"#ResourceString(DecisionDate_tooltip)#"` | (успадковано від базового класу) |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -61,23 +59,23 @@ reuseStrategy: `Reuse`
 
 Властивості, які **не є inputs компонента**, але зустрічаються в реальних конфігах: їх читають препроцесори метаданих (`crtOnMetaDataInit` / `crtOnModelInit`), компілятор view (`crtIf`, `layoutConfig`) або дизайнер. Без них конфіг теж валідний, але поведінка буде «за замовчуванням».
 
-| Властивість | N | Значення | Що робить |
-|---|---|---|---|
-| `layoutConfig` | 76 | `{}` | спільна → [[Common view-element properties#layoutConfig]] |
-| `visible` | 33 | `true`, `false` | спільна → [[Common view-element properties#visible]] |
-| `formControlConfig` | 1 |  | конфіг Angular FormControl, який генерує препроцесор для полів (валідатори/required) |
+| Властивість | Значення | Що робить |
+|---|---|---|
+| `layoutConfig` | `{}` | спільна → [[Common view-element properties#layoutConfig]] |
+| `visible` | `true`, `false` | спільна → [[Common view-element properties#visible]] |
+| `formControlConfig` |  | конфіг Angular FormControl, який генерує препроцесор для полів (валідатори/required) |
 
 ## Структура вкладених об'єктів
 
-Шляхи всередині складних властивостей, як їх реально заповнюють (N = частота; `[]` = елемент масиву).
+Шляхи всередині складних властивостей, як їх реально заповнюють (`[]` = елемент масиву).
 
-| Шлях | N | Значення | Примітка |
-|---|---|---|---|
-| `formControlConfig.relatesTo` | 1 | `"control"` |  |
-| `layoutConfig.colSpan` | 72 | `1`, `2` |  |
-| `layoutConfig.column` | 72 | `1`, `2` |  |
-| `layoutConfig.row` | 72 | `1`, `5`, `2`, `3`, `6`, `7` |  |
-| `layoutConfig.rowSpan` | 72 | `1` |  |
+| Шлях | Значення | Примітка |
+|---|---|---|
+| `formControlConfig.relatesTo` | `"control"` |  |
+| `layoutConfig.colSpan` | `1`, `2` |  |
+| `layoutConfig.column` | `1`, `2` |  |
+| `layoutConfig.row` | `1`, `5`, `2`, `3`, `6`, `7` |  |
+| `layoutConfig.rowSpan` | `1` |  |
 
 ## Метадані дизайнера (Page Designer)
 
@@ -89,7 +87,6 @@ reuseStrategy: `Reuse`
 
 ## Приклад з реальної схеми
 
-Джерело: `UsrPendingLines_FormPage.js`
 
 ```json
 {

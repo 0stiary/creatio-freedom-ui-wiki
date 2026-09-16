@@ -2,7 +2,6 @@
 type: crt.Summaries
 selector: crt-summaries
 group: "Списки і дані"
-usage_in_configs: 25
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -13,23 +12,22 @@ generated: 2026-09-16
 Angular-селектор: `<crt-summaries>`  
 Група: **Списки і дані**  
 reuseStrategy: `Reuse`  
-Зустрічається в реальних конфігах: **25** раз(ів)  
 `classes`: ❌ приймається, але **не застосовується** до DOM · `styles`: ❌ приймається, але **не застосовується** до DOM — див. [[Common view-element properties#Хто реально рендерить classes і styles]]
 
 Див. також [[Common view-element properties|спільні властивості всіх елементів]] (`name`, `visible`, `visibilityStrategyMode`, `layoutConfig`, `classes`, `styles`, `bindTo`, `_designOptions`).
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `actions` |  |  |  |  |
-| `disabled` |  | `true` | 18 |  |
-| `expanded` |  | `false`, `<binding>` | 22 |  |
-| `items` |  | `[]` | 25 | масив `crt.SummaryItem` |
-| `readonly` |  |  |  |  |
-| `title` |  |  |  |  |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `actions` |  |  |  |
+| `disabled` |  | `true` |  |
+| `expanded` |  | `false`, `<binding>` |  |
+| `items` |  | `[]` | масив `crt.SummaryItem` |
+| `readonly` |  |  |  |
+| `title` |  |  |  |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -45,18 +43,18 @@ reuseStrategy: `Reuse`
 
 Властивості, які **не є inputs компонента**, але зустрічаються в реальних конфігах: їх читають препроцесори метаданих (`crtOnMetaDataInit` / `crtOnModelInit`), компілятор view (`crtIf`, `layoutConfig`) або дизайнер. Без них конфіг теж валідний, але поведінка буде «за замовчуванням».
 
-| Властивість | N | Значення | Що робить |
-|---|---|---|---|
-| `_designOptions` | 25 |  | **прихована**: `{modelName: "PDS"}` — джерело даних для агрегацій |
-| `visible` | 22 | `false`, `true` | спільна → [[Common view-element properties#visible]] |
+| Властивість | Значення | Що робить |
+|---|---|---|
+| `_designOptions` |  | **прихована**: `{modelName: "PDS"}` — джерело даних для агрегацій |
+| `visible` | `false`, `true` | спільна → [[Common view-element properties#visible]] |
 
 ## Структура вкладених об'єктів
 
-Шляхи всередині складних властивостей, як їх реально заповнюють (N = частота; `[]` = елемент масиву).
+Шляхи всередині складних властивостей, як їх реально заповнюють (`[]` = елемент масиву).
 
-| Шлях | N | Значення | Примітка |
-|---|---|---|---|
-| `_designOptions.modelName` | 25 | `"GridDetail_1pq50ekDS"`, `"GridDetail_12go2z3DS"`, `"GridDetail_2ydt4vbDS"`, `"PDS"`, `"DataGrid_x3umv3rDS"`, `"DataGrid_xm741rqDS"` |  |
+| Шлях | Значення | Примітка |
+|---|---|---|
+| `_designOptions.modelName` | `"GridDetail_1pq50ekDS"`, `"GridDetail_12go2z3DS"`, `"GridDetail_2ydt4vbDS"`, `"PDS"`, `"DataGrid_x3umv3rDS"`, `"DataGrid_xm741rqDS"` |  |
 
 ## Метадані дизайнера (Page Designer)
 
@@ -68,7 +66,6 @@ reuseStrategy: `Reuse`
 
 ## Приклад з реальної схеми
 
-Джерело: `Accounts_FormPage.js`
 
 ```json
 {

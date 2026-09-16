@@ -2,7 +2,6 @@
 type: crt.BaseMessageComposer
 selector: crt-base-message-composer
 group: "Чати / Omnichannel / повідомлення"
-usage_in_configs: 0
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -17,28 +16,28 @@ reuseStrategy: `Reuse`
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `channelSelector` |  |  |  |  |
-| `composerCacheCode` |  |  |  |  |
-| `dataCachingService` |  |  |  |  |
-| `disableSelectionOptions` |  |  |  |  |
-| `disabled` | `false` |  |  |  |
-| `discardBtnVisible` | `false` |  |  |  |
-| `footerPanelExpanded` | `false` |  |  |  |
-| `footerPanelIndent` | `0` |  |  |  |
-| `footerPanelOptions` |  |  |  |  |
-| `height` |  |  |  |  |
-| `inputPlaceHolder` |  |  |  |  |
-| `maxAttachmentsSize` | `0` |  |  |  |
-| `mentionsService` |  |  |  |  |
-| `selectionActions` |  |  |  |  |
-| `sendButtonIcon` |  |  |  |  |
-| `sendingButtonDisabled` | `false` |  |  |  |
-| `useDrafts` | `false` |  |  |  |
-| `useTemplates` | `false` |  |  |  |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `channelSelector` |  |  |  |
+| `composerCacheCode` |  |  |  |
+| `dataCachingService` |  |  |  |
+| `disableSelectionOptions` |  |  |  |
+| `disabled` | `false` |  |  |
+| `discardBtnVisible` | `false` |  |  |
+| `footerPanelExpanded` | `false` |  |  |
+| `footerPanelIndent` | `0` |  |  |
+| `footerPanelOptions` |  |  |  |
+| `height` |  |  |  |
+| `inputPlaceHolder` |  |  |  |
+| `maxAttachmentsSize` | `0` |  |  |
+| `mentionsService` |  |  |  |
+| `selectionActions` |  |  |  |
+| `sendButtonIcon` |  |  |  |
+| `sendingButtonDisabled` | `false` |  |  |
+| `useDrafts` | `false` |  |  |
+| `useTemplates` | `false` |  |  |
 
 ## Вихідні події (outputs)
 

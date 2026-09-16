@@ -2,7 +2,6 @@
 type: crt.MenuItem
 selector: crt-menu-item
 group: "Базові компоненти"
-usage_in_configs: 899
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -13,24 +12,23 @@ generated: 2026-09-16
 Angular-селектор: `<crt-menu-item>`  
 Група: **Базові компоненти**  
 reuseStrategy: `Reuse`  
-Зустрічається в реальних конфігах: **899** раз(ів)  
 `classes`: ❌ приймається, але **не застосовується** до DOM · `styles`: ❌ приймається, але **не застосовується** до DOM — див. [[Common view-element properties#Хто реально рендерить classes і styles]]
 
 Див. також [[Common view-element properties|спільні властивості всіх елементів]] (`name`, `visible`, `visibilityStrategyMode`, `layoutConfig`, `classes`, `styles`, `bindTo`, `_designOptions`).
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `caption` |  | `<binding>`, `"Export to Excel"`, `"Delete"`, `"Add tag"`, `"Remove tag"`, `"DataGrid.RowToolbar.Open"`, `"DataGrid.RowToolbar.Delete"`, `"Merge"` | 899 | текст або локалізований ключ (`DataGrid.RowToolbar.Open`) або `#ResourceString(...)#` |
-| `disabled` |  | `<binding>` | 58 | (успадковано від базового класу) |
-| `handleItemClick` |  |  | 38 | (успадковано від базового класу) |
-| `icon` |  | `"export-button-icon"`, `"import-button-icon"`, `"delete-button-icon"`, `"tag-icon"`, `"edit-row-action"`, `"delete-row-action"`, `"merge-icon"`, `"copy-row-action"` | 871 | (успадковано від базового класу) |
-| `iconColor` |  | `"accent"`, `"warn"` | 4 | (успадковано від базового класу) |
-| `items` |  | `[]` | 61 | вкладені пункти (підменю) |
-| `visible` |  | `true`, `<binding>` | 196 | (успадковано від базового класу) |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `caption` |  | `<binding>`, `"Export to Excel"`, `"Delete"`, `"Add tag"`, `"Remove tag"`, `"DataGrid.RowToolbar.Open"`, `"DataGrid.RowToolbar.Delete"`, `"Merge"` | текст або локалізований ключ (`DataGrid.RowToolbar.Open`) або `#ResourceString(...)#` |
+| `disabled` |  | `<binding>` | (успадковано від базового класу) |
+| `handleItemClick` |  |  | (успадковано від базового класу) |
+| `icon` |  | `"export-button-icon"`, `"import-button-icon"`, `"delete-button-icon"`, `"tag-icon"`, `"edit-row-action"`, `"delete-row-action"`, `"merge-icon"`, `"copy-row-action"` | (успадковано від базового класу) |
+| `iconColor` |  | `"accent"`, `"warn"` | (успадковано від базового класу) |
+| `items` |  | `[]` | вкладені пункти (підменю) |
+| `visible` |  | `true`, `<binding>` | (успадковано від базового класу) |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -46,112 +44,112 @@ reuseStrategy: `Reuse`
 
 Властивості, які **не є inputs компонента**, але зустрічаються в реальних конфігах: їх читають препроцесори метаданих (`crtOnMetaDataInit` / `crtOnModelInit`), компілятор view (`crtIf`, `layoutConfig`) або дизайнер. Без них конфіг теж валідний, але поведінка буде «за замовчуванням».
 
-| Властивість | N | Значення | Що робить |
-|---|---|---|---|
-| `color` | 403 | `"default"` | **прихована/дизайнерська** — не input компонента |
-| `size` | 403 | `"medium"` |  |
-| `clickMode` | 5 | `"default"`, `"menu"` |  |
-| `defaultLocalizableStrings` | 4 |  | службове поле дизайнера — ключі локалізації, які підставляються при вставці елемента |
-| `readonly` | 2 | `<binding>` |  |
-| `selected` | 1 |  | службовий стан дизайнера (виділення елемента в Page Designer) |
-| `dataItemMarker` | 1 | `"external-access"` | маркер для автотестів (`ts-data-item-marker`) |
-| `_d` | 1 |  |  |
+| Властивість | Значення | Що робить |
+|---|---|---|
+| `color` | `"default"` | **прихована/дизайнерська** — не input компонента |
+| `size` | `"medium"` |  |
+| `clickMode` | `"default"`, `"menu"` |  |
+| `defaultLocalizableStrings` |  | службове поле дизайнера — ключі локалізації, які підставляються при вставці елемента |
+| `readonly` | `<binding>` |  |
+| `selected` |  | службовий стан дизайнера (виділення елемента в Page Designer) |
+| `dataItemMarker` | `"external-access"` | маркер для автотестів (`ts-data-item-marker`) |
+| `_d` |  |  |
 
 ## Структура вкладених об'єктів
 
-Шляхи всередині складних властивостей, як їх реально заповнюють (N = частота; `[]` = елемент масиву).
+Шляхи всередині складних властивостей, як їх реально заповнюють (`[]` = елемент масиву).
 
-| Шлях | N | Значення | Примітка |
-|---|---|---|---|
-| `clicked.request` | 851 | `"crt.ExportDataGridToExcelRequest"`, `"crt.ImportDataRequest"`, `"crt.DeleteRecordsRequest"`, `"crt.AddTagsInRecordsRequest"`, `"crt.RemoveTagsInRecordsRequest"`, `"crt.UpdateRecordRequest"` |  |
-| `clicked.params` | 840 | `{}`, `null` |  |
-| `clicked.params.viewName` | 313 | `"DataTable"`, `"AddressList"`, `"GridDetail_odku0r4"`, `"GridDetail_7wxmt7n"`, `"GridDetail_wv97db3"`, `"GridDetail_d2yhkhu"` |  |
-| `clicked.params.filters` | 270 | `<binding>` |  |
-| `clicked.params.entitySchemaName` | 196 | `"Activity"`, `"UsrPendingLines"`, `"Case"`, `"UsrContactRefCodes"`, `"Contact"`, `"UsrTransaction"` |  |
-| `clicked.params.dataSourceName` | 182 | `"PDS"`, `"GridDetail_odku0r4DS"`, `"ContactsListDS"`, `"GridDetail_7wxmt7nDS"`, `"GridDetail_v3k7o8yDS"`, `"DataGrid_wij59kwDS"` |  |
-| `clicked.params.recordId` | 83 | `<binding>` |  |
-| `clicked.params.itemsAttributeName` | 79 | `"Items"`, `"GridDetail_odku0r4"`, `"GridDetail_7wxmt7n"`, `"GridDetail_12go2z3"`, `"BfDisplayCondition"`, `"GridDetail_d2yhkhu"` |  |
-| `clicked.useRelativeContext` | 23 | `true`, `false` |  |
-| `clicked.params.selectionState` | 16 | `<binding>` |  |
-| `clicked.params.schemaName` | 9 | `"LandingiDesigner_Page"`, `"CampaignProgressCheck_ListPage"` |  |
-| `clicked.params.dataGridName` | 8 |  |  |
-| `clicked.params.messageTextAfterCompletion` | 8 |  |  |
-| `clicked.params.tagInRecordSourceSchemaName` | 8 | `"AccountInTag"`, `"CallInTag"`, `"CampaignInTag"` |  |
-| `clicked.params.confirmation` | 7 |  |  |
-| `clicked.params.confirmation.message` | 7 |  |  |
-| `clicked.params.bulkEmailId` | 6 | `<binding>` |  |
-| `clicked.params.rewriteAction` | 6 | `"Friendly"`, `"Formal"`, `"Shorten"`, `"Extend"`, `"Rephrase"`, `"AskCopilot"` |  |
-| `clicked.params.selectionAttributeName` | 6 |  |  |
-| `clicked.params.entityName` | 5 | `"Account"`, `"Activity"` |  |
-| `clicked.params.processName` | 5 | `"CopyLandingPageProcess"`, `"GrantAdAccountAccess"`, `"SynchronizeAdCampaignData"` |  |
-| `clicked.params.processRunType` | 5 | `"RegardlessOfThePage"` |  |
-| `clicked.params.showSuccessMessage` | 5 | `true` |  |
-| `clicked.params.sysAdminUnitIds` | 5 |  |  |
-| `clicked.params.timeScale` | 5 | `"00:05:00"`, `"00:10:00"`, `"00:15:00"`, `"00:30:00"`, `"01:00:00"` |  |
-| `clicked.params.timeScaleAttributeName` | 5 | `"Calendar_Tasks_TimeScale"` |  |
-| `clicked.params.confirmation.approveAction` | 4 |  |  |
-| `clicked.params.mode` | 4 | `"scratch"`, `"preset"` |  |
-| `clicked.params.summariesName` | 4 |  |  |
-| `clicked.params.clearDescendants` | 3 | `true` |  |
-| `clicked.params.fileName` | 3 |  |  |
-| `clicked.params.approvalListAttributeName` | 2 |  |  |
-| `clicked.params.collectionName` | 2 | `"SelectedFormFieldsCollection"` |  |
-| `clicked.params.config` | 2 |  |  |
-| `clicked.params.config.actionType` | 2 |  |  |
-| `clicked.params.config.id` | 2 |  |  |
-| `clicked.params.config.schemaName` | 2 |  |  |
-| `clicked.params.fieldName` | 2 | `<binding>` |  |
-| `clicked.params.isDefault` | 2 | `true` |  |
-| `clicked.params.loadDataConfig` | 2 |  |  |
-| `clicked.params.loadDataConfig.parentRecordId` | 2 | `<binding>` |  |
-| `clicked.params.loadDataConfig.parentSchemaName` | 2 |  |  |
-| `clicked.params.name` | 2 |  |  |
-| `clicked.params.processParameters` | 2 |  |  |
-| `clicked.params.processParameters.LandingPageGoal` | 2 | `<binding>` |  |
-| `clicked.params.processParameters.LandingPageId` | 2 | `<binding>` |  |
-| `clicked.params.processParameters.LandingPageName` | 2 | `<binding>` |  |
-| `clicked.params.saveAtProcessStart` | 2 | `false` |  |
-| `clicked.params.showNotification` | 2 | `false` |  |
-| `clicked.params.viewElementName` | 2 |  |  |
-| `clicked.params.bindingColumns` | 1 |  |  |
-| `clicked.params.calendarType` | 1 |  |  |
-| `clicked.params.columns` | 1 |  |  |
-| `clicked.params.convertInPDF` | 1 |  |  |
-| `clicked.params.dataTableData` | 1 |  |  |
-| `clicked.params.dataTableData.columns` | 1 |  |  |
-| `clicked.params.dataTableData.sorting` | 1 |  |  |
-| `clicked.params.defaultValues` | 1 |  |  |
-| `clicked.params.detail` | 1 |  |  |
-| `clicked.params.detail.file` | 1 |  |  |
-| `clicked.params.drilldownConfig` | 1 |  |  |
-| `clicked.params.drilldownConfig.columns` | 1 |  |  |
-| `clicked.params.elementName` | 1 |  |  |
-| `clicked.params.mailboxId` | 1 |  |  |
-| `clicked.params.payload` | 1 |  |  |
-| `clicked.params.payload.entitySchemaName` | 1 | `"SysSchemaAdminUnit"` |  |
-| `clicked.params.payload.primaryColumnValue` | 1 |  |  |
-| `clicked.params.payload.primaryDisplayColumnValue` | 1 |  |  |
-| `clicked.params.printableCaption` | 1 |  |  |
-| `clicked.params.reportId` | 1 |  |  |
-| `clicked.params.showWeekendsAttributeName` | 1 | `"Calendar_showweekends"` |  |
-| `clicked.params.summaryItemCreationConfig` | 1 |  |  |
-| `clicked.params.summaryItemCreationConfig.expression` | 1 |  |  |
-| `clicked.params.summaryItemCreationConfig.label` | 1 |  |  |
-| `clicked.params.summaryItemCreationConfig.modelName` | 1 |  |  |
-| `clicked.params.templateId` | 1 |  |  |
-| `clicked.params.userProfileDataAttributeName` | 1 |  |  |
-| `clicked.params.viewModelAttributeName` | 1 |  |  |
-| `clicked.params.widgetAttributePrefix` | 1 |  |  |
-| `defaultLocalizableStrings.caption` | 4 | `"NextSteps.CreateActivityButtonCaption"`, `"NextSteps.CreateEmailButtonCaption"` |  |
-| `items[].caption` | 1 |  |  |
-| `items[].clicked` | 1 |  |  |
-| `items[].clicked.params` | 1 |  |  |
-| `items[].clicked.params.dataSourceName` | 1 |  |  |
-| `items[].clicked.params.filters` | 1 |  |  |
-| `items[].clicked.request` | 1 | `"crt.RemoveTagsInRecordsRequest"` |  |
-| `items[].icon` | 1 | `"delete-button-icon"` |  |
-| `items[].name` | 1 |  |  |
-| `items[].type` | 1 | `"crt.MenuItem"` |  |
+| Шлях | Значення | Примітка |
+|---|---|---|
+| `clicked.request` | `"crt.ExportDataGridToExcelRequest"`, `"crt.ImportDataRequest"`, `"crt.DeleteRecordsRequest"`, `"crt.AddTagsInRecordsRequest"`, `"crt.RemoveTagsInRecordsRequest"`, `"crt.UpdateRecordRequest"` |  |
+| `clicked.params` | `{}`, `null` |  |
+| `clicked.params.viewName` | `"DataTable"`, `"AddressList"`, `"GridDetail_odku0r4"`, `"GridDetail_7wxmt7n"`, `"GridDetail_wv97db3"`, `"GridDetail_d2yhkhu"` |  |
+| `clicked.params.filters` | `<binding>` |  |
+| `clicked.params.entitySchemaName` | `"Activity"`, `"UsrPendingLines"`, `"Case"`, `"UsrContactRefCodes"`, `"Contact"`, `"UsrTransaction"` |  |
+| `clicked.params.dataSourceName` | `"PDS"`, `"GridDetail_odku0r4DS"`, `"ContactsListDS"`, `"GridDetail_7wxmt7nDS"`, `"GridDetail_v3k7o8yDS"`, `"DataGrid_wij59kwDS"` |  |
+| `clicked.params.recordId` | `<binding>` |  |
+| `clicked.params.itemsAttributeName` | `"Items"`, `"GridDetail_odku0r4"`, `"GridDetail_7wxmt7n"`, `"GridDetail_12go2z3"`, `"BfDisplayCondition"`, `"GridDetail_d2yhkhu"` |  |
+| `clicked.useRelativeContext` | `true`, `false` |  |
+| `clicked.params.selectionState` | `<binding>` |  |
+| `clicked.params.schemaName` | `"LandingiDesigner_Page"`, `"CampaignProgressCheck_ListPage"` |  |
+| `clicked.params.dataGridName` |  |  |
+| `clicked.params.messageTextAfterCompletion` |  |  |
+| `clicked.params.tagInRecordSourceSchemaName` | `"AccountInTag"`, `"CallInTag"`, `"CampaignInTag"` |  |
+| `clicked.params.confirmation` |  |  |
+| `clicked.params.confirmation.message` |  |  |
+| `clicked.params.bulkEmailId` | `<binding>` |  |
+| `clicked.params.rewriteAction` | `"Friendly"`, `"Formal"`, `"Shorten"`, `"Extend"`, `"Rephrase"`, `"AskCopilot"` |  |
+| `clicked.params.selectionAttributeName` |  |  |
+| `clicked.params.entityName` | `"Account"`, `"Activity"` |  |
+| `clicked.params.processName` | `"CopyLandingPageProcess"`, `"GrantAdAccountAccess"`, `"SynchronizeAdCampaignData"` |  |
+| `clicked.params.processRunType` | `"RegardlessOfThePage"` |  |
+| `clicked.params.showSuccessMessage` | `true` |  |
+| `clicked.params.sysAdminUnitIds` |  |  |
+| `clicked.params.timeScale` | `"00:05:00"`, `"00:10:00"`, `"00:15:00"`, `"00:30:00"`, `"01:00:00"` |  |
+| `clicked.params.timeScaleAttributeName` | `"Calendar_Tasks_TimeScale"` |  |
+| `clicked.params.confirmation.approveAction` |  |  |
+| `clicked.params.mode` | `"scratch"`, `"preset"` |  |
+| `clicked.params.summariesName` |  |  |
+| `clicked.params.clearDescendants` | `true` |  |
+| `clicked.params.fileName` |  |  |
+| `clicked.params.approvalListAttributeName` |  |  |
+| `clicked.params.collectionName` | `"SelectedFormFieldsCollection"` |  |
+| `clicked.params.config` |  |  |
+| `clicked.params.config.actionType` |  |  |
+| `clicked.params.config.id` |  |  |
+| `clicked.params.config.schemaName` |  |  |
+| `clicked.params.fieldName` | `<binding>` |  |
+| `clicked.params.isDefault` | `true` |  |
+| `clicked.params.loadDataConfig` |  |  |
+| `clicked.params.loadDataConfig.parentRecordId` | `<binding>` |  |
+| `clicked.params.loadDataConfig.parentSchemaName` |  |  |
+| `clicked.params.name` |  |  |
+| `clicked.params.processParameters` |  |  |
+| `clicked.params.processParameters.LandingPageGoal` | `<binding>` |  |
+| `clicked.params.processParameters.LandingPageId` | `<binding>` |  |
+| `clicked.params.processParameters.LandingPageName` | `<binding>` |  |
+| `clicked.params.saveAtProcessStart` | `false` |  |
+| `clicked.params.showNotification` | `false` |  |
+| `clicked.params.viewElementName` |  |  |
+| `clicked.params.bindingColumns` |  |  |
+| `clicked.params.calendarType` |  |  |
+| `clicked.params.columns` |  |  |
+| `clicked.params.convertInPDF` |  |  |
+| `clicked.params.dataTableData` |  |  |
+| `clicked.params.dataTableData.columns` |  |  |
+| `clicked.params.dataTableData.sorting` |  |  |
+| `clicked.params.defaultValues` |  |  |
+| `clicked.params.detail` |  |  |
+| `clicked.params.detail.file` |  |  |
+| `clicked.params.drilldownConfig` |  |  |
+| `clicked.params.drilldownConfig.columns` |  |  |
+| `clicked.params.elementName` |  |  |
+| `clicked.params.mailboxId` |  |  |
+| `clicked.params.payload` |  |  |
+| `clicked.params.payload.entitySchemaName` | `"SysSchemaAdminUnit"` |  |
+| `clicked.params.payload.primaryColumnValue` |  |  |
+| `clicked.params.payload.primaryDisplayColumnValue` |  |  |
+| `clicked.params.printableCaption` |  |  |
+| `clicked.params.reportId` |  |  |
+| `clicked.params.showWeekendsAttributeName` | `"Calendar_showweekends"` |  |
+| `clicked.params.summaryItemCreationConfig` |  |  |
+| `clicked.params.summaryItemCreationConfig.expression` |  |  |
+| `clicked.params.summaryItemCreationConfig.label` |  |  |
+| `clicked.params.summaryItemCreationConfig.modelName` |  |  |
+| `clicked.params.templateId` |  |  |
+| `clicked.params.userProfileDataAttributeName` |  |  |
+| `clicked.params.viewModelAttributeName` |  |  |
+| `clicked.params.widgetAttributePrefix` |  |  |
+| `defaultLocalizableStrings.caption` | `"NextSteps.CreateActivityButtonCaption"`, `"NextSteps.CreateEmailButtonCaption"` |  |
+| `items[].caption` |  |  |
+| `items[].clicked` |  |  |
+| `items[].clicked.params` |  |  |
+| `items[].clicked.params.dataSourceName` |  |  |
+| `items[].clicked.params.filters` |  |  |
+| `items[].clicked.request` | `"crt.RemoveTagsInRecordsRequest"` |  |
+| `items[].icon` | `"delete-button-icon"` |  |
+| `items[].name` |  |  |
+| `items[].type` | `"crt.MenuItem"` |  |
 
 ## Метадані дизайнера (Page Designer)
 
@@ -163,7 +161,6 @@ reuseStrategy: `Reuse`
 
 ## Приклад з реальної схеми
 
-Джерело: `UsrBillingLines_FormPage.js`
 
 ```json
 {

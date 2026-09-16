@@ -2,7 +2,6 @@
 type: crt.Gallery
 selector: crt-gallery
 group: "Списки і дані"
-usage_in_configs: 0
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -17,20 +16,20 @@ reuseStrategy: `Reuse`
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `ariaLabel` | `"gallery"` |  |  |  |
-| `bulkActions` |  |  |  |  |
-| `itemStyles` |  |  |  |  |
-| `mode` |  |  |  |  |
-| `multiselect` |  |  |  |  |
-| `selectable` | `true` |  |  |  |
-| `selectedItemId` |  |  |  |  |
-| `selectionState` |  |  |  |  |
-| `itemConfig` | `{}` |  |  | (успадковано від базового класу) |
-| `items` |  |  |  | (успадковано від базового класу) |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `ariaLabel` | `"gallery"` |  |  |
+| `bulkActions` |  |  |  |
+| `itemStyles` |  |  |  |
+| `mode` |  |  |  |
+| `multiselect` |  |  |  |
+| `selectable` | `true` |  |  |
+| `selectedItemId` |  |  |  |
+| `selectionState` |  |  |  |
+| `itemConfig` | `{}` |  | (успадковано від базового класу) |
+| `items` |  |  | (успадковано від базового класу) |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -63,7 +62,6 @@ reuseStrategy: `Reuse`
 
 ## Приклад з реальної схеми
 
-Джерело: `4223.hash=3d5a69794a1b3d08.js`
 
 ```json
 {type:"crt.Gallery",reuseStrategy:i.B.Reuse,compatibleAPIs:{[s.I.Filtration]:true}}

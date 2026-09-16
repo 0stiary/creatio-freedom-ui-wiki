@@ -2,7 +2,6 @@
 type: crt.Feed
 selector: crt-feed
 group: "Timeline / Feed / Файли"
-usage_in_configs: 4
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -14,33 +13,32 @@ Angular-селектор: `<crt-feed>`
 Група: **Timeline / Feed / Файли**  
 Слоти вкладених елементів (`contentSlots`): `selectionActions`  
 reuseStrategy: `Reuse`  
-Зустрічається в реальних конфігах: **4** раз(ів)  
 `classes`: ❌ приймається, але **не застосовується** до DOM · `styles`: ❌ приймається, але **не застосовується** до DOM — див. [[Common view-element properties#Хто реально рендерить classes і styles]]
 
 Див. також [[Common view-element properties|спільні властивості всіх елементів]] (`name`, `visible`, `visibilityStrategyMode`, `layoutConfig`, `classes`, `styles`, `bindTo`, `_designOptions`).
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `allowExternalPost` |  |  |  |  |
-| `cardState` |  | `<binding>` | 4 | `$CardState` |
-| `dataSourceName` |  | `null`, `"PDS"` | 4 | `PDS` |
-| `disableSelectionOptions` |  |  |  |  |
-| `entitySchemaName` |  | `"#DataSourceEntityName()#"`, `"UsrFilterNodes"`, `"UsrPendingLines"` | 4 | об'єкт запису або `#DataSourceEntityName()#` |
-| `feedMessages` | `[]` |  |  |  |
-| `feedMessagesPage` | `[]` |  |  |  |
-| `feedType` |  | `"Record"` | 4 | `Record` |
-| `isReadOnly` |  |  |  |  |
-| `offsetDate` |  |  |  |  |
-| `primaryColumnValue` |  | `<binding>` | 4 | `$Id` |
-| `primaryDisplayColumnValue` |  |  |  |  |
-| `readingMode` |  |  |  |  |
-| `selection` |  |  |  |  |
-| `showBlankSlate` | `true` |  |  |  |
-| `sortColumn` |  |  |  |  |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `allowExternalPost` |  |  |  |
+| `cardState` |  | `<binding>` | `$CardState` |
+| `dataSourceName` |  | `null`, `"PDS"` | `PDS` |
+| `disableSelectionOptions` |  |  |  |
+| `entitySchemaName` |  | `"#DataSourceEntityName()#"`, `"UsrFilterNodes"`, `"UsrPendingLines"` | об'єкт запису або `#DataSourceEntityName()#` |
+| `feedMessages` | `[]` |  |  |
+| `feedMessagesPage` | `[]` |  |  |
+| `feedType` |  | `"Record"` | `Record` |
+| `isReadOnly` |  |  |  |
+| `offsetDate` |  |  |  |
+| `primaryColumnValue` |  | `<binding>` | `$Id` |
+| `primaryDisplayColumnValue` |  |  |  |
+| `readingMode` |  |  |  |
+| `selection` |  |  |  |
+| `showBlankSlate` | `true` |  |  |
+| `sortColumn` |  |  |  |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -71,7 +69,6 @@ reuseStrategy: `Reuse`
 
 ## Приклад з реальної схеми
 
-Джерело: `_bundle_8x_schema_1.js.завантаження`
 
 ```json
 {type:"crt.Feed",feedType:"Record",primaryColumnValue:"$Id",cardState:"$CardState",dataSourceName:null,entitySchemaName:"#DataSourceEntityName()#"}

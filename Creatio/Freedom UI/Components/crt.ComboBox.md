@@ -2,7 +2,6 @@
 type: crt.ComboBox
 selector: crt-combobox
 group: "Поля вводу"
-usage_in_configs: 465
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -13,45 +12,44 @@ generated: 2026-09-16
 Angular-селектор: `<crt-combobox>`  
 Група: **Поля вводу**  
 reuseStrategy: `Reuse`  
-Зустрічається в реальних конфігах: **465** раз(ів)  
 `classes`: ❌ приймається, але **не застосовується** до DOM · `styles`: ❌ приймається, але **не застосовується** до DOM — див. [[Common view-element properties#Хто реально рендерить classes і styles]]
 
 Див. також [[Common view-element properties|спільні властивості всіх елементів]] (`name`, `visible`, `visibilityStrategyMode`, `layoutConfig`, `classes`, `styles`, `bindTo`, `_designOptions`).
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `autofocus` |  |  |  |  |
-| `controlActions` |  | `[]` | 464 | дії праворуч від поля |
-| `debounceTime` | `500` |  |  |  |
-| `disabled` |  |  |  |  |
-| `filteringFn` |  |  |  |  |
-| `groupControlActions` |  |  |  |  |
-| `isAddAllowed` | `false` | `true`, `false` | 364 | показувати дію «Додати» (`crt.CreateRecordFromLookupRequest`) |
-| `isGoToSourceAllowed` | `false` |  |  |  |
-| `items` |  | `<binding>` | 3 | статичний список `{value, displayValue}` замість довідника |
-| `linkViewConfig` |  |  |  |  |
-| `listActions` |  | `[]` | 464 | дії у списку — `crt.ComboboxSearchTextAction` (`addRecord`), слот |
-| `mode` |  | `"List"` | 45 | `List` (випадаючий список) / `Lookup` (вікно вибору) |
-| `readonly` |  | `true`, `false`, `<binding>` | 148 |  |
-| `showSecondaryDisplayValue` |  |  |  |  |
-| `showValueAsLink` | `false` | `true`, `false` | 464 | значення як посилання на запис |
-| `sortFilteringFn` |  |  |  |  |
-| `tooltipConfig` |  |  |  |  |
-| `useMultiChoice` | `false` | `true` | 2 | мультивибір |
-| `useStaticFiltering` |  | `true` | 1 | фільтрувати статичний `items` на клієнті |
-| `value` |  | `<binding>` | 2 |  |
-| `valueDetails` |  | `null` | 24 | додаткові дані значення (null) |
-| `appearance` | `"legacy"` | `legacy`, `outline` |  | `legacy` / `outline` |
-| `ariaLabel` | `""` | `""`, `<binding>` | 365 | (успадковано від базового класу) |
-| `control` |  | `<binding>` | 462 | `"$PDS_Column_hash"` — атрибут значення; препроцесор створює список `"$…_List"` (isCollection) і `formControlConfig` |
-| `label` | `""` | `<binding>` | 464 | (успадковано від базового класу) |
-| `labelPosition` |  | `"auto"`, `"above"`, `"left"`, `"hidden"` | 465 | `auto` / `above` / `left` |
-| `placeholder` |  | `""`, `<binding>`, `"#ResourceString(Type_placeholder)#"`, `"#ResourceString(Owner_placeholder)#"`, `"#ResourceString(Account_placeholder)#"`, `"#ResourceString(Gender_placeholder)#"`, `"#ResourceString(Language_placeholder)#"`, `"#ResourceString(Industry_placeholder)#"` | 206 | (успадковано від базового класу) |
-| `tooltip` |  | `""`, `<binding>` | 432 | (успадковано від базового класу) |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `autofocus` |  |  |  |
+| `controlActions` |  | `[]` | дії праворуч від поля |
+| `debounceTime` | `500` |  |  |
+| `disabled` |  |  |  |
+| `filteringFn` |  |  |  |
+| `groupControlActions` |  |  |  |
+| `isAddAllowed` | `false` | `true`, `false` | показувати дію «Додати» (`crt.CreateRecordFromLookupRequest`) |
+| `isGoToSourceAllowed` | `false` |  |  |
+| `items` |  | `<binding>` | статичний список `{value, displayValue}` замість довідника |
+| `linkViewConfig` |  |  |  |
+| `listActions` |  | `[]` | дії у списку — `crt.ComboboxSearchTextAction` (`addRecord`), слот |
+| `mode` |  | `"List"` | `List` (випадаючий список) / `Lookup` (вікно вибору) |
+| `readonly` |  | `true`, `false`, `<binding>` |  |
+| `showSecondaryDisplayValue` |  |  |  |
+| `showValueAsLink` | `false` | `true`, `false` | значення як посилання на запис |
+| `sortFilteringFn` |  |  |  |
+| `tooltipConfig` |  |  |  |
+| `useMultiChoice` | `false` | `true` | мультивибір |
+| `useStaticFiltering` |  | `true` | фільтрувати статичний `items` на клієнті |
+| `value` |  | `<binding>` |  |
+| `valueDetails` |  | `null` | додаткові дані значення (null) |
+| `appearance` | `"legacy"` | `legacy`, `outline` | `legacy` / `outline` |
+| `ariaLabel` | `""` | `""`, `<binding>` | (успадковано від базового класу) |
+| `control` |  | `<binding>` | `"$PDS_Column_hash"` — атрибут значення; препроцесор створює список `"$…_List"` (isCollection) і `formControlConfig` |
+| `label` | `""` | `<binding>` | (успадковано від базового класу) |
+| `labelPosition` |  | `"auto"`, `"above"`, `"left"`, `"hidden"` | `auto` / `above` / `left` |
+| `placeholder` |  | `""`, `<binding>`, `"#ResourceString(Type_placeholder)#"`, `"#ResourceString(Owner_placeholder)#"`, `"#ResourceString(Account_placeholder)#"`, `"#ResourceString(Gender_placeholder)#"`, `"#ResourceString(Language_placeholder)#"`, `"#ResourceString(Industry_placeholder)#"` | (успадковано від базового класу) |
+| `tooltip` |  | `""`, `<binding>` | (успадковано від базового класу) |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -78,25 +76,25 @@ reuseStrategy: `Reuse`
 
 Властивості, які **не є inputs компонента**, але зустрічаються в реальних конфігах: їх читають препроцесори метаданих (`crtOnMetaDataInit` / `crtOnModelInit`), компілятор view (`crtIf`, `layoutConfig`) або дизайнер. Без них конфіг теж валідний, але поведінка буде «за замовчуванням».
 
-| Властивість | N | Значення | Що робить |
-|---|---|---|---|
-| `layoutConfig` | 371 | `{}` | спільна → [[Common view-element properties#layoutConfig]] |
-| `visible` | 206 | `true`, `false` | спільна → [[Common view-element properties#visible]] |
-| `secondaryDisplayValue` | 5 | `"Description"`, `null` |  |
-| `isSimpleLookup` | 2 | `null` | **прихована**: спрощений lookup (без вікна вибору) |
-| `formControlConfig` | 1 |  | **прихована**, генерується препроцесором (валідатори) |
+| Властивість | Значення | Що робить |
+|---|---|---|
+| `layoutConfig` | `{}` | спільна → [[Common view-element properties#layoutConfig]] |
+| `visible` | `true`, `false` | спільна → [[Common view-element properties#visible]] |
+| `secondaryDisplayValue` | `"Description"`, `null` |  |
+| `isSimpleLookup` | `null` | **прихована**: спрощений lookup (без вікна вибору) |
+| `formControlConfig` |  | **прихована**, генерується препроцесором (валідатори) |
 
 ## Структура вкладених об'єктів
 
-Шляхи всередині складних властивостей, як їх реально заповнюють (N = частота; `[]` = елемент масиву).
+Шляхи всередині складних властивостей, як їх реально заповнюють (`[]` = елемент масиву).
 
-| Шлях | N | Значення | Примітка |
-|---|---|---|---|
-| `formControlConfig.relatesTo` | 1 | `"control"` |  |
-| `layoutConfig.colSpan` | 355 | `1`, `2` |  |
-| `layoutConfig.column` | 355 | `1`, `2`, `4`, `3` |  |
-| `layoutConfig.row` | 355 | `2`, `1`, `3`, `4`, `6`, `5` |  |
-| `layoutConfig.rowSpan` | 355 | `1` |  |
+| Шлях | Значення | Примітка |
+|---|---|---|
+| `formControlConfig.relatesTo` | `"control"` |  |
+| `layoutConfig.colSpan` | `1`, `2` |  |
+| `layoutConfig.column` | `1`, `2`, `4`, `3` |  |
+| `layoutConfig.row` | `2`, `1`, `3`, `4`, `6`, `5` |  |
+| `layoutConfig.rowSpan` | `1` |  |
 
 ## Метадані дизайнера (Page Designer)
 
@@ -108,7 +106,6 @@ reuseStrategy: `Reuse`
 
 ## Приклад з реальної схеми
 
-Джерело: `UsrPendingLines_FormPage.js`
 
 ```json
 {

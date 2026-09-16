@@ -2,7 +2,6 @@
 type: crt.Link
 selector: crt-link
 group: "Базові компоненти"
-usage_in_configs: 30
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -13,26 +12,25 @@ generated: 2026-09-16
 Angular-селектор: `<crt-link>`  
 Група: **Базові компоненти**  
 reuseStrategy: `Reuse`  
-Зустрічається в реальних конфігах: **30** раз(ів)  
 `classes`: ❌ приймається, але **не застосовується** до DOM · `styles`: ❌ приймається, але **не застосовується** до DOM — див. [[Common view-element properties#Хто реально рендерить classes і styles]]
 
 Див. також [[Common view-element properties|спільні властивості всіх елементів]] (`name`, `visible`, `visibilityStrategyMode`, `layoutConfig`, `classes`, `styles`, `bindTo`, `_designOptions`).
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `ariaLabel` |  |  |  |  |
-| `caption` |  | `<binding>` | 30 |  |
-| `href` |  | `<binding>`, `"https://oauth.net/2/"` | 27 | URL або біндінг з `crt.ToRecordLinkAsync` |
-| `linkType` |  | `"body"`, `"caption"` | 13 |  |
-| `mode` |  | `native` · `"preventDefault"`, `"native"` | 17 | `native` |
-| `payload` |  |  |  |  |
-| `target` |  | `"_blank"`, `"_self"` | 20 | `_blank` |
-| `title` |  |  |  |  |
-| `underlining` |  | `"hover"`, `"never"` | 17 | `hover`/`always`/`none` |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `ariaLabel` |  |  |  |
+| `caption` |  | `<binding>` |  |
+| `href` |  | `<binding>`, `"https://oauth.net/2/"` | URL або біндінг з `crt.ToRecordLinkAsync` |
+| `linkType` |  | `"body"`, `"caption"` |  |
+| `mode` |  | `native` · `"preventDefault"`, `"native"` | `native` |
+| `payload` |  |  |  |
+| `target` |  | `"_blank"`, `"_self"` | `_blank` |
+| `title` |  |  |  |
+| `underlining` |  | `"hover"`, `"never"` | `hover`/`always`/`none` |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -48,31 +46,30 @@ reuseStrategy: `Reuse`
 
 Властивості, які **не є inputs компонента**, але зустрічаються в реальних конфігах: їх читають препроцесори метаданих (`crtOnMetaDataInit` / `crtOnModelInit`), компілятор view (`crtIf`, `layoutConfig`) або дизайнер. Без них конфіг теж валідний, але поведінка буде «за замовчуванням».
 
-| Властивість | N | Значення | Що робить |
-|---|---|---|---|
-| `visible` | 13 | `true` | спільна → [[Common view-element properties#visible]] |
-| `layoutConfig` | 1 | `{}` | спільна → [[Common view-element properties#layoutConfig]] |
-| `column` | 1 |  |  |
+| Властивість | Значення | Що робить |
+|---|---|---|
+| `visible` | `true` | спільна → [[Common view-element properties#visible]] |
+| `layoutConfig` | `{}` | спільна → [[Common view-element properties#layoutConfig]] |
+| `column` |  |  |
 
 ## Структура вкладених об'єктів
 
-Шляхи всередині складних властивостей, як їх реально заповнюють (N = частота; `[]` = елемент масиву).
+Шляхи всередині складних властивостей, як їх реально заповнюють (`[]` = елемент масиву).
 
-| Шлях | N | Значення | Примітка |
-|---|---|---|---|
-| `clicked.params` | 9 |  |  |
-| `clicked.request` | 9 | `"crt.OpenPageRequest"`, `"crt.OpenUserCardRequest"`, `"crt.UpdateRecordRequest"` |  |
-| `clicked.params.modelInitConfigs` | 5 |  |  |
-| `clicked.params.schemaName` | 5 | `"UsrTransactions_ListPage"` |  |
-| `clicked.params.entityName` | 2 |  |  |
-| `clicked.params.modelInitConfigs[].OracleInvoiceNo` | 2 | `<binding>` |  |
-| `clicked.params.recordId` | 2 |  |  |
-| `clicked.params.systemUserId` | 2 | `<binding>` |  |
-| `clicked.params.itemsAttributeName` | 1 |  |  |
+| Шлях | Значення | Примітка |
+|---|---|---|
+| `clicked.params` |  |  |
+| `clicked.request` | `"crt.OpenPageRequest"`, `"crt.OpenUserCardRequest"`, `"crt.UpdateRecordRequest"` |  |
+| `clicked.params.modelInitConfigs` |  |  |
+| `clicked.params.schemaName` | `"UsrTransactions_ListPage"` |  |
+| `clicked.params.entityName` |  |  |
+| `clicked.params.modelInitConfigs[].OracleInvoiceNo` | `<binding>` |  |
+| `clicked.params.recordId` |  |  |
+| `clicked.params.systemUserId` | `<binding>` |  |
+| `clicked.params.itemsAttributeName` |  |  |
 
 ## Приклад з реальної схеми
 
-Джерело: `Accounts_FormPage.js`
 
 ```json
 {

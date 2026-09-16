@@ -2,7 +2,6 @@
 type: crt.AgentInbox
 selector: crt-agent-inbox
 group: "Бізнес-компоненти"
-usage_in_configs: 0
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -18,13 +17,13 @@ reuseStrategy: `Reuse`
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `currentCall` |  |  |  |  |
-| `currentCallAccount` |  |  |  |  |
-| `currentCallContact` |  |  |  |  |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `currentCall` |  |  |  |
+| `currentCallAccount` |  |  |  |
+| `currentCallContact` |  |  |  |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -46,7 +45,6 @@ reuseStrategy: `Reuse`
 
 ## Приклад з реальної схеми
 
-Джерело: `7513.hash=4d91c117521646dc.js`
 
 ```json
 {type:"crt.AgentInbox",contentSlots:["callControlsPanel","centerPanel","footerPanel"],reuseStrategy:z.B.Reuse}

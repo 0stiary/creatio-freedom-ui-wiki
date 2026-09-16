@@ -2,7 +2,6 @@
 type: crt.ComboboxAction
 selector: crt-combobox-action
 group: "Поля вводу"
-usage_in_configs: 1
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -11,27 +10,26 @@ generated: 2026-09-16
 Angular-селектор: `<crt-combobox-action>`  
 Група: **Поля вводу**  
 reuseStrategy: `Reuse`  
-Зустрічається в реальних конфігах: **1** раз(ів)  
 `classes`: ❌ приймається, але **не застосовується** до DOM · `styles`: ❌ приймається, але **не застосовується** до DOM — див. [[Common view-element properties#Хто реально рендерить classes і styles]]
 
 Див. також [[Common view-element properties|спільні властивості всіх елементів]] (`name`, `visible`, `visibilityStrategyMode`, `layoutConfig`, `classes`, `styles`, `bindTo`, `_designOptions`).
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `details` |  |  |  |  |
-| `iconPosition` |  |  |  |  |
-| `title` |  |  |  |  |
-| `caption` |  | `"ComboBox.OpenSection"` | 1 | (успадковано від базового класу) |
-| `disabled` |  |  |  | (успадковано від базового класу) |
-| `handleItemClick` |  |  |  | (успадковано від базового класу) |
-| `icon` |  | `"combobox-go-to-source"` | 1 | (успадковано від базового класу) |
-| `iconColor` |  |  |  | (успадковано від базового класу) |
-| `items` |  |  |  | (успадковано від базового класу) |
-| `visible` |  |  |  | (успадковано від базового класу) |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `details` |  |  |  |
+| `iconPosition` |  |  |  |
+| `title` |  |  |  |
+| `caption` |  | `"ComboBox.OpenSection"` | (успадковано від базового класу) |
+| `disabled` |  |  | (успадковано від базового класу) |
+| `handleItemClick` |  |  | (успадковано від базового класу) |
+| `icon` |  | `"combobox-go-to-source"` | (успадковано від базового класу) |
+| `iconColor` |  |  | (успадковано від базового класу) |
+| `items` |  |  | (успадковано від базового класу) |
+| `visible` |  |  | (успадковано від базового класу) |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -47,18 +45,18 @@ reuseStrategy: `Reuse`
 
 Властивості, які **не є inputs компонента**, але зустрічаються в реальних конфігах: їх читають препроцесори метаданих (`crtOnMetaDataInit` / `crtOnModelInit`), компілятор view (`crtIf`, `layoutConfig`) або дизайнер. Без них конфіг теж валідний, але поведінка буде «за замовчуванням».
 
-| Властивість | N | Значення | Що робить |
-|---|---|---|---|
-| `code` | 1 |  |  |
+| Властивість | Значення | Що робить |
+|---|---|---|
+| `code` |  |  |
 
 ## Структура вкладених об'єктів
 
-Шляхи всередині складних властивостей, як їх реально заповнюють (N = частота; `[]` = елемент масиву).
+Шляхи всередині складних властивостей, як їх реально заповнюють (`[]` = елемент масиву).
 
-| Шлях | N | Значення | Примітка |
-|---|---|---|---|
-| `clicked.params` | 1 | `{}` |  |
-| `clicked.request` | 1 | `"crt.OpenLookupSourceRequest"` |  |
+| Шлях | Значення | Примітка |
+|---|---|---|
+| `clicked.params` | `{}` |  |
+| `clicked.request` | `"crt.OpenLookupSourceRequest"` |  |
 
 ## Метадані дизайнера (Page Designer)
 
@@ -70,7 +68,6 @@ reuseStrategy: `Reuse`
 
 ## Приклад з реальної схеми
 
-Джерело: `4223.hash=3d5a69794a1b3d08.js`
 
 ```json
 {code:D.U.GoToRecordList,type:"crt.ComboboxAction",icon:"combobox-go-to-source",caption:"ComboBox.OpenSection",clicked:{request:"crt.OpenLookupSourceRequest",params:{}}}

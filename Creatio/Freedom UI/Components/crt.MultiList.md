@@ -2,7 +2,6 @@
 type: crt.MultiList
 selector: crt-multi-list
 group: "Списки і дані"
-usage_in_configs: 0
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -17,17 +16,17 @@ Angular-селектор: `<crt-multi-list>`
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `currentPage` |  |  |  |  |
-| `isCombinedMode` |  |  |  |  |
-| `isSearchDisabled` |  |  |  |  |
-| `itemsList` | `[]` |  |  |  |
-| `searchFilter` |  |  |  |  |
-| `selectedItemId` |  |  |  |  |
-| `showNoDataBlankState` | `true` |  |  |  |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `currentPage` |  |  |  |
+| `isCombinedMode` |  |  |  |
+| `isSearchDisabled` |  |  |  |
+| `itemsList` | `[]` |  |  |
+| `searchFilter` |  |  |  |
+| `selectedItemId` |  |  |  |
+| `showNoDataBlankState` | `true` |  |  |
 
 ## Вихідні події (outputs)
 

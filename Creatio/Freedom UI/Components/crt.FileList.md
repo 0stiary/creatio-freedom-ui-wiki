@@ -2,7 +2,6 @@
 type: crt.FileList
 selector: crt-file-list
 group: "Timeline / Feed / Файли"
-usage_in_configs: 11
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -13,43 +12,42 @@ generated: 2026-09-16
 Angular-селектор: `<crt-file-list>`  
 Група: **Timeline / Feed / Файли**  
 reuseStrategy: `Reuse`  
-Зустрічається в реальних конфігах: **11** раз(ів)  
 `classes`: ✅ рендериться (на внутрішній елемент) · `styles`: ❌ приймається, але **не застосовується** до DOM — див. [[Common view-element properties#Хто реально рендерить classes і styles]]
 
 Див. також [[Common view-element properties|спільні властивості всіх елементів]] (`name`, `visible`, `visibilityStrategyMode`, `layoutConfig`, `classes`, `styles`, `bindTo`, `_designOptions`).
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `droppable` | `false` |  |  |  |
-| `features` |  |  |  |  |
-| `fileGroups` |  |  |  | групи файлів |
-| `galleryItemConfig` |  |  |  |  |
-| `items` |  | `<binding>` | 10 |  |
-| `masterRecordColumnValue` |  | `<binding>`, `null` | 11 | `$Id` |
-| `recordColumnName` |  | `"RecordId"`, `"VwSysProcess"`, `"UsrPendingLines"` | 11 | колонка-посилання на майстер-запис (`UsrPendingLines`) |
-| `tag` |  |  |  |  |
-| `viewType` |  | `"gallery"` | 10 | `gallery` / `list` |
-| `activeRow` |  |  |  | (успадковано від базового класу) |
-| `bulkActions` | `[]` |  |  | (успадковано від базового класу) |
-| `columns` |  |  | 10 | (успадковано від базового класу) |
-| `editingCells` |  |  |  | (успадковано від базового класу) |
-| `fitContent` |  |  |  | (успадковано від базового класу) |
-| `header` |  |  |  | (успадковано від базового класу) |
-| `headerToolbarItems` |  |  |  | (успадковано від базового класу) |
-| `hierarchicalColumnName` |  |  |  | (успадковано від базового класу) |
-| `maxHeight` |  |  |  | (успадковано від базового класу) |
-| `primaryColumnName` |  | `"AttachmentListDS_Id"`, `"FileList_v3u1cpzDS_Id"`, `"FileList_pazhlwoDS_Id"` | 10 | (успадковано від базового класу) |
-| `rowToolbarItems` | `[]` |  |  | (успадковано від базового класу) |
-| `selectedRows` |  |  |  | (успадковано від базового класу) |
-| `selectionState` |  |  |  | (успадковано від базового класу) |
-| `sorting` |  |  |  | (успадковано від базового класу) |
-| `stretch` | `false` |  |  | (успадковано від базового класу) |
-| `title` |  |  |  | (успадковано від базового класу) |
-| `totalItemsCount` |  |  |  | (успадковано від базового класу) |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `droppable` | `false` |  |  |
+| `features` |  |  |  |
+| `fileGroups` |  |  | групи файлів |
+| `galleryItemConfig` |  |  |  |
+| `items` |  | `<binding>` |  |
+| `masterRecordColumnValue` |  | `<binding>`, `null` | `$Id` |
+| `recordColumnName` |  | `"RecordId"`, `"VwSysProcess"`, `"UsrPendingLines"` | колонка-посилання на майстер-запис (`UsrPendingLines`) |
+| `tag` |  |  |  |
+| `viewType` |  | `"gallery"` | `gallery` / `list` |
+| `activeRow` |  |  | (успадковано від базового класу) |
+| `bulkActions` | `[]` |  | (успадковано від базового класу) |
+| `columns` |  |  | (успадковано від базового класу) |
+| `editingCells` |  |  | (успадковано від базового класу) |
+| `fitContent` |  |  | (успадковано від базового класу) |
+| `header` |  |  | (успадковано від базового класу) |
+| `headerToolbarItems` |  |  | (успадковано від базового класу) |
+| `hierarchicalColumnName` |  |  | (успадковано від базового класу) |
+| `maxHeight` |  |  | (успадковано від базового класу) |
+| `primaryColumnName` |  | `"AttachmentListDS_Id"`, `"FileList_v3u1cpzDS_Id"`, `"FileList_pazhlwoDS_Id"` | (успадковано від базового класу) |
+| `rowToolbarItems` | `[]` |  | (успадковано від базового класу) |
+| `selectedRows` |  |  | (успадковано від базового класу) |
+| `selectionState` |  |  | (успадковано від базового класу) |
+| `sorting` |  |  | (успадковано від базового класу) |
+| `stretch` | `false` |  | (успадковано від базового класу) |
+| `title` |  |  | (успадковано від базового класу) |
+| `totalItemsCount` |  |  | (успадковано від базового класу) |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -77,27 +75,27 @@ reuseStrategy: `Reuse`
 
 Властивості, які **не є inputs компонента**, але зустрічаються в реальних конфігах: їх читають препроцесори метаданих (`crtOnMetaDataInit` / `crtOnModelInit`), компілятор view (`crtIf`, `layoutConfig`) або дизайнер. Без них конфіг теж валідний, але поведінка буде «за замовчуванням».
 
-| Властивість | N | Значення | Що робить |
-|---|---|---|---|
-| `layoutConfig` | 11 |  | спільна → [[Common view-element properties#layoutConfig]] |
-| `tileSize` | 10 | `"small"`, `"medium"` | **прихована**: `small`… |
-| `visible` | 6 | `true` | спільна → [[Common view-element properties#visible]] |
+| Властивість | Значення | Що робить |
+|---|---|---|
+| `layoutConfig` |  | спільна → [[Common view-element properties#layoutConfig]] |
+| `tileSize` | `"small"`, `"medium"` | **прихована**: `small`… |
+| `visible` | `true` | спільна → [[Common view-element properties#visible]] |
 
 ## Структура вкладених об'єктів
 
-Шляхи всередині складних властивостей, як їх реально заповнюють (N = частота; `[]` = елемент масиву).
+Шляхи всередині складних властивостей, як їх реально заповнюють (`[]` = елемент масиву).
 
-| Шлях | N | Значення | Примітка |
-|---|---|---|---|
-| `columns[].caption` | 5 | `<binding>` |  |
-| `columns[].code` | 5 | `"AttachmentListDS_Name"`, `"FileList_v3u1cpzDS_Name"`, `"FileList_pazhlwoDS_Name"` |  |
-| `columns[].dataValueType` | 5 | `28` |  |
-| `columns[].id` | 3 | `"0193477a-4a7f-4e8f-b40a-6908c85dfeb0"`, `"5ab4b71a-d4a1-8189-f7e0-1a859e4555c5"`, `"3085fa39-2b1a-2a36-d098-9cf8310d04e2"` |  |
-| `columns[].width` | 3 | `200` |  |
-| `layoutConfig.colSpan` | 10 | `2` |  |
-| `layoutConfig.column` | 10 | `1` |  |
-| `layoutConfig.row` | 10 | `1` |  |
-| `layoutConfig.rowSpan` | 10 | `10`, `6` |  |
+| Шлях | Значення | Примітка |
+|---|---|---|
+| `columns[].caption` | `<binding>` |  |
+| `columns[].code` | `"AttachmentListDS_Name"`, `"FileList_v3u1cpzDS_Name"`, `"FileList_pazhlwoDS_Name"` |  |
+| `columns[].dataValueType` | `28` |  |
+| `columns[].id` | `"0193477a-4a7f-4e8f-b40a-6908c85dfeb0"`, `"5ab4b71a-d4a1-8189-f7e0-1a859e4555c5"`, `"3085fa39-2b1a-2a36-d098-9cf8310d04e2"` |  |
+| `columns[].width` | `200` |  |
+| `layoutConfig.colSpan` | `2` |  |
+| `layoutConfig.column` | `1` |  |
+| `layoutConfig.row` | `1` |  |
+| `layoutConfig.rowSpan` | `10`, `6` |  |
 
 ## Метадані дизайнера (Page Designer)
 
@@ -109,7 +107,6 @@ reuseStrategy: `Reuse`
 
 ## Приклад з реальної схеми
 
-Джерело: `UsrPage_3phu6i7.js`
 
 ```json
 {

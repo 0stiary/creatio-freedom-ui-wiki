@@ -2,7 +2,6 @@
 type: crt.IconRadioButton
 selector: crt-icon-radio-button
 group: "Базові компоненти"
-usage_in_configs: 0
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -17,18 +16,18 @@ reuseStrategy: `Reuse`
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `control` |  |  |  |  |
-| `direction` | `"row"` |  |  |  |
-| `disabled` | `false` |  |  |  |
-| `disabledStateTooltip` |  |  |  |  |
-| `items` | `[]` |  |  |  |
-| `label` | `""` |  |  |  |
-| `radioGroupAriaLabel` |  |  |  |  |
-| `value` |  |  |  |  |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `control` |  |  |  |
+| `direction` | `"row"` |  |  |
+| `disabled` | `false` |  |  |
+| `disabledStateTooltip` |  |  |  |
+| `items` | `[]` |  |  |
+| `label` | `""` |  |  |
+| `radioGroupAriaLabel` |  |  |  |
+| `value` |  |  |  |
 
 ## Вихідні події (outputs)
 

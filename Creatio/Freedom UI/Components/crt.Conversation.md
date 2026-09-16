@@ -2,7 +2,6 @@
 type: crt.Conversation
 selector: crt-conversation
 group: "Layout"
-usage_in_configs: 0
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -17,33 +16,33 @@ Angular-селектор: `<crt-conversation>`
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `actions` | `[]` |  |  |  |
-| `conversationEvent` |  |  |  |  |
-| `conversationId` |  |  |  |  |
-| `disableAutoScroll` | `false` |  |  |  |
-| `hasPreviousMessages` | `false` |  |  |  |
-| `information` | `[]` |  |  |  |
-| `isEmbeddedMode` | `false` |  |  |  |
-| `isTyping` | `false` |  |  |  |
-| `messages` | `[]` |  |  |  |
-| `placeholder` | `[]` |  |  |  |
-| `previewMessageId` | `""` |  |  |  |
-| `searchFilter` |  |  |  |  |
-| `tools` | `[]` |  |  |  |
-| `typing` | `[]` |  |  |  |
-| `borderRadius` |  |  |  | (успадковано від базового класу) |
-| `color` |  |  |  | (успадковано від базового класу) |
-| `elementResponsiveWidth` | `0` |  |  | (успадковано від базового класу) |
-| `fitContent` | `true` |  |  | (успадковано від базового класу) |
-| `items` | `[]` |  |  | (успадковано від базового класу) |
-| `padding` |  |  |  | (успадковано від базового класу) |
-| `responsiveWidth` |  |  |  | (успадковано від базового класу) |
-| `stretch` | `false` |  |  | (успадковано від базового класу) |
-| `visiblePadding` | `true` |  |  | (успадковано від базового класу) |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `actions` | `[]` |  |  |
+| `conversationEvent` |  |  |  |
+| `conversationId` |  |  |  |
+| `disableAutoScroll` | `false` |  |  |
+| `hasPreviousMessages` | `false` |  |  |
+| `information` | `[]` |  |  |
+| `isEmbeddedMode` | `false` |  |  |
+| `isTyping` | `false` |  |  |
+| `messages` | `[]` |  |  |
+| `placeholder` | `[]` |  |  |
+| `previewMessageId` | `""` |  |  |
+| `searchFilter` |  |  |  |
+| `tools` | `[]` |  |  |
+| `typing` | `[]` |  |  |
+| `borderRadius` |  |  | (успадковано від базового класу) |
+| `color` |  |  | (успадковано від базового класу) |
+| `elementResponsiveWidth` | `0` |  | (успадковано від базового класу) |
+| `fitContent` | `true` |  | (успадковано від базового класу) |
+| `items` | `[]` |  | (успадковано від базового класу) |
+| `padding` |  |  | (успадковано від базового класу) |
+| `responsiveWidth` |  |  | (успадковано від базового класу) |
+| `stretch` | `false` |  | (успадковано від базового класу) |
+| `visiblePadding` | `true` |  | (успадковано від базового класу) |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -75,7 +74,6 @@ Angular-селектор: `<crt-conversation>`
 
 ## Приклад з реальної схеми
 
-Джерело: `main.4ac964730f037ecc.js`
 
 ```json
 {"type":"crt.Conversation","contentSlots":["actions","information","typing","tools","placeholder"]}

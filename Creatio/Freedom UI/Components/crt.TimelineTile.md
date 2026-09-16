@@ -2,7 +2,6 @@
 type: crt.TimelineTile
 selector: crt-timeline-tile
 group: "Timeline / Feed / Файли"
-usage_in_configs: 80
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -14,22 +13,21 @@ Angular-селектор: `<crt-timeline-tile>`
 Група: **Timeline / Feed / Файли**  
 Слоти вкладених елементів (`contentSlots`): `items`, `filters`  
 reuseStrategy: `Reuse`  
-Зустрічається в реальних конфігах: **80** раз(ів)  
 `classes`: ❌ приймається, але **не застосовується** до DOM · `styles`: ❌ приймається, але **не застосовується** до DOM — див. [[Common view-element properties#Хто реально рендерить classes і styles]]
 
 Див. також [[Common view-element properties|спільні властивості всіх елементів]] (`name`, `visible`, `visibilityStrategyMode`, `layoutConfig`, `classes`, `styles`, `bindTo`, `_designOptions`).
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `entity` |  |  |  |  |
-| `tileColumnsConfig` |  |  |  |  |
-| `tileEntityConfig` |  |  |  |  |
-| `tileViewConfig` |  |  |  |  |
-| `updatedEntity` |  |  |  |  |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `entity` |  |  |  |
+| `tileColumnsConfig` |  |  |  |
+| `tileEntityConfig` |  |  |  |
+| `tileViewConfig` |  |  |  |
+| `updatedEntity` |  |  |  |
 
 ## Вихідні події (outputs)
 
@@ -39,40 +37,40 @@ reuseStrategy: `Reuse`
 
 Властивості, які **не є inputs компонента**, але зустрічаються в реальних конфігах: їх читають препроцесори метаданих (`crtOnMetaDataInit` / `crtOnModelInit`), компілятор view (`crtIf`, `layoutConfig`) або дизайнер. Без них конфіг теж валідний, але поведінка буде «за замовчуванням».
 
-| Властивість | N | Значення | Що робить |
-|---|---|---|---|
-| `classes` | 80 |  | спільна → [[Common view-element properties#classes]] |
-| `sortedByColumn` | 80 | `"CreatedOn"`, `null`, `"SendDate"`, `"RegisteredOn"`, `"StartDate"` | **прихована** |
-| `ownerColumn` | 80 | `"CreatedBy"`, `"Owner"`, `"SenderContact"`, `"Contact"` | **прихована** |
-| `data` | 80 |  | **прихована**: список колонок для відображення |
-| `linkedColumn` | 76 | `"Account"`, `"Contact"`, `"QualifiedAccount"`, `"QualifiedContact"` | **прихована**: колонка зв'язку з майстер-записом |
-| `iconId` | 54 | `null` |  |
-| `filters` | 50 | `<binding>` | **прихована**: фільтри плитки |
-| `iconPosition` | 36 | `"only-icon"` |  |
-| `icon` | 36 | `"star-tab-icon"`, `"star-icon"` |  |
-| `visible` | 36 | `true` | спільна → [[Common view-element properties#visible]] |
-| `isDefault` | 2 | `true` |  |
+| Властивість | Значення | Що робить |
+|---|---|---|
+| `classes` |  | спільна → [[Common view-element properties#classes]] |
+| `sortedByColumn` | `"CreatedOn"`, `null`, `"SendDate"`, `"RegisteredOn"`, `"StartDate"` | **прихована** |
+| `ownerColumn` | `"CreatedBy"`, `"Owner"`, `"SenderContact"`, `"Contact"` | **прихована** |
+| `data` |  | **прихована**: список колонок для відображення |
+| `linkedColumn` | `"Account"`, `"Contact"`, `"QualifiedAccount"`, `"QualifiedContact"` | **прихована**: колонка зв'язку з майстер-записом |
+| `iconId` | `null` |  |
+| `filters` | `<binding>` | **прихована**: фільтри плитки |
+| `iconPosition` | `"only-icon"` |  |
+| `icon` | `"star-tab-icon"`, `"star-icon"` |  |
+| `visible` | `true` | спільна → [[Common view-element properties#visible]] |
+| `isDefault` | `true` |  |
 
 ## Структура вкладених об'єктів
 
-Шляхи всередині складних властивостей, як їх реально заповнюють (N = частота; `[]` = елемент масиву).
+Шляхи всередині складних властивостей, як їх реально заповнюють (`[]` = елемент масиву).
 
-| Шлях | N | Значення | Примітка |
-|---|---|---|---|
-| `data.columns` | 72 |  |  |
-| `data.schemaName` | 72 | `"Activity"`, `"Opportunity"`, `"Lead"`, `"Call"`, `"Case"`, `"Order"` |  |
-| `data.isDefault` | 66 | `true`, `false` |  |
-| `data.schemaType` | 60 | `null`, `"Email"`, `"Activity"`, `"SysFile"`, `"Feed"` |  |
-| `data.columns[].columnLayout` | 50 | `null` |  |
-| `data.columns[].columnName` | 50 | `"CreatedOn"`, `"Title"`, `"Direction"`, `"Category"` |  |
-| `data.filter` | 8 | `null` |  |
-| `data.uId` | 8 | `"c449d832-a4cc-4b01-b9d5-8a12c42a9f89"`, `"2f81fa05-11ae-400d-8e07-5ef6a620d1ad"`, `"04184833-0a7d-4c43-a6da-fcd8bdd098c5"` |  |
-| `data.columns[].columnLayout.colSpan` | 6 | `12`, `4`, `3` |  |
-| `data.columns[].columnLayout.column` | 6 | `1` |  |
-| `data.columns[].columnLayout.row` | 6 | `1` |  |
-| `data.columns[].columnLayout.rowSpan` | 6 | `1` |  |
-| `data.filter.columnName` | 4 | `"Type"` |  |
-| `data.filter.columnValue` | 4 | `"e2831dec-cfc0-df11-b00f-001d60e938c6"`, `"fbe0acdc-cfc0-df11-b00f-001d60e938c6"` |  |
+| Шлях | Значення | Примітка |
+|---|---|---|
+| `data.columns` |  |  |
+| `data.schemaName` | `"Activity"`, `"Opportunity"`, `"Lead"`, `"Call"`, `"Case"`, `"Order"` |  |
+| `data.isDefault` | `true`, `false` |  |
+| `data.schemaType` | `null`, `"Email"`, `"Activity"`, `"SysFile"`, `"Feed"` |  |
+| `data.columns[].columnLayout` | `null` |  |
+| `data.columns[].columnName` | `"CreatedOn"`, `"Title"`, `"Direction"`, `"Category"` |  |
+| `data.filter` | `null` |  |
+| `data.uId` | `"c449d832-a4cc-4b01-b9d5-8a12c42a9f89"`, `"2f81fa05-11ae-400d-8e07-5ef6a620d1ad"`, `"04184833-0a7d-4c43-a6da-fcd8bdd098c5"` |  |
+| `data.columns[].columnLayout.colSpan` | `12`, `4`, `3` |  |
+| `data.columns[].columnLayout.column` | `1` |  |
+| `data.columns[].columnLayout.row` | `1` |  |
+| `data.columns[].columnLayout.rowSpan` | `1` |  |
+| `data.filter.columnName` | `"Type"` |  |
+| `data.filter.columnValue` | `"e2831dec-cfc0-df11-b00f-001d60e938c6"`, `"fbe0acdc-cfc0-df11-b00f-001d60e938c6"` |  |
 
 ## Метадані дизайнера (Page Designer)
 
@@ -84,7 +82,6 @@ reuseStrategy: `Reuse`
 
 ## Приклад з реальної схеми
 
-Джерело: `Accounts_FormPage.js`
 
 ```json
 {

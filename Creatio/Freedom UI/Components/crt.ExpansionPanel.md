@@ -2,7 +2,6 @@
 type: crt.ExpansionPanel
 selector: crt-expansion-panel
 group: "Layout"
-usage_in_configs: 305
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -14,39 +13,38 @@ Angular-селектор: `<crt-expansion-panel>`
 Група: **Layout**  
 Слоти вкладених елементів (`contentSlots`): `items`, `tools`  
 reuseStrategy: `Reuse`  
-Зустрічається в реальних конфігах: **305** раз(ів)  
 `classes`: ✅ рендериться (на внутрішній елемент) · `styles`: ❌ приймається, але **не застосовується** до DOM — див. [[Common view-element properties#Хто реально рендерить classes і styles]]
 
 Див. також [[Common view-element properties|спільні властивості всіх елементів]] (`name`, `visible`, `visibilityStrategyMode`, `layoutConfig`, `classes`, `styles`, `bindTo`, `_designOptions`).
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `ariaLabel` |  |  |  | (успадковано від базового класу) |
-| `description` |  |  |  | (успадковано від базового класу) |
-| `disableOverflow` |  |  |  | (успадковано від базового класу) |
-| `expanded` | `true` | `true`, `false` | 305 | стан; зберігається у профіль (`DisableSaveToProfileExpPanelExpanded`) |
-| `extraStyles` |  |  |  | (успадковано від базового класу) |
-| `fullWidthHeader` | `true` | `false` | 305 | клікабельний весь хедер |
-| `labelColor` |  | `"auto"`, `"#0D2E4E"` | 305 | (успадковано від базового класу) |
-| `title` |  | `<binding>` | 305 | заголовок |
-| `titleWidth` |  | `20`, `"20"`, `"30"` | 305 | ширина заголовка у % |
-| `togglePosition` | `"before"` | `"before"`, `"after"` | 305 | `before` / `after` |
-| `toggleType` |  | `default`, `material` · `"default"`, `"material"` | 305 | `default` / `material` |
-| `tools` | `[]` | `[]` | 305 | слот для кнопок у хедері |
-| `tooltip` |  |  |  | (успадковано від базового класу) |
-| `borderRadius` |  |  |  | (успадковано від базового класу) |
-| `color` |  |  |  | (успадковано від базового класу) |
-| `elementResponsiveWidth` | `0` |  |  | (успадковано від базового класу) |
-| `fitContent` | `true` | `true`, `false` | 247 | (успадковано від базового класу) |
-| `items` | `[]` | `[]` | 305 | (успадковано від базового класу) |
-| `padding` |  |  | 305 | (успадковано від базового класу) |
-| `responsiveWidth` |  |  |  | (успадковано від базового класу) |
-| `stretch` | `false` | `true` | 2 | (успадковано від базового класу) |
-| `visiblePadding` | `true` |  |  | (успадковано від базового класу) |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `ariaLabel` |  |  | (успадковано від базового класу) |
+| `description` |  |  | (успадковано від базового класу) |
+| `disableOverflow` |  |  | (успадковано від базового класу) |
+| `expanded` | `true` | `true`, `false` | стан; зберігається у профіль (`DisableSaveToProfileExpPanelExpanded`) |
+| `extraStyles` |  |  | (успадковано від базового класу) |
+| `fullWidthHeader` | `true` | `false` | клікабельний весь хедер |
+| `labelColor` |  | `"auto"`, `"#0D2E4E"` | (успадковано від базового класу) |
+| `title` |  | `<binding>` | заголовок |
+| `titleWidth` |  | `20`, `"20"`, `"30"` | ширина заголовка у % |
+| `togglePosition` | `"before"` | `"before"`, `"after"` | `before` / `after` |
+| `toggleType` |  | `default`, `material` · `"default"`, `"material"` | `default` / `material` |
+| `tools` | `[]` | `[]` | слот для кнопок у хедері |
+| `tooltip` |  |  | (успадковано від базового класу) |
+| `borderRadius` |  |  | (успадковано від базового класу) |
+| `color` |  |  | (успадковано від базового класу) |
+| `elementResponsiveWidth` | `0` |  | (успадковано від базового класу) |
+| `fitContent` | `true` | `true`, `false` | (успадковано від базового класу) |
+| `items` | `[]` | `[]` | (успадковано від базового класу) |
+| `padding` |  |  | (успадковано від базового класу) |
+| `responsiveWidth` |  |  | (успадковано від базового класу) |
+| `stretch` | `false` | `true` | (успадковано від базового класу) |
+| `visiblePadding` | `true` |  | (успадковано від базового класу) |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -64,26 +62,26 @@ reuseStrategy: `Reuse`
 
 Властивості, які **не є inputs компонента**, але зустрічаються в реальних конфігах: їх читають препроцесори метаданих (`crtOnMetaDataInit` / `crtOnModelInit`), компілятор view (`crtIf`, `layoutConfig`) або дизайнер. Без них конфіг теж валідний, але поведінка буде «за замовчуванням».
 
-| Властивість | N | Значення | Що робить |
-|---|---|---|---|
-| `visible` | 243 | `true`, `false`, `<binding>` | спільна → [[Common view-element properties#visible]] |
-| `alignItems` | 174 | `"stretch"` |  |
-| `layoutConfig` | 76 |  | спільна → [[Common view-element properties#layoutConfig]] |
+| Властивість | Значення | Що робить |
+|---|---|---|
+| `visible` | `true`, `false`, `<binding>` | спільна → [[Common view-element properties#visible]] |
+| `alignItems` | `"stretch"` |  |
+| `layoutConfig` |  | спільна → [[Common view-element properties#layoutConfig]] |
 
 ## Структура вкладених об'єктів
 
-Шляхи всередині складних властивостей, як їх реально заповнюють (N = частота; `[]` = елемент масиву).
+Шляхи всередині складних властивостей, як їх реально заповнюють (`[]` = елемент масиву).
 
-| Шлях | N | Значення | Примітка |
-|---|---|---|---|
-| `layoutConfig.colSpan` | 76 | `1`, `2` |  |
-| `layoutConfig.column` | 76 | `1`, `2`, `3` |  |
-| `layoutConfig.row` | 76 | `1`, `3`, `2`, `45`, `70`, `40` |  |
-| `layoutConfig.rowSpan` | 76 | `1`, `11` |  |
-| `padding.bottom` | 305 | `"small"`, `"none"` |  |
-| `padding.left` | 305 | `"none"` |  |
-| `padding.right` | 305 | `"none"` |  |
-| `padding.top` | 305 | `"small"`, `"none"`, `"medium"` |  |
+| Шлях | Значення | Примітка |
+|---|---|---|
+| `layoutConfig.colSpan` | `1`, `2` |  |
+| `layoutConfig.column` | `1`, `2`, `3` |  |
+| `layoutConfig.row` | `1`, `3`, `2`, `45`, `70`, `40` |  |
+| `layoutConfig.rowSpan` | `1`, `11` |  |
+| `padding.bottom` | `"small"`, `"none"` |  |
+| `padding.left` | `"none"` |  |
+| `padding.right` | `"none"` |  |
+| `padding.top` | `"small"`, `"none"`, `"medium"` |  |
 
 ## Метадані дизайнера (Page Designer)
 
@@ -95,7 +93,6 @@ reuseStrategy: `Reuse`
 
 ## Приклад з реальної схеми
 
-Джерело: `UsrUpdateBillingLines_MiniPage.js`
 
 ```json
 {

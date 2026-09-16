@@ -2,7 +2,6 @@
 type: crt.GaugeWidget
 selector: crt-gauge-widget
 group: "Дашборди та віджети"
-usage_in_configs: 0
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -17,22 +16,22 @@ reuseStrategy: `Reuse`
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `config` |  |  |  |  |
-| `isDesignTime` |  |  |  |  |
-| `data` |  |  |  | (успадковано від базового класу) |
-| `drilldownEnabled` | `true` |  |  | (успадковано від базового класу) |
-| `listConfig` |  |  |  | (успадковано від базового класу) |
-| `listData` |  |  |  | (успадковано від базового класу) |
-| `pagingConfig` |  |  |  | (успадковано від базового класу) |
-| `searchValue` | `""` |  |  | (успадковано від базового класу) |
-| `sectionBindingColumnRecordId` |  |  |  | (успадковано від базового класу) |
-| `sortingConfig` | `null` |  |  | (успадковано від базового класу) |
-| `toolbarMenuItems` | `[]` |  |  | (успадковано від базового класу) |
-| `userProfileData` |  |  |  | (успадковано від базового класу) |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `config` |  |  |  |
+| `isDesignTime` |  |  |  |
+| `data` |  |  | (успадковано від базового класу) |
+| `drilldownEnabled` | `true` |  | (успадковано від базового класу) |
+| `listConfig` |  |  | (успадковано від базового класу) |
+| `listData` |  |  | (успадковано від базового класу) |
+| `pagingConfig` |  |  | (успадковано від базового класу) |
+| `searchValue` | `""` |  | (успадковано від базового класу) |
+| `sectionBindingColumnRecordId` |  |  | (успадковано від базового класу) |
+| `sortingConfig` | `null` |  | (успадковано від базового класу) |
+| `toolbarMenuItems` | `[]` |  | (успадковано від базового класу) |
+| `userProfileData` |  |  | (успадковано від базового класу) |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -59,7 +58,6 @@ reuseStrategy: `Reuse`
 
 ## Приклад з реальної схеми
 
-Джерело: `4223.hash=3d5a69794a1b3d08.js`
 
 ```json
 {type:"crt.GaugeWidget",reuseStrategy:u.B.Reuse,renderStrategy:g.D.OnViewport,placeholderSize:{height:"98px"},compatibleAPIs:{[_.I.Filtration]:{enable:true,aggregation:true}}}

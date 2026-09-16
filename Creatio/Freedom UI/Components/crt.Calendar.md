@@ -2,7 +2,6 @@
 type: crt.Calendar
 selector: crt-calendar
 group: "Бізнес-компоненти"
-usage_in_configs: 1
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -12,33 +11,32 @@ Angular-селектор: `<crt-calendar>`
 Група: **Бізнес-компоненти**  
 Слоти вкладених елементів (`contentSlots`): `tileContent`  
 reuseStrategy: `Reuse`  
-Зустрічається в реальних конфігах: **1** раз(ів)  
 `classes`: ❌ приймається, але **не застосовується** до DOM · `styles`: ❌ приймається, але **не застосовується** до DOM — див. [[Common view-element properties#Хто реально рендерить classes і styles]]
 
 Див. також [[Common view-element properties|спільні властивості всіх елементів]] (`name`, `visible`, `visibilityStrategyMode`, `layoutConfig`, `classes`, `styles`, `bindTo`, `_designOptions`).
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `colorizationType` |  |  |  |  |
-| `dateRangeLimitInDays` |  |  |  |  |
-| `endBusinessTime` |  |  |  |  |
-| `filters` |  |  |  |  |
-| `items` |  | `<binding>` | 1 |  |
-| `lightweightModeLimit` |  |  |  |  |
-| `maxDuplicatesByOwner` | `16` |  |  |  |
-| `miniPageSchemaName` |  | `"AddTaskMiniPage"` | 1 |  |
-| `pageSize` | `150` |  |  |  |
-| `participantFilters` |  |  |  |  |
-| `showWeekends` |  | `<binding>` | 1 |  |
-| `startBusinessTime` |  |  |  |  |
-| `templateValuesMapping` |  |  | 1 |  |
-| `timeScale` |  | `<binding>` | 1 |  |
-| `useAllDayMeeting` | `true` |  |  |  |
-| `useAutoScrollToCurrentTime` | `true` | `true` | 1 |  |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `colorizationType` |  |  |  |
+| `dateRangeLimitInDays` |  |  |  |
+| `endBusinessTime` |  |  |  |
+| `filters` |  |  |  |
+| `items` |  | `<binding>` |  |
+| `lightweightModeLimit` |  |  |  |
+| `maxDuplicatesByOwner` | `16` |  |  |
+| `miniPageSchemaName` |  | `"AddTaskMiniPage"` |  |
+| `pageSize` | `150` |  |  |
+| `participantFilters` |  |  |  |
+| `showWeekends` |  | `<binding>` |  |
+| `startBusinessTime` |  |  |  |
+| `templateValuesMapping` |  |  |  |
+| `timeScale` |  | `<binding>` |  |
+| `useAllDayMeeting` | `true` |  |  |
+| `useAutoScrollToCurrentTime` | `true` | `true` |  |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -60,28 +58,28 @@ reuseStrategy: `Reuse`
 
 Властивості, які **не є inputs компонента**, але зустрічаються в реальних конфігах: їх читають препроцесори метаданих (`crtOnMetaDataInit` / `crtOnModelInit`), компілятор view (`crtIf`, `layoutConfig`) або дизайнер. Без них конфіг теж валідний, але поведінка буде «за замовчуванням».
 
-| Властивість | N | Значення | Що робить |
-|---|---|---|---|
-| `layoutConfig` | 1 | `{}` | спільна → [[Common view-element properties#layoutConfig]] |
-| `highlightedStartDate` | 1 | `"Calendar_n8j0xn9_highlightedStartDate"` |  |
-| `hightlightedEndDate` | 1 | `"Calendar_n8j0xn9_highlightedEndDate"` |  |
-| `tileContent` | 1 | `[]` |  |
-| `visible` | 1 | `true` | спільна → [[Common view-element properties#visible]] |
-| `fitContent` | 1 | `true` |  |
-| `primaryColumnName` | 1 | `"Calendar_n8j0xn9DS_Id"` |  |
+| Властивість | Значення | Що робить |
+|---|---|---|
+| `layoutConfig` | `{}` | спільна → [[Common view-element properties#layoutConfig]] |
+| `highlightedStartDate` | `"Calendar_n8j0xn9_highlightedStartDate"` |  |
+| `hightlightedEndDate` | `"Calendar_n8j0xn9_highlightedEndDate"` |  |
+| `tileContent` | `[]` |  |
+| `visible` | `true` | спільна → [[Common view-element properties#visible]] |
+| `fitContent` | `true` |  |
+| `primaryColumnName` | `"Calendar_n8j0xn9DS_Id"` |  |
 
 ## Структура вкладених об'єктів
 
-Шляхи всередині складних властивостей, як їх реально заповнюють (N = частота; `[]` = елемент масиву).
+Шляхи всередині складних властивостей, як їх реально заповнюють (`[]` = елемент масиву).
 
-| Шлях | N | Значення | Примітка |
-|---|---|---|---|
-| `templateValuesMapping.Label_11cnx3j` | 1 | `"Calendar_n8j0xn9DS_Location"` |  |
-| `templateValuesMapping.Label_t6oa43h` | 1 | `"Calendar_n8j0xn9DS_Account"` |  |
-| `templateValuesMapping.endColumn` | 1 | `"Calendar_n8j0xn9DS_DueDate"` |  |
-| `templateValuesMapping.notesColumn` | 1 | `"Calendar_n8j0xn9DS_Notes"` |  |
-| `templateValuesMapping.startColumn` | 1 | `"Calendar_n8j0xn9DS_StartDate"` |  |
-| `templateValuesMapping.titleColumn` | 1 | `"Calendar_n8j0xn9DS_Title"` |  |
+| Шлях | Значення | Примітка |
+|---|---|---|
+| `templateValuesMapping.Label_11cnx3j` | `"Calendar_n8j0xn9DS_Location"` |  |
+| `templateValuesMapping.Label_t6oa43h` | `"Calendar_n8j0xn9DS_Account"` |  |
+| `templateValuesMapping.endColumn` | `"Calendar_n8j0xn9DS_DueDate"` |  |
+| `templateValuesMapping.notesColumn` | `"Calendar_n8j0xn9DS_Notes"` |  |
+| `templateValuesMapping.startColumn` | `"Calendar_n8j0xn9DS_StartDate"` |  |
+| `templateValuesMapping.titleColumn` | `"Calendar_n8j0xn9DS_Title"` |  |
 
 ## Метадані дизайнера (Page Designer)
 
@@ -93,7 +91,6 @@ reuseStrategy: `Reuse`
 
 ## Приклад з реальної схеми
 
-Джерело: `_bundle_8x_schema_2.js.завантаження`
 
 ```json
 {layoutConfig:{},showWeekends:"$Calendar_showweekends",highlightedStartDate:"Calendar_n8j0xn9_highlightedStartDate",hightlightedEndDate:"Calendar_n8j0xn9_highlightedEndDate",type:"crt.Calendar",tileContent:[],templateValuesMapping:{startColumn:"Calendar_n8j0xn9DS_StartDate",endColumn:"Calendar_n8j0xn9DS_DueDate",titleColumn:"Calendar_n8j0xn9DS_Title",Label_t6oa43h:"Calendar_n8j0xn9DS_Account",Label_11cnx3j:"Calendar_n8j0xn9DS_Location",notesColumn:"Calendar_n8j0xn9DS_Notes"},useAutoScrollToCurrentTime:true,miniPageSchemaName:"AddTaskMiniPage",visible:true,fitContent:true,items:"$Calendar_n8j0xn9",primaryColumnName:"Calendar_n8j0xn9DS_Id",timeScale:"$Calendar_Tasks_TimeScale"}

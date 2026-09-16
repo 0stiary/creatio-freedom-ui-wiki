@@ -2,7 +2,6 @@
 type: crt.MessageComposerSelector
 selector: crt-message-composer-selector
 group: "Чати / Omnichannel / повідомлення"
-usage_in_configs: 2
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -12,22 +11,21 @@ Angular-селектор: `<crt-message-composer-selector>`
 Група: **Чати / Omnichannel / повідомлення**  
 Слоти вкладених елементів (`contentSlots`): `items`  
 reuseStrategy: `Reuse`  
-Зустрічається в реальних конфігах: **2** раз(ів)  
 `classes`: ❌ приймається, але **не застосовується** до DOM · `styles`: ❌ приймається, але **не застосовується** до DOM — див. [[Common view-element properties#Хто реально рендерить classes і styles]]
 
 Див. також [[Common view-element properties|спільні властивості всіх елементів]] (`name`, `visible`, `visibilityStrategyMode`, `layoutConfig`, `classes`, `styles`, `bindTo`, `_designOptions`).
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `composerEvent` |  |  |  |  |
-| `defaultChannel` |  | `null` | 2 |  |
-| `items` |  | `[]` | 2 |  |
-| `preserveContent` | `true` |  |  |  |
-| `selectedComposerChannelIndex` |  |  |  |  |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `composerEvent` |  |  |  |
+| `defaultChannel` |  | `null` |  |
+| `items` |  | `[]` |  |
+| `preserveContent` | `true` |  |  |
+| `selectedComposerChannelIndex` |  |  |  |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -44,9 +42,9 @@ reuseStrategy: `Reuse`
 
 Властивості, які **не є inputs компонента**, але зустрічаються в реальних конфігах: їх читають препроцесори метаданих (`crtOnMetaDataInit` / `crtOnModelInit`), компілятор view (`crtIf`, `layoutConfig`) або дизайнер. Без них конфіг теж валідний, але поведінка буде «за замовчуванням».
 
-| Властивість | N | Значення | Що робить |
-|---|---|---|---|
-| `visible` | 2 | `false` | спільна → [[Common view-element properties#visible]] |
+| Властивість | Значення | Що робить |
+|---|---|---|
+| `visible` | `false` | спільна → [[Common view-element properties#visible]] |
 
 ## Метадані дизайнера (Page Designer)
 
@@ -58,7 +56,6 @@ reuseStrategy: `Reuse`
 
 ## Приклад з реальної схеми
 
-Джерело: `_bundle_8x_schema_1.js.завантаження`
 
 ```json
 {type:"crt.MessageComposerSelector",items:[],classes:["view-element"],visible:false,defaultChannel:null}

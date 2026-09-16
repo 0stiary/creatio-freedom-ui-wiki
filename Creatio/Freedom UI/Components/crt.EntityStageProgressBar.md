@@ -2,7 +2,6 @@
 type: crt.EntityStageProgressBar
 selector: crt-entity-stage-progress-bar
 group: "Бізнес-компоненти"
-usage_in_configs: 3
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -12,29 +11,28 @@ generated: 2026-09-16
 
 Angular-селектор: `<crt-entity-stage-progress-bar>`  
 Група: **Бізнес-компоненти**  
-Зустрічається в реальних конфігах: **3** раз(ів)  
 `classes`: ❌ приймається, але **не застосовується** до DOM · `styles`: ❌ приймається, але **не застосовується** до DOM — див. [[Common view-element properties#Хто реально рендерить classes і styles]]
 
 Див. також [[Common view-element properties|спільні властивості всіх елементів]] (`name`, `visible`, `visibilityStrategyMode`, `layoutConfig`, `classes`, `styles`, `bindTo`, `_designOptions`).
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `allowedStages` | `null` |  |  |  |
-| `askUserToChangeSchema` |  | `true` | 3 | питати про зміну схеми кейсу |
-| `currentStage` |  |  |  |  |
-| `entityName` |  | `"UsrPendingLines"`, `"UsrPIMRequest"` | 3 | об'єкт |
-| `isAppropriateEntityStageSchema` |  |  |  |  |
-| `recordId` |  |  |  |  |
-| `saveOnChange` |  | `false`, `true` | 3 | зберігати запис при зміні стадії |
-| `stageConnections` |  |  |  |  |
-| `stageRunningProcessUId` |  |  |  |  |
-| `stageSchemaFilterByValue` |  |  |  |  |
-| `stages` |  |  |  |  |
-| `value` |  |  |  |  |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `allowedStages` | `null` |  |  |
+| `askUserToChangeSchema` |  | `true` | питати про зміну схеми кейсу |
+| `currentStage` |  |  |  |
+| `entityName` |  | `"UsrPendingLines"`, `"UsrPIMRequest"` | об'єкт |
+| `isAppropriateEntityStageSchema` |  |  |  |
+| `recordId` |  |  |  |
+| `saveOnChange` |  | `false`, `true` | зберігати запис при зміні стадії |
+| `stageConnections` |  |  |  |
+| `stageRunningProcessUId` |  |  |  |
+| `stageSchemaFilterByValue` |  |  |  |
+| `stages` |  |  |  |
+| `value` |  |  |  |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -54,9 +52,9 @@ Angular-селектор: `<crt-entity-stage-progress-bar>`
 
 Властивості, які **не є inputs компонента**, але зустрічаються в реальних конфігах: їх читають препроцесори метаданих (`crtOnMetaDataInit` / `crtOnModelInit`), компілятор view (`crtIf`, `layoutConfig`) або дизайнер. Без них конфіг теж валідний, але поведінка буде «за замовчуванням».
 
-| Властивість | N | Значення | Що робить |
-|---|---|---|---|
-| `visible` | 1 | `true` | спільна → [[Common view-element properties#visible]] |
+| Властивість | Значення | Що робить |
+|---|---|---|
+| `visible` | `true` | спільна → [[Common view-element properties#visible]] |
 
 ## Метадані дизайнера (Page Designer)
 
@@ -68,7 +66,6 @@ Angular-селектор: `<crt-entity-stage-progress-bar>`
 
 ## Приклад з реальної схеми
 
-Джерело: `UsrPendingLines_FormPage.js`
 
 ```json
 {

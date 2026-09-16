@@ -2,7 +2,6 @@
 type: crt.ChatItem
 selector: crt-chat-item
 group: "Чати / Omnichannel / повідомлення"
-usage_in_configs: 0
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -16,15 +15,15 @@ Angular-селектор: `<crt-chat-item>`
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `chat` |  |  |  |  |
-| `chatMenuItems` |  |  |  |  |
-| `isCombinedMode` |  |  |  |  |
-| `isSelected` |  |  |  |  |
-| `searchFilter` |  |  |  |  |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `chat` |  |  |  |
+| `chatMenuItems` |  |  |  |
+| `isCombinedMode` |  |  |  |
+| `isSelected` |  |  |  |
+| `searchFilter` |  |  |  |
 
 ## Вихідні події (outputs)
 

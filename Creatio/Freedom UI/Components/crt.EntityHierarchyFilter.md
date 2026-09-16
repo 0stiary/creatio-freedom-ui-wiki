@@ -2,7 +2,6 @@
 type: crt.EntityHierarchyFilter
 selector: crt-entity-hierarchy-filter
 group: "Фільтри"
-usage_in_configs: 2
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -13,26 +12,25 @@ generated: 2026-09-16
 Angular-селектор: `<crt-entity-hierarchy-filter>`  
 Група: **Фільтри**  
 reuseStrategy: `Reuse`  
-Зустрічається в реальних конфігах: **2** раз(ів)  
 `classes`: ❌ приймається, але **не застосовується** до DOM · `styles`: ❌ приймається, але **не застосовується** до DOM — див. [[Common view-element properties#Хто реально рендерить classes і styles]]
 
 Див. також [[Common view-element properties|спільні властивості всіх елементів]] (`name`, `visible`, `visibilityStrategyMode`, `layoutConfig`, `classes`, `styles`, `bindTo`, `_designOptions`).
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `displayMode` |  | `"manualDisplayMode"` | 2 |  |
-| `expandedItems` |  |  |  |  |
-| `nodes` |  |  |  |  |
-| `searchResultNodes` |  |  |  |  |
-| `selectedNodeId` |  |  |  |  |
-| `selectedTabIndex` | `1` |  |  |  |
-| `specificationEntityName` |  |  |  |  |
-| `specificationFiltersConfiguration` |  |  |  |  |
-| `specificationReferenceColumnName` |  |  |  |  |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `displayMode` |  | `"manualDisplayMode"` |  |
+| `expandedItems` |  |  |  |
+| `nodes` |  |  |  |
+| `searchResultNodes` |  |  |  |
+| `selectedNodeId` |  |  |  |
+| `selectedTabIndex` | `1` |  |  |
+| `specificationEntityName` |  |  |  |
+| `specificationFiltersConfiguration` |  |  |  |
+| `specificationReferenceColumnName` |  |  |  |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
@@ -54,28 +52,28 @@ reuseStrategy: `Reuse`
 
 Властивості, які **не є inputs компонента**, але зустрічаються в реальних конфігах: їх читають препроцесори метаданих (`crtOnMetaDataInit` / `crtOnModelInit`), компілятор view (`crtIf`, `layoutConfig`) або дизайнер. Без них конфіг теж валідний, але поведінка буде «за замовчуванням».
 
-| Властивість | N | Значення | Що робить |
-|---|---|---|---|
-| `_filterOptions` | 2 |  | **прихована**: expose-атрибут фільтра для гріда |
-| `visible` | 2 | `true` | спільна → [[Common view-element properties#visible]] |
-| `schemaName` | 2 | `"Case"` | **прихована**: об'єкт дерева |
-| `nodesConfig` | 2 |  | **прихована**: конфіг вузлів |
-| `layoutConfig` | 2 |  | спільна → [[Common view-element properties#layoutConfig]] |
+| Властивість | Значення | Що робить |
+|---|---|---|
+| `_filterOptions` |  | **прихована**: expose-атрибут фільтра для гріда |
+| `visible` | `true` | спільна → [[Common view-element properties#visible]] |
+| `schemaName` | `"Case"` | **прихована**: об'єкт дерева |
+| `nodesConfig` |  | **прихована**: конфіг вузлів |
+| `layoutConfig` |  | спільна → [[Common view-element properties#layoutConfig]] |
 
 ## Структура вкладених об'єктів
 
-Шляхи всередині складних властивостей, як їх реально заповнюють (N = частота; `[]` = елемент масиву).
+Шляхи всередині складних властивостей, як їх реально заповнюють (`[]` = елемент масиву).
 
-| Шлях | N | Значення | Примітка |
-|---|---|---|---|
-| `_filterOptions.expose` | 2 |  |  |
-| `_filterOptions.from` | 2 |  |  |
-| `_filterOptions.expose[].attribute` | 1 | `"EntityHierarchyFilter_i03k17b_Filters"` |  |
-| `_filterOptions.expose[].converters` | 1 |  |  |
-| `_filterOptions.expose[].converters[].converter` | 1 | `"crt.ToHierarchyFiltersConverter"` |  |
-| `layoutConfig.height` | 2 | `507` |  |
-| `nodesConfig[].children` | 1 | `[]` |  |
-| `nodesConfig[].columnName` | 1 | `"Category"` |  |
+| Шлях | Значення | Примітка |
+|---|---|---|
+| `_filterOptions.expose` |  |  |
+| `_filterOptions.from` |  |  |
+| `_filterOptions.expose[].attribute` | `"EntityHierarchyFilter_i03k17b_Filters"` |  |
+| `_filterOptions.expose[].converters` |  |  |
+| `_filterOptions.expose[].converters[].converter` | `"crt.ToHierarchyFiltersConverter"` |  |
+| `layoutConfig.height` | `507` |  |
+| `nodesConfig[].children` | `[]` |  |
+| `nodesConfig[].columnName` | `"Category"` |  |
 
 ## Метадані дизайнера (Page Designer)
 
@@ -87,7 +85,6 @@ reuseStrategy: `Reuse`
 
 ## Приклад з реальної схеми
 
-Джерело: `UsrOpenCaseSection_ListPage.js`
 
 ```json
 {

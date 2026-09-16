@@ -2,7 +2,6 @@
 type: crt.SchemaOutlet
 selector: crt-schema-outlet
 group: "Shell / службові"
-usage_in_configs: 0
 tags: [creatio, freedom-ui, view-element]
 generated: 2026-09-16
 ---
@@ -16,14 +15,14 @@ Angular-селектор: `<crt-schema-outlet>`
 
 ## Вхідні параметри (inputs)
 
-Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем; *N* = скільки разів властивість зустрічається в реальних конфігах.
+Джерело: декоратор `@Input()` Freedom UI у класі компонента та його базових класах. Колонка *Значення* = можливі значення, знайдені в коді компонента та в реальних конфігах схем.
 
-| Властивість | Default | Значення | N | Примітка |
-|---|---|---|---|---|
-| `componentRef` | `null` |  |  |  |
-| `features` |  |  |  |  |
-| `parameters` |  |  |  |  |
-| `schemaName` |  |  |  |  |
+| Властивість | Default | Значення | Примітка |
+|---|---|---|---|
+| `componentRef` | `null` |  |  |
+| `features` |  |  |  |
+| `parameters` |  |  |  |
+| `schemaName` |  |  |  |
 
 Базові inputs (приймаються всіма елементами, але `classes`/`styles` рендеряться не всюди — див. рядок вище): `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` — [[Common view-element properties]].
 
