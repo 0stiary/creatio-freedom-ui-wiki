@@ -4,7 +4,7 @@ generated: 2026-09-16
 ---
 # Freedom UI — довідник view-елементів (crt.*)
 
-Згенеровано автоматично з мінімізованого коду Shell **Creatio 8.3.4.2753** (папка `Z:\Creatio Freedom\Shell`, 63 lazy-чанки з 124 — компоненти з незавантажених чанків, напр. `crt.IFrame`, `crt.NextStepTile`, `crt.ApprovalTile`, `crt.InplaceProcessSchemaDesigner`, `crt.Angular7XDetail`, у довіднику відсутні) та з ~1 000 реальних конфігів схем (бандли збережених сторінок + пакети `WTW_*`/`CP_Main`).
+Згенеровано автоматично з мінімізованого коду Shell **Creatio 8.3.4.2753** (63 lazy-чанки з 124 — компоненти з незавантажених чанків, напр. `crt.IFrame`, `crt.NextStepTile`, `crt.ApprovalTile`, `crt.InplaceProcessSchemaDesigner`, `crt.Angular7XDetail`, у довіднику відсутні) та з ~1 000 реальних конфігів схем (OOTB-бандли сторінок + кастомні пакети проєкту).
 
 Для кожного елемента: **inputs** (справжні `@Input` компонента, включно з успадкованими), **outputs**, **приховані властивості** (читаються препроцесорами, у документації не описані — напр. `visibilityStrategyMode`, `_designOptions`, `_filterOptions`), структура вкладених об'єктів, метадані дизайнера і приклад з реальної схеми.
 
