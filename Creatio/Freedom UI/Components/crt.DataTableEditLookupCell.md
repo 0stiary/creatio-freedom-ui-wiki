@@ -67,5 +67,15 @@ reuseStrategy: `Reuse`
 {type:"crt.DataTableEditLookupCell",value:"$SelectedFormFieldsCollection.Caption",valueChange:{request:"crt.EditFormFieldRecordRequest",params:{fieldName:"$SelectedFormFieldsList_ActiveRow",collectionName:"SelectedFormFieldsCollection",value:"@event"}},items:"$AvailableFormFields",useStaticFiltering:true}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.DataTableEditLookupCell** → *(базовий клас не розв'язано — його модуль відсутній у збережених чанках Shell; за архітектурою це BaseViewElement)*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.DataTableEditLookupCell** (власні) | `control`, `items`, `listActions`, `mode`, `readonly`, `useStaticFiltering`, `value` | `paginationChange`, `selectionWindowIconPressed`, `showList`, `valueChange` |  |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (4223.hash=3d5a69794a1b3d08.js) + 10 згадок у конфігах. Мінімізовані імена класів не наводяться.*

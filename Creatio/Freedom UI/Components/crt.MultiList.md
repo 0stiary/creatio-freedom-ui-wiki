@@ -46,5 +46,15 @@ Angular-селектор: `<crt-multi-list>`
 
 У реальних конфігах додаткових властивостей не знайдено.
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.MultiList** → *(базовий клас не розв'язано — його модуль відсутній у збережених чанках Shell; за архітектурою це BaseViewElement)*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.MultiList** (власні) | `currentPage`, `isCombinedMode`, `isSearchDisabled`, `itemsList`, `searchFilter`, `selectedItemId`, `showNoDataBlankState` | `currentPageChange`, `itemClicked`, `itemFocused`, `loadData`, `searchFilterChange` |  |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (4223.hash=3d5a69794a1b3d08.js) + 0 згадок у конфігах. Мінімізовані імена класів не наводяться.*

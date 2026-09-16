@@ -45,5 +45,17 @@ Angular-селектор: `<crt-message-editor-input>`
 
 У реальних конфігах додаткових властивостей не знайдено.
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.MessageEditorInput** → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.MessageEditorInput** (власні) | `action`, `chatInput`, `inputMode`, `isFocused`, `mentionService` | `chatInputChange`, `getMentionService`, `isFocusedChange`, `sendHotkeyPressed`, `sendMessage` |  |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (2656.hash=2360e964a8a68b73.js) + 1 згадок у конфігах. Мінімізовані імена класів не наводяться.*

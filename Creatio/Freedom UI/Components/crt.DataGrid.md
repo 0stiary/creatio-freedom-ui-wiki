@@ -211,6 +211,20 @@ reuseStrategy: `Reuse`
 **cellView** (через `_designOptions.columns.cellViews.<code>` або `columns[].cellView`): `{ type: "crt.Link", caption: "$Items.PDS_X | crt.ToObjectProp : 'displayValue'", href: "$Items.PDS_X | crt.ToObjectProp : 'value' | crt.ToRecordLinkAsync : 'PDS_X'", target: "_blank", mode: "native" }` або `{ name, type: "crt.TableTextCell", disabled: true, control: "Items.PDS_X", value: "$Items.PDS_X | usr.Conv" }`.
 **Запити гріда:** `crt.LoadDataRequest {dataSourceName, config:{loadType:"reload"}}`, `crt.ExportDataGridToExcelRequest {viewName}`, `crt.DeleteRecordsRequest`, `crt.DataGridSortDataRequest`, `crt.DataGridCreateItemRequest`, `crt.DataGridRowDoubleClickRequest`, `crt.DataGridSaveDesignSettingsRequest`.
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.DataGrid** → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.DataGrid** (власні) | `activeRow`, `bulkActions`, `columns`, `editingCells`, `features`, `fitContent`, `header`, `headerToolbarItems`, `hierarchicalColumnName`, `items`, `maxHeight`, `primaryColumnName`, `rowToolbarItems`, `selectedRows`, `selectionState`, `sorting`, `stretch`, `title`, `totalItemsCount` | `activeRowChange`, `cancelItemsChanges`, `columnsChange`, `createItem`, `deleteItem`, `paginationChange`, `rowDoubleClick`, `saveItemsChanges`, `selectedRowsChange`, `selectionStateChange`, `sortingChange` |  |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
+Нащадки (компоненти, що наслідують цей): [[crt.ApprovalList]], [[crt.FileList]]
+
 ## Пов'язані
 
 [[crt.MenuItem]], [[crt.Placeholder]], [[crt.TableTextCell]], [[crt.TableBooleanCell]], [[crt.TableColoredCell]], [[crt.DataTableEditLookupCell]], [[crt.SearchFilter]], [[crt.QuickFilter]], [[crt.Summaries]], [[crt.FileList]]

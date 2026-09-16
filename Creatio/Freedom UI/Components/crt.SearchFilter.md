@@ -116,6 +116,18 @@ reuseStrategy: `Reuse`
 				}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.SearchFilter** → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.SearchFilter** (власні) | `columnsGroupsConfig`, `disabled`, `filteredColumn`, `iconOnly`, `instant`, `minifySearch`, `placeholder`, `selectedColumnsGroups`, `tooltip`, `value` | `minifySearchChange`, `selectedColumnsGroupsChange`, `valueChange` |  |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ## Пов'язані
 
 [[crt.QuickFilter]], [[crt.DataGrid]]

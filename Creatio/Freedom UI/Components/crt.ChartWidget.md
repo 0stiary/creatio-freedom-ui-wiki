@@ -106,5 +106,18 @@ reuseStrategy: `Reuse`
 {layoutConfig:{column:1,row:3,colSpan:4,rowSpan:4},type:"crt.ChartWidget",config:{title:"#ResourceString(crtChartWidget2709e25260fee39e4e4d6a1cecdd7e34_title)#",color:"dark-green",theme:"partial-fill",scales:{stacked:false,xAxis:{name:"",formatting:{type:"string",maxLinesCount:2,maxLineLength:10}},yAxis:{name:"",formatting:{type:"number",thousandAbbreviation:{enabled:true}}}},series:[{type:"doughnut",label:"#ResourceString(crtChartWidget2709e25260fee39e4e4d6a1cecdd7e34_series_0)#",legend:{enabled:false},data:{providing:{schemaName:"Case",rowCount:50,grouping:{column:{expression:{expressionType:0,columnPath:"Status"}},type:"by-value"},aggregation:{column:{expression:{expressionType:1,functionType:2,aggregationType:1,aggregationEvalType:2,functionArgument:{expressionType:0,columnPath:"Id"}}}},filters:{filter:{items:{columnIsNotNullFilter:{comparisonType:2,filterType:2,isEnabled:true,isNull:false,trimDateTimeParameterToDate:false,leftExpression:{expressionType:0,columnPath:"Status"}}},logicalOperation:0,isEnabled:true,filterType:6,rootSchemaName:"Case"}}},formatting:{type:"number",decimalSeparator:".",thousandSeparator:","}}}],seriesOrder:{type:"by-grouping-value",direction:1}}}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.ChartWidget** → *BaseWidget* → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.ChartWidget** (власні) | `config`, `isDesignTime`, `seriesData` | `seriesConfigsChanged` |  |
+| *BaseWidget* | `listConfig`, `listData`, `pagingConfig`, `searchValue`, `sectionBindingColumnRecordId`, `sortingConfig`, `toolbarMenuItems`, `userProfileData` | `columnsChange`, `drillDown`, `fullScreenStateChanged`, `getProfileColumns`, `paginationChange`, `resetToDefault`, `searchFilterChange`, `sortingChange` | віджет дашборда: `sectionBindingColumnRecordId, toolbarMenuItems, listConfig, userProfileData, listData, searchValue, pagingConfig, sortingConfig`; події `drillDown, paginationChange, columnsChange, resetToDefault, getProfileColumns, sortingChange, searchFilterChange, fullScreenStateChanged` |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (4223.hash=3d5a69794a1b3d08.js) + 143 згадок у конфігах. Мінімізовані імена класів не наводяться.*

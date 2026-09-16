@@ -49,5 +49,17 @@ Angular-селектор: `<crt-skip-links>`
 {type:"crt.SkipLinks",links:[{label:"#ResourceString(SkipLinkToNavigation_caption)#",elementSelectors:["#LeftNavigationPanel","crt-navigation-panel-button button"]},{label:"#ResourceString(SkipLinkToMainContent_caption)#",elementSelectors:["#RouterOutlet"]},]}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.SkipLinks** → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.SkipLinks** (власні) | `links` | — |  |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (887.hash=700fed5564cae876.js) + 2 згадок у конфігах. Мінімізовані імена класів не наводяться.*

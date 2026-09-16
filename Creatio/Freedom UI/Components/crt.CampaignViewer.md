@@ -52,5 +52,17 @@ reuseStrategy: `Reuse`
 {type:"crt.CampaignViewer",selector:"crt-campaign-viewer-7x",reuseStrategy:L.B.Reuse}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.CampaignViewer** → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.CampaignViewer** (власні) | `campaignId`, `fitContent` | — |  |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (2544.hash=abd05a3b2042cbcb.js) + 1 згадок у конфігах. Мінімізовані імена класів не наводяться.*

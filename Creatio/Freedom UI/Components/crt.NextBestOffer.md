@@ -84,5 +84,17 @@ reuseStrategy: `Reuse`
 {layoutConfig:{column:1,row:1,colSpan:1,rowSpan:1},type:"crt.NextBestOffer",visible:true,itemConfig:{templateValuesMapping:{caption:"NextBestOfferDS_Name",description:"NextBestOfferDS_ShortDescription",image:"NextBestOfferDS_ProductPicture",id:"NextBestOfferDS_Id",numberTag:"NextBestOfferDS_Score",infoLabel:"NextBestOfferDS_Type"}},items:"$NextBestOffer",specificPageRecordId:"NextBestOfferDS_Product",useSpecificPage:true,specificPage:"Products_FormPage"}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.NextBestOffer** → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.NextBestOffer** (власні) | `alignCenter`, `hideScrollButtons`, `itemConfig`, `items`, `loop`, `selectable`, `selectedItem`, `viewMode` | `selectedItemChange` |  |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (1851.hash=21f7ed8e55170b5b.js) + 28 згадок у конфігах. Мінімізовані імена класів не наводяться.*

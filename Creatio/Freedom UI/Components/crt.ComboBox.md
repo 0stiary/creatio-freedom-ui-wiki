@@ -137,6 +137,19 @@ reuseStrategy: `Reuse`
 
 Фільтрація списку/вікна: перехоплюйте `crt.LoadDataRequest` (для `dataSourceName === "<Attr>_List_DS"` додайте `request.parameters.push({type:"filter", value})`) та `crt.OpenSelectionWindowRequest` (`request.filtersConfig.filterAttributes.push({name:'X'})`, `attributesConfig.X = {value: filterGroup}`). Значення атрибута — `{value: guid, displayValue}`.
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.ComboBox** → *BaseFormControl* → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.ComboBox** (власні) | `autofocus`, `controlActions`, `debounceTime`, `disabled`, `filteringFn`, `groupControlActions`, `isAddAllowed`, `isGoToSourceAllowed`, `items`, `linkViewConfig`, `listActions`, `mode`, `readonly`, `showSecondaryDisplayValue`, `showValueAsLink`, `sortFilteringFn`, `tooltipConfig`, `useMultiChoice`, `useStaticFiltering`, `value`, `valueDetails` | `addRecord`, `closed`, `goToSource`, `opened`, `paginationChange`, `selectionWindowIconPressed`, `showList`, `valueChange` |  |
+| *BaseFormControl* | `appearance`, `ariaLabel`, `control`, `label`, `labelPosition`, `placeholder`, `tooltip` | `blurred`, `focused`, `keyDown`, `keyUp` | поле форми: `label, ariaLabel, appearance, placeholder, disabled, tooltip, control, labelPosition`; події `keyUp, keyDown, blurred, focused`; зв'язок з FormControl (`_initControl`, required, disabled state) |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ## Пов'язані
 
 [[crt.ComboboxSearchTextAction]], [[crt.ComboboxAction]], [[crt.MultiSelect]], [[crt.TagSelect]]

@@ -53,5 +53,17 @@ reuseStrategy: `Reuse`
                         }
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.TableTextCell** → *BaseTextTableCell* → *BaseTableCell*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.TableTextCell** (власні) | — | — |  |
+| *BaseTextTableCell* | — | — | проміжна база текстової комірки |
+| *BaseTableCell* | `column`, `record`, `value` | — | комірка гріда: `value, record, column`; `getTitle()` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (4223.hash=3d5a69794a1b3d08.js) + 16 згадок у конфігах. Мінімізовані імена класів не наводяться.*

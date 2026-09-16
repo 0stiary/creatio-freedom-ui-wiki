@@ -178,6 +178,21 @@ reuseStrategy: `Reuse`
 						}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.MenuItem** → *BaseMenuItem* → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.MenuItem** (власні) | — | — |  |
+| *BaseMenuItem* | `caption`, `disabled`, `handleItemClick`, `icon`, `iconColor`, `items`, `visible` | `clicked` | `caption, icon, iconColor, visible, disabled, items, handleItemClick`; подія `clicked` |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
+Нащадки (компоненти, що наслідують цей): [[crt.ComboboxAction]], [[crt.ComboboxSearchTextAction]]
+
 ## Пов'язані
 
 [[crt.Button]], [[crt.Menu]], [[crt.DataGrid]]

@@ -52,6 +52,18 @@ reuseStrategy: `Reuse`
 {toolbarConfig:{position:50,hint:"Components.FolderTreeActions.Hint",icon:n(41456),defaultPropertyValues:{folderTree:null}},propertiesPanelComponentTypeName:"crt.FolderTreeActionsPropertiesPanel",viewElementGroupType:f.J.Components,typeCaption:"Components.FolderTreeActions.Caption",placeholderSize:{height:"18px"}}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.FolderTreeActions** → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.FolderTreeActions** (власні) | `activeFolderId`, `activeFolderName`, `favoriteItems`, `folderTree` | `activeFolderChanged`, `folderTreeVisibleChanged` |  |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ## Пов'язані
 
 [[crt.FolderTree]]

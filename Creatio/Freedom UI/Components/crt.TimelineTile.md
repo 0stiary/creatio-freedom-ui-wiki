@@ -116,5 +116,15 @@ reuseStrategy: `Reuse`
 				}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.TimelineTile** → *(базовий клас не розв'язано — його модуль відсутній у збережених чанках Shell; за архітектурою це BaseViewElement)*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.TimelineTile** (власні) | `entity`, `tileColumnsConfig`, `tileEntityConfig`, `tileViewConfig`, `updatedEntity` | — |  |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (7910.hash=7aee5aadbf21d80e.js) + 610 згадок у конфігах. Мінімізовані імена класів не наводяться.*

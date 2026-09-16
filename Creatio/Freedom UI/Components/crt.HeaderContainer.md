@@ -60,5 +60,18 @@ reuseStrategy: `Reuse`
 {type:"crt.HeaderContainer",color:"primary",padding:{right:"large",left:"large"},fitContent:true,items:[]}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.HeaderContainer** → *BaseContainer* → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.HeaderContainer** (власні) | `title` | — |  |
+| *BaseContainer* | `borderRadius`, `color`, `elementResponsiveWidth`, `fitContent`, `items`, `padding`, `responsiveWidth`, `stretch`, `visiblePadding` | — | контейнер: `items, padding, visiblePadding, borderRadius, color, stretch, fitContent, responsiveWidth, elementResponsiveWidth`; класи padding/color/borderRadius, реакція на resize |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (4223.hash=3d5a69794a1b3d08.js) + 8 згадок у конфігах. Мінімізовані імена класів не наводяться.*

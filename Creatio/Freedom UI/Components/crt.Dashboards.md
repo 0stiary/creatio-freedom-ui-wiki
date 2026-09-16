@@ -75,6 +75,18 @@ reuseStrategy: `Reuse`
 {type:"crt.Dashboards",placeholder:true,_designOptions:{dependencies:[],filters:[]}}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.Dashboards** → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.Dashboards** (власні) | `canManage`, `dashboards`, `filter`, `headerToolbarItems`, `hierarchicalColumnValue`, `hierarchicalFilter`, `selectedDashboard` | `createDashboard`, `dashboardsOutdated`, `selectedDashboardChange` |  |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ## Пов'язані
 
 [[crt.ChartWidget]], [[crt.IndicatorWidget]], [[crt.GaugeWidget]], [[crt.FunnelWidget]], [[crt.ListWidget]]

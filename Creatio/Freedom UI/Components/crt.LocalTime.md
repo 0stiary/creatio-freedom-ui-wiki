@@ -60,5 +60,19 @@ reuseStrategy: `Reuse`
 {toolbarConfig:{position:240,icon:t(22601),defaultPropertyValues:{labelType:"body",labelThickness:"normal",labelEllipsis:false,labelColor:"#098401",labelBackgroundColor:"transparent",labelTextAlign:"start"},defaultLocalizableStrings:{caption:"DataValueType.LocalTimeCaption",label:"DataValueType.LocalTimeCaption"}},propertiesPanelComponentTypeName:"crt.LocalTimePropertiesPanel",viewElementGroupType:s.J.Components,typeCaption:"DataValueType.LocalTimeCaption",dataValueTypes:[c.r.Lookup],referenceSchemaNames:["TimeZone"],placeholderSize:{height:"20px"}}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.LocalTime** → [[crt.Label]] → *BaseLabel* → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.LocalTime** (власні) | `control` | — |  |
+| [[crt.Label]] | `headingLevel`, `labelBackgroundColor`, `labelElementType`, `labelTextAlign` | — |  |
+| *BaseLabel* | `caption`, `labelColor`, `labelEllipsis`, `labelFontFamily`, `labelFontSize`, `labelHeight`, `labelLetterSpacing`, `labelLineHeight`, `labelMargin`, `labelStyle`, `labelTextTransform`, `labelThickness`, `labelType`, `required` | — | `caption, required, labelType, labelMargin, labelFontSize, labelFontFamily, labelHeight, labelLineHeight, labelLetterSpacing, labelThickness, labelEllipsis, labelTextTransform, labelColor, labelStyle` |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (4223.hash=3d5a69794a1b3d08.js) + 0 згадок у конфігах. Мінімізовані імена класів не наводяться.*

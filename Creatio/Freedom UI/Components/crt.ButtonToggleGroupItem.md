@@ -66,5 +66,18 @@ reuseStrategy: `Reuse`
 {type:"crt.ButtonToggleGroupItem",size:s,iconSize:c,contentAlign:d,menuButtonsMode:true,displayValue:m,value:l,icon:f,iconPosition:v,pressed:null,clickMode:"menu",displayMenuIcon:true,shape:"default",menuItems:r?.map(C=>({...C,type:"crt.MenuItem",caption:C.displayValue,selected:l===C.value,handleItemClick:()=>{i.handleToggleItemClickQueue([C])}}))}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.ButtonToggleGroupItem** → *BaseToggleGroupItem* → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.ButtonToggleGroupItem** (власні) | — | — |  |
+| *BaseToggleGroupItem* | `ariaLabel`, `backgroundColor`, `badge`, `badgeConfig`, `color`, `contentAlign`, `disabled`, `displayMenuIcon`, `displayValue`, `icon`, `iconPosition`, `iconSize`, `menuButtonsMode`, `menuItems`, `pressed`, `size`, `tooltipNotificationsPostfix`, `tooltipTitle`, `value`, `visible` | `toggleItemClicked` | `value, displayValue, icon, iconPosition, size, menuItems, pressed, backgroundColor, color, badge, tooltipTitle`; подія `toggleItemClicked` |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (4223.hash=3d5a69794a1b3d08.js) + 18 згадок у конфігах. Мінімізовані імена класів не наводяться.*

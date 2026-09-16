@@ -125,5 +125,16 @@ reuseStrategy: `Reuse`
 {layoutConfig:{column:1,colSpan:12,row:12,rowSpan:16},type:"crt.ListWidget",widgetConfig:{theme:"without-fill",layout:{color:"dark-blue"}},title:"#ResourceString(SubmissionsList_title)#",features:{rows:{numeration:true,selection:{enable:true,multiple:false}},editable:false,header:{visible:true},columns:{dragAndDrop:false,resizing:true,sorting:true}},items:"$ListWidget_wgiaud9",selectionState:"$ListWidget_wgiaud9_SelectionState",_selectionOptions:{attribute:"ListWidget_wgiaud9_SelectionState"},primaryColumnName:"ListWidget_wgiaud9DS_Id",columns:[{id:"3b745f55-618e-9b83-debd-8d20e46ffd3a",code:"ListWidget_wgiaud9DS_CreatedOn",caption:"#ResourceString(ListWidget_wgiaud9DS_CreatedOn)#",dataValueType:7},{id:"f7eb7afa-7f01-87d3-df30-a25b691c21ae",code:"ListWidget_wgiaud9DS_Contact",caption:"#ResourceString(ListWidget_wgiaud9DS_Contact)#",dataValueType:10},{id:"51a026ee-83e0-6c8c-40b1-0c3a21d20c3b",code:"ListWidget_wgiaud9DS_Email",caption:"#ResourceString(ListWidget_wgiaud9DS_Email)#",dataValueType:28},{id:"b134ab56-94f0-c447-7720-ff4cd7f5fd1c",code:"ListWidget_wgiaud9DS_Channel",caption:"#ResourceString(ListWidget_wgiaud9DS_Channel)#",dataValueType:10},{id:"a084a4b8-9519-b00e-4da6-6d11c361acf4",code:"ListWidget_wgiaud9DS_Source",caption:"#ResourceString(ListWidget_wgiaud9DS_Source)#",dataValueType:10}],placeholder:false,bulkActions:[],visible:true,fitContent:true,activeRow:"$ListWidget_wgiaud9_ActiveRow"}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.ListWidget** → *DataGridInputsMixin*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.ListWidget** (власні) | `widgetConfig`, `widgetToolbarItems` | — |  |
+| *DataGridInputsMixin* | `activeRow`, `bulkActions`, `columns`, `editingCells`, `features`, `fitContent`, `header`, `headerToolbarItems`, `hierarchicalColumnName`, `items`, `loading`, `maxHeight`, `primaryColumnName`, `rowToolbarItems`, `selectedRows`, `selectionState`, `sorting`, `stretch`, `title`, `totalItemsCount` | `activeRowChange`, `cancelItemsChanges`, `columnsChange`, `createItem`, `deleteItem`, `paginationChange`, `rowDoubleClick`, `saveItemsChanges`, `selectedRowsChange`, `selectionStateChange`, `sortingChange` | усі inputs/outputs DataGrid без реалізації (`columns, items, features, selectionState, activeRow, sorting, rowToolbarItems, bulkActions…`) — база для віджета-списку |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (4223.hash=3d5a69794a1b3d08.js) + 38 згадок у конфігах. Мінімізовані імена класів не наводяться.*

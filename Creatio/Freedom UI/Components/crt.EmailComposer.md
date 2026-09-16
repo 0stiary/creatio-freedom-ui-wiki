@@ -106,5 +106,18 @@ reuseStrategy: `Reuse`
 {type:"crt.EmailComposer",classes:["view-element"],sortedByColumn:"CreatedOn",data:{uId:"75aadc65-a834-42d0-b880-fac9bdee4c86",schemaType:"Email",caption:"Email",sortedByColumn:"CreatedOn",typeName:"crt.EmailComposer",icon:"email-composer-icon"},recordId:"$Id",defaultSenderRequest:"crt.DefaultSenderComposerRequest",entitySchemaName:"Account"}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.EmailComposer** → *BaseComposer* → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.EmailComposer** (власні) | `bcc`, `bindingColumns`, `body`, `cc`, `composerEvent`, `defaultSenderRequest`, `emailId`, `entitySchemaName`, `expandOnLoad`, `from`, `headerExpanded`, `headerLabelsWidth`, `height`, `isReplyExpanded`, `recipientsMailboxes`, `recordId`, `sendersMailboxes`, `skeletonLoading`, `subject`, `to`, `visibleBcc`, `visibleCc` | `bccChange`, `bodyChange`, `ccChange`, `emailComposerCleared`, `emailComposerSaved`, `fromChange`, `headerExpandedChange`, `refreshRecipients`, `subjectChange`, `toChange`, `visibleBccChange`, `visibleCcChange` |  |
+| *BaseComposer* | `disableSelectionOptions`, `selection` | `composerEventChange`, `selectionChange` | композер повідомлень: `selection, disableSelectionOptions`; події `composerEventChange, selectionChange`; фокус/клік по полю вводу |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (3789.hash=c07acffd1a475b43.js) + 12 згадок у конфігах. Мінімізовані імена класів не наводяться.*

@@ -44,5 +44,15 @@ reuseStrategy: `Reuse`
 {type:"crt.LookupQuickFilterMenuItem",checkedStateChange:T=>this._checkLookupFilterItemHandler(T),dataItemMarker:M.displayValue,...M}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.LookupQuickFilterMenuItem** → *(базовий клас не розв'язано — його модуль відсутній у збережених чанках Shell; за архітектурою це BaseViewElement)*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.LookupQuickFilterMenuItem** (власні) | `checkedState`, `checkedStateChange`, `displayValue`, `value` | — |  |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (3681.hash=5b6e27ea9c707070.js) + 2 згадок у конфігах. Мінімізовані імена класів не наводяться.*

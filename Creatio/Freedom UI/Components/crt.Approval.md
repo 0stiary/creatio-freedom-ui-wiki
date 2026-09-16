@@ -70,5 +70,17 @@ Angular-селектор: `<crt-approval>`
 {type:"crt.Approval",activeColor:"white",inactiveColor:"white",items:[],entityName:"UsrPIMRequest",approvalEntityName:"SysApproval",visible:true,hiddenWhenNoData:true}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.Approval** → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.Approval** (власні) | `activeColor`, `approval`, `approvalChangedHandler`, `approvalEntityName`, `approvalsMetrics`, `dataLoaded`, `entityName`, `hiddenWhenNoData`, `inactiveColor`, `linkedSchemaColumnName`, `linkedSchemaName`, `recordId` | `approve`, `createApproval`, `loadData`, `reject` |  |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (5423.hash=0147d731c99b363a.js) + 7 згадок у конфігах. Мінімізовані імена класів не наводяться.*

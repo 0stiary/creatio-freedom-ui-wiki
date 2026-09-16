@@ -67,6 +67,19 @@ reuseStrategy: `Reuse`
 
 Керування видимістю відбувається через `_changeItemVisibility` (клас `hide`) або `_destroyRenderedItem`. Закриття панелі (`ToggleContainerItem.closeContainer`) емітить `selectedTabChange(null)`.
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.ToggleContainer** → *BaseContainer* → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.ToggleContainer** (власні) | `items`, `preserveContent`, `selectedTab`, `selectedTabIndex`, `slidingAnimation` | `selectedTabChange`, `selectedTabIndexChange` |  |
+| *BaseContainer* | `borderRadius`, `color`, `elementResponsiveWidth`, `fitContent`, `padding`, `responsiveWidth`, `stretch`, `visiblePadding` | — | контейнер: `items, padding, visiblePadding, borderRadius, color, stretch, fitContent, responsiveWidth, elementResponsiveWidth`; класи padding/color/borderRadius, реакція на resize |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ## Пов'язані
 
 [[crt.TabPanel]], [[crt.ToggleContainerItem]], [[crt.ButtonToggleGroup]]

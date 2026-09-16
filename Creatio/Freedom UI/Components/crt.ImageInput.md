@@ -102,5 +102,21 @@ reuseStrategy: `Reuse`
 {type:"crt.ImageInput",label:"$Resources.Strings.null",value:"https://d3a7ykdi65m4cy.cloudfront.net/ac-en/s3fs-public/images/Demo/No-access-meet-summary.svg",readonly:true,placeholder:"",labelPosition:"auto",size:"large",borderRadius:"none",positioning:"scale-down",visible:true,tooltip:"",layoutConfig:{column:6,colSpan:2,row:1,rowSpan:1}}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.ImageInput** → *BaseImageInput* → [[crt.Input]] → *BaseInputControl* → *BaseFormControl* → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.ImageInput** (власні) | — | — |  |
+| *BaseImageInput* | `alt`, `borderRadius`, `colorId`, `customBorderWidth`, `customHeight`, `customWidth`, `isFocused`, `maxFileSize`, `placeholder`, `placeholderMode`, `positioning`, `size`, `value`, `valueValidationInfo` | `imageClear`, `imageSelected` | `value, alt, placeholderMode, colorId, maxFileSize, size, positioning, borderRadius, custom*`; події `imageSelected/imageClear` |
+| [[crt.Input]] | `displayTools`, `inputType`, `mask`, `multiline` | — |  |
+| *BaseInputControl* | `autocomplete`, `autofocus`, `id`, `readonly` | — | `id, value, readonly, autofocus, autocomplete` (+ `ngDoCheck`) |
+| *BaseFormControl* | `appearance`, `ariaLabel`, `control`, `disabled`, `label`, `labelPosition`, `tooltip` | `blurred`, `focused`, `keyDown`, `keyUp` | поле форми: `label, ariaLabel, appearance, placeholder, disabled, tooltip, control, labelPosition`; події `keyUp, keyDown, blurred, focused`; зв'язок з FormControl (`_initControl`, required, disabled state) |
+| *BaseViewElement* | `classes`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (4223.hash=3d5a69794a1b3d08.js) + 165 згадок у конфігах. Мінімізовані імена класів не наводяться.*

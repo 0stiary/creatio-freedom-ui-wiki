@@ -128,6 +128,20 @@ reuseStrategy: `Reuse`
 
 Препроцесор: обмежує висоту вкладеного `crt.DataGrid` (`setDataGridMaxHeight`), фільтрує items за типом гріда і нормалізує paddings.
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.ExpansionPanel** → *BaseExpansionPanel* → *BaseContainer* → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.ExpansionPanel** (власні) | — | — |  |
+| *BaseExpansionPanel* | `ariaLabel`, `description`, `disableOverflow`, `expanded`, `extraStyles`, `fullWidthHeader`, `labelColor`, `title`, `titleWidth`, `togglePosition`, `toggleType`, `tools`, `tooltip` | `closed`, `expandedChange`, `opened` | `expanded, title, togglePosition, toggleType, labelColor, tooltip, description, fullWidthHeader, titleWidth, tools, disableOverflow`; події `opened/closed/expandedChange` |
+| *BaseContainer* | `borderRadius`, `color`, `elementResponsiveWidth`, `fitContent`, `items`, `padding`, `responsiveWidth`, `stretch`, `visiblePadding` | — | контейнер: `items, padding, visiblePadding, borderRadius, color, stretch, fitContent, responsiveWidth, elementResponsiveWidth`; класи padding/color/borderRadius, реакція на resize |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ## Пов'язані
 
 [[crt.FlexContainer]], [[crt.GridContainer]], [[crt.DataGrid]]

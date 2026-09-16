@@ -136,6 +136,18 @@ reuseStrategy: `Reuse`
 
 Макроси у `defaultValue`: `[#currentUserContact#]`, `[#currentUserAccount#]`, `[#currentMonth#]`, `[#currentWeek#]`. Значення lookup-фільтра — масив `{value, displayValue, checkedState}`.
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.QuickFilter** → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.QuickFilter** (власні) | `config`, `filterType`, `value` | `valueChange` |  |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ## Пов'язані
 
 [[crt.SearchFilter]], [[crt.FolderTree]], [[crt.DataGrid]], [[crt.LookupQuickFilterMenuItem]]

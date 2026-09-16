@@ -52,5 +52,15 @@ reuseStrategy: `Reuse`
 {type:"crt.DataTableEditPhoneCell",formControlConfig:{relatesTo:"control"},reuseStrategy:k.B.Reuse}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.DataTableEditPhoneCell** → *(базовий клас не розв'язано — його модуль відсутній у збережених чанках Shell; за архітектурою це BaseViewElement)*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.DataTableEditPhoneCell** (власні) | `control`, `displayAsPhone`, `isViewCellMode`, `readonly` | — |  |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (2997.hash=951aa068dc9fece4.js) + 1 згадок у конфігах. Мінімізовані імена класів не наводяться.*

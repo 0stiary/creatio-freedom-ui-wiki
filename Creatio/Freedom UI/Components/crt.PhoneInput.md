@@ -109,5 +109,20 @@ Angular-селектор: `<crt-phone-input>`
 				}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.PhoneInput** → [[crt.Input]] → *BaseInputControl* → *BaseFormControl* → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.PhoneInput** (власні) | `alwaysShowFlags`, `countrySelectionConfig`, `displayAsPhone`, `isGridMode`, `isViewCellMode`, `phoneAsLink` | — |  |
+| [[crt.Input]] | `displayTools`, `inputType`, `mask`, `multiline` | — |  |
+| *BaseInputControl* | `autocomplete`, `autofocus`, `id`, `readonly`, `value` | — | `id, value, readonly, autofocus, autocomplete` (+ `ngDoCheck`) |
+| *BaseFormControl* | `appearance`, `ariaLabel`, `control`, `disabled`, `label`, `labelPosition`, `placeholder`, `tooltip` | `blurred`, `focused`, `keyDown`, `keyUp` | поле форми: `label, ariaLabel, appearance, placeholder, disabled, tooltip, control, labelPosition`; події `keyUp, keyDown, blurred, focused`; зв'язок з FormControl (`_initControl`, required, disabled state) |
+| *BaseViewElement* | `classes`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (5034.hash=3867441b4932aa64.js) + 46 згадок у конфігах. Мінімізовані імена класів не наводяться.*

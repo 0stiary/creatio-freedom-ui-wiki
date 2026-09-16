@@ -85,6 +85,21 @@ reuseStrategy: `Reuse`
 {type:"crt.Label",caption:"$UsrCaseFilterNodes.UsrCaseFilterNodeDS_RecordsCount | usr.FilterNodeCountCaptionConverter",labelType:"caption-large",labelThickness:"default",labelEllipsis:false,labelColor:"auto",labelBackgroundColor:"transparent",labelTextAlign:"center",headingLevel:"label",visible:"$UsrCaseFilterNodes.UsrCaseFilterNodeDS_RecordsCount | crt.IsEqual : 0 | crt.InvertBooleanValue"}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.Label** → *BaseLabel* → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.Label** (власні) | `headingLevel`, `labelBackgroundColor`, `labelElementType`, `labelTextAlign` | — |  |
+| *BaseLabel* | `caption`, `labelColor`, `labelEllipsis`, `labelFontFamily`, `labelFontSize`, `labelHeight`, `labelLetterSpacing`, `labelLineHeight`, `labelMargin`, `labelStyle`, `labelTextTransform`, `labelThickness`, `labelType`, `required` | — | `caption, required, labelType, labelMargin, labelFontSize, labelFontFamily, labelHeight, labelLineHeight, labelLetterSpacing, labelThickness, labelEllipsis, labelTextTransform, labelColor, labelStyle` |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
+Нащадки (компоненти, що наслідують цей): [[crt.LocalTime]], [[crt.Timer]]
+
 ## Пов'язані
 
 [[crt.Timer]], [[crt.Link]]

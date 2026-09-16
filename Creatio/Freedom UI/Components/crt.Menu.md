@@ -49,5 +49,15 @@ Angular-селектор: `<crt-menu>`
 {id:this._getNestedMenuId(at),name:at.name,type:"crt.Menu",items:at.items,panelClass:this._panelClass,useGlassmorphism:this._useGlassmorphism,visible:true}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.Menu** → *(базовий клас не розв'язано — його модуль відсутній у збережених чанках Shell; за архітектурою це BaseViewElement)*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.Menu** (власні) | `context`, `items`, `menuItems`, `panelClass`, `stopOverlayClickPropagation`, `useGlassmorphism`, `xPosition`, `yPosition` | — |  |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (4223.hash=3d5a69794a1b3d08.js) + 10 згадок у конфігах. Мінімізовані імена класів не наводяться.*

@@ -89,5 +89,17 @@ reuseStrategy: `Reuse`
 				}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.NextSteps** → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.NextSteps** (власні) | `bindingColumns`, `canAdd`, `cardState`, `dataLoading`, `galleryItemConfig`, `masterSchemaId`, `masterSchemaName`, `nextSteps`, `reloadNextSteps`, `tilesMap` | `reloadNextStepsChange` |  |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (7907.hash=e671ec9673e17f6d.js) + 9 згадок у конфігах. Мінімізовані імена класів не наводяться.*

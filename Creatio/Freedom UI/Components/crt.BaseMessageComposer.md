@@ -64,5 +64,15 @@ reuseStrategy: `Reuse`
 
 У реальних конфігах додаткових властивостей не знайдено.
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.BaseMessageComposer** → *(базовий клас не розв'язано — його модуль відсутній у збережених чанках Shell; за архітектурою це BaseViewElement)*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.BaseMessageComposer** (власні) | `channelSelector`, `composerCacheCode`, `dataCachingService`, `disableSelectionOptions`, `disabled`, `discardBtnVisible`, `footerPanelExpanded`, `footerPanelIndent`, `footerPanelOptions`, `height`, `inputPlaceHolder`, `maxAttachmentsSize`, `mentionsService`, `selectionActions`, `sendButtonIcon`, `sendingButtonDisabled`, `useDrafts`, `useTemplates` | `attachmentAdded`, `composerCleared`, `messageChanged`, `messageChangesCancel`, `messageInputBlur`, `messageInputClick`, `messageInputFocus`, `messagePublish`, `newMention`, `saveDraft`, `selectTemplate`, `selectionChange` |  |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (3789.hash=c07acffd1a475b43.js) + 0 згадок у конфігах. Мінімізовані імена класів не наводяться.*

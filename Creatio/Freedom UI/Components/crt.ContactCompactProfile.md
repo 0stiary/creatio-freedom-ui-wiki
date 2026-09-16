@@ -74,5 +74,18 @@ reuseStrategy: `Reuse`
 {layoutConfig:{},type:"crt.ContactCompactProfile",referenceColumn:"$PrimaryContact",readonly:true}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.ContactCompactProfile** → *BaseCompactProfile* → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.ContactCompactProfile** (власні) | `birthDate`, `city`, `country`, `displayName`, `firstName`, `firstNameValidationInfo`, `lastName`, `middleName`, `timeZone` | `firstNameChange`, `fullNameChange`, `lastNameChange`, `middleNameChange` |  |
+| *BaseCompactProfile* | `dialogTitle`, `photo`, `photoTitle`, `readonly`, `referenceColumn` | `imageClear`, `imageSelected` | `photo, photoTitle, dialogTitle, referenceColumn, readonly`; події `imageSelected/imageClear` |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (6316.hash=ba7a97bcc1acf044.js) + 12 згадок у конфігах. Мінімізовані імена класів не наводяться.*

@@ -181,6 +181,19 @@ reuseStrategy: `Reuse`
 				}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.Button** → *BaseButton* → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.Button** (власні) | — | — |  |
+| *BaseButton* | `allowMenuOnDisabled`, `ariaLabel`, `attributes`, `autofocus`, `caption`, `clickMode`, `color`, `contentAlign`, `disableRipple`, `disabled`, `displayMenuIcon`, `displayType`, `icon`, `iconPosition`, `iconSize`, `isIconModeSizePx`, `menuItems`, `menuPanelClass`, `pressed`, `size`, `textTransform`, `title`, `type`, `useGlassmorphism` | `blurred`, `clicked`, `focused` | `caption, icon, size, iconSize, iconPosition, color, displayType, clickMode, menuItems, disabled, autofocus, title, textTransform, type, disableRipple, useGlassmorphism`; події `clicked, focused, blurred`; класи розміру/іконки |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ## Пов'язані
 
 [[crt.MenuItem]], [[crt.MenuDivider]], [[crt.MenuLabel]], [[crt.ButtonToggleGroup]], [[crt.Link]]

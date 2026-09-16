@@ -93,6 +93,18 @@ Angular-селектор: `<crt-folder-tree>`
 {type:"crt.FolderTree",sourceSchemaName:"ActivityFolder",rootSchemaName:"Activity",layoutConfig:{width:328.125},classes:["section-folder-tree"],_filterOptions:{expose:[{attribute:"FolderTree_active_folder_filter",converters:[{converter:"crt.FolderTreeActiveFilterAttributeConverter",args:["Activity"]}]}],from:["FolderTree_items","FolderTree_favoriteItems","FolderTree_active_folder_id"]},borderRadius:"none"}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.FolderTree** → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.FolderTree** (власні) | `activeFolderId`, `borderRadius`, `expandedItems`, `favoriteItems`, `items`, `minVisibleItemsCount`, `readonly`, `rootSchemaName`, `showMask`, `sortingOrder`, `sourceSchemaName`, `useStaticFolders` | `activeFolderChanged`, `addFolder`, `convertToStaticFolder`, `copyFolder`, `deleteFolder`, `folderChangeRights`, `folderFiltersUpdated`, `folderRenamed`, `folderTreeExpandedItemsChanged`, `folderTreeVisibleChanged`, `moveFolder`, `toggleFolderFavorite` |  |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ## Пов'язані
 
 [[crt.FolderTreeActions]], [[crt.QuickFilter]]

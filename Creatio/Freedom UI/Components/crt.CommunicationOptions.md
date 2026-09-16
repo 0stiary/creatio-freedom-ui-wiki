@@ -86,5 +86,17 @@ reuseStrategy: `Reuse`
 				}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.CommunicationOptions** → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.CommunicationOptions** (власні) | `columnsCount`, `defaultOptionConfig`, `displayFormatColumnName`, `items`, `labelPosition`, `masterRecordColumnName`, `masterRecordColumnValue`, `numberColumnName`, `optionActions`, `primaryColumnName`, `readonly`, `showNoDataPlaceholder`, `templates`, `typeColumnName` | — |  |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (7262.hash=da34f3680bc7571c.js) + 86 згадок у конфігах. Мінімізовані імена класів не наводяться.*

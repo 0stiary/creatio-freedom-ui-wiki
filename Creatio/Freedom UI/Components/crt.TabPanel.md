@@ -126,6 +126,18 @@ reuseStrategy: `Reuse`
 
 **Подія зміни вкладки** ловиться через `crt.HandleViewModelAttributeChangeRequest` з `attributeName === "<Name>_SelectedItem"` (toggle з ButtonToggleGroup) або власний атрибут у `selectedTab: "$MyAttr"`.
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.TabPanel** → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.TabPanel** (власні) | `headerBackgroundColor`, `selectedTab`, `selectedTabIndex`, `styleType`, `underlineSelectedTabColor` | `selectedTabChange`, `selectedTabIndexChange` |  |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ## Пов'язані
 
 [[crt.TabContainer]], [[crt.ToggleContainer]], [[crt.ToggleContainerItem]], [[crt.TabPanelHeader]], [[crt.TabPanelHeaderItem]], [[crt.ButtonToggleGroup]]

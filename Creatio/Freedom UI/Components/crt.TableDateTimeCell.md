@@ -34,5 +34,16 @@ reuseStrategy: `Reuse`
 
 У реальних конфігах додаткових властивостей не знайдено.
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.TableDateTimeCell** → *BaseTableCell*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.TableDateTimeCell** (власні) | — | — |  |
+| *BaseTableCell* | `column`, `record`, `value` | — | комірка гріда: `value, record, column`; `getTitle()` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (4223.hash=3d5a69794a1b3d08.js) + 0 згадок у конфігах. Мінімізовані імена класів не наводяться.*

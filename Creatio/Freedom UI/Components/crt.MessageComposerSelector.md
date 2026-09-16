@@ -61,5 +61,17 @@ reuseStrategy: `Reuse`
 {type:"crt.MessageComposerSelector",items:[],classes:["view-element"],visible:false,defaultChannel:null}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.MessageComposerSelector** → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.MessageComposerSelector** (власні) | `composerEvent`, `defaultChannel`, `items`, `preserveContent`, `selectedComposerChannelIndex` | `composerEventChange`, `selectedComposerChannelIndexChange` |  |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (3789.hash=c07acffd1a475b43.js) + 8 згадок у конфігах. Мінімізовані імена класів не наводяться.*

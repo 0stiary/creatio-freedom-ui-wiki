@@ -78,5 +78,18 @@ reuseStrategy: `Reuse`
 {layoutConfig:{column:2,colSpan:1,row:2,rowSpan:1},type:"crt.Slider",color:"primary",minValue:1,maxValue:4,step:1,label:"$Resources.Strings.PDS_UsrDurationHours_1t4a0xh",visible:true,readonly:false,labelPosition:null,placeholder:"",tooltip:"",control:"$PDS_UsrDurationHours_1t4a0xh"}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.Slider** → *BaseSlider* → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.Slider** (власні) | — | — |  |
+| *BaseSlider* | `ariaLabel`, `color`, `control`, `disableResizing`, `disabled`, `height`, `hideLabels`, `hideThumb`, `label`, `maxValue`, `minValue`, `paddingLineMode`, `readonly`, `step`, `value` | `valueChanged` | `control, value, minValue, maxValue, step, hideLabels, hideThumb, color, height, paddingLineMode` |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (4223.hash=3d5a69794a1b3d08.js) + 13 згадок у конфігах. Мінімізовані імена класів не наводяться.*

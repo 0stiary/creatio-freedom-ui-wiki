@@ -61,5 +61,17 @@ reuseStrategy: `Reuse`
 {toolbarConfig:{position:180,icon:t(19450),defaultPropertyValues:{tagInRecordSourceSchemaName:Is.lo}},propertiesPanelComponentTypeName:"crt.TagSelectPropertiesPanel",viewElementGroupType:O.J.Components,typeCaption:"Components.TagSelect.Caption",placeholderSize:{height:"18px"}}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.TagSelect** → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.TagSelect** (власні) | `disabled`, `items`, `label`, `labelPosition`, `listItems`, `wrap` | `addTagsInRecord`, `createTag`, `deleteTag`, `deleteTagInRecord`, `editTag`, `paginationChange`, `showList` |  |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (4223.hash=3d5a69794a1b3d08.js) + 2 згадок у конфігах. Мінімізовані імена класів не наводяться.*

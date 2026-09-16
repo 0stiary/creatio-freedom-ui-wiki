@@ -91,6 +91,20 @@ reuseStrategy: `Reuse`
 
 Вибір зберігається у профіль (`DisableSaveToProfileToggleGroupSelectedTab`). Ліцензійні вкладки (`CtiTab`, `EmailsTab`, `ChatsTab`) прибираються автоматично, якщо немає ліцензії.
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.ButtonToggleGroup** → *BaseButtonToggleGroup* → *BaseToggleGroup* → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.ButtonToggleGroup** (власні) | — | — |  |
+| *BaseButtonToggleGroup* | `allowUntoggle`, `badgeConfig`, `contentAlign`, `direction`, `disabled`, `fitContent`, `gap`, `iconSize`, `menuButtonsMode`, `size`, `toggleViewMode`, `value` | — | `menuButtonsMode, size, iconSize, allowUntoggle, badgeConfig, direction, gap, fitContent, contentAlign, disabled, toggleViewMode`; керує pressed-станом елементів |
+| *BaseToggleGroup* | `items` | `valueChange` | `items, value`; `valueChange` |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ## Пов'язані
 
 [[crt.ButtonToggleGroupItem]], [[crt.TabPanel]], [[crt.ToggleContainer]]

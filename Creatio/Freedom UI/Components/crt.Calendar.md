@@ -96,5 +96,17 @@ reuseStrategy: `Reuse`
 {layoutConfig:{},showWeekends:"$Calendar_showweekends",highlightedStartDate:"Calendar_n8j0xn9_highlightedStartDate",hightlightedEndDate:"Calendar_n8j0xn9_highlightedEndDate",type:"crt.Calendar",tileContent:[],templateValuesMapping:{startColumn:"Calendar_n8j0xn9DS_StartDate",endColumn:"Calendar_n8j0xn9DS_DueDate",titleColumn:"Calendar_n8j0xn9DS_Title",Label_t6oa43h:"Calendar_n8j0xn9DS_Account",Label_11cnx3j:"Calendar_n8j0xn9DS_Location",notesColumn:"Calendar_n8j0xn9DS_Notes"},useAutoScrollToCurrentTime:true,miniPageSchemaName:"AddTaskMiniPage",visible:true,fitContent:true,items:"$Calendar_n8j0xn9",primaryColumnName:"Calendar_n8j0xn9DS_Id",timeScale:"$Calendar_Tasks_TimeScale"}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.Calendar** → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.Calendar** (власні) | `colorizationType`, `dateRangeLimitInDays`, `endBusinessTime`, `filters`, `items`, `lightweightModeLimit`, `maxDuplicatesByOwner`, `miniPageSchemaName`, `pageSize`, `participantFilters`, `showWeekends`, `startBusinessTime`, `templateValuesMapping`, `timeScale`, `useAllDayMeeting`, `useAutoScrollToCurrentTime` | `endBusinessTimeChange`, `highlightArea`, `loadNextPage`, `openEditPage`, `openPositionedMiniPage`, `silenceCreate`, `startBusinessTimeChange` |  |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (9517.hash=586d2d36fceb19fd.js) + 13 згадок у конфігах. Мінімізовані імена класів не наводяться.*

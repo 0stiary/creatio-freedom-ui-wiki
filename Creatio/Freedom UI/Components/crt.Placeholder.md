@@ -61,5 +61,15 @@ reuseStrategy: `Reuse`
 {type:"crt.Placeholder",image:{type:"animation",name:"search"},title:"#ResourceString(FilteredEmptySectionPlaceholderTitle)#",subhead:"#ResourceString(FilteredEmptySectionPlaceholderSubHead)#",visible:"$DataTable_NoFilteredItems"}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.Placeholder** → *(базовий клас не розв'язано — його модуль відсутній у збережених чанках Shell; за архітектурою це BaseViewElement)*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.Placeholder** (власні) | `image`, `loading`, `subhead`, `title` | — |  |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (2215.hash=c7626779519a0486.js) + 41 згадок у конфігах. Мінімізовані імена класів не наводяться.*

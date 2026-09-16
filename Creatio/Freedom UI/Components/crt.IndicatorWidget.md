@@ -131,5 +131,20 @@ reuseStrategy: `Reuse`
 {layoutConfig:{column:4,row:1,colSpan:3,rowSpan:2},type:"crt.IndicatorWidget",config:{title:"#ResourceString(crtIndicatorWidget36551d0719c71252aea435e530446ecf_title)#",data:{providing:{schemaName:"VwExpiringLicense",aggregation:{column:{expression:{expressionType:1,functionType:2,aggregationType:1,aggregationEvalType:2,functionArgument:{expressionType:0,columnPath:"Id"}}}},filters:{filter:{items:{},logicalOperation:0,isEnabled:true,filterType:6,rootSchemaName:"VwExpiringLicense"}}},formatting:{type:"number",decimalSeparator:".",thousandSeparator:","}},text:{template:"#ResourceString(crtIndicatorWidget36551d0719c71252aea435e530446ecf_template)#",metricMacros:"{0}",fontSizeMode:"large"},layout:{color:"navy-blue"},theme:"full-fill"}}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.IndicatorWidget** → *BaseWidget* → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.IndicatorWidget** (власні) | `config`, `data`, `drilldownEnabled`, `isDesignTime` | — |  |
+| *BaseWidget* | `listConfig`, `listData`, `pagingConfig`, `searchValue`, `sectionBindingColumnRecordId`, `sortingConfig`, `toolbarMenuItems`, `userProfileData` | `columnsChange`, `drillDown`, `fullScreenStateChanged`, `getProfileColumns`, `paginationChange`, `resetToDefault`, `searchFilterChange`, `sortingChange` | віджет дашборда: `sectionBindingColumnRecordId, toolbarMenuItems, listConfig, userProfileData, listData, searchValue, pagingConfig, sortingConfig`; події `drillDown, paginationChange, columnsChange, resetToDefault, getProfileColumns, sortingChange, searchFilterChange, fullScreenStateChanged` |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
+Нащадки (компоненти, що наслідують цей): [[crt.GaugeWidget]]
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (4223.hash=3d5a69794a1b3d08.js) + 340 згадок у конфігах. Мінімізовані імена класів не наводяться.*

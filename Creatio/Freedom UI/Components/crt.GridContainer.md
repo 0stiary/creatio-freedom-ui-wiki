@@ -165,6 +165,20 @@ reuseStrategy: `Reuse`
 				}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.GridContainer** → *BaseLayoutContainer* → *BaseContainer* → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.GridContainer** (власні) | `alignItems`, `allowOverlap`, `columns`, `gap`, `justifyItems`, `rows` | — |  |
+| *BaseLayoutContainer* | — | — | розкладка дітей: читає `layoutConfig` слот-елементів і перетворює на стилі (`getItemLayout`, `applySlotElementStyles`) |
+| *BaseContainer* | `borderRadius`, `color`, `elementResponsiveWidth`, `fitContent`, `items`, `padding`, `responsiveWidth`, `stretch`, `visiblePadding` | — | контейнер: `items, padding, visiblePadding, borderRadius, color, stretch, fitContent, responsiveWidth, elementResponsiveWidth`; класи padding/color/borderRadius, реакція на resize |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ## Пов'язані
 
 [[crt.FlexContainer]], [[crt.ExpansionPanel]]

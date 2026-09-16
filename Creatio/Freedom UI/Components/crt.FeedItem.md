@@ -52,5 +52,15 @@ reuseStrategy: `Reuse`
 
 У реальних конфігах додаткових властивостей не знайдено.
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.FeedItem** → *(базовий клас не розв'язано — його модуль відсутній у збережених чанках Shell; за архітектурою це BaseViewElement)*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.FeedItem** (власні) | `allowExternalPost`, `customVisibleItemActionsMenu`, `disableLikesComments`, `disableSelectionOptions`, `feedType`, `isDraftItem`, `isEditMode`, `isTheLastComment`, `item`, `itemActionItems`, `readingMode`, `schemaName`, `showMenuActionItems`, `useCustomHead`, `useCustomPhoto` | `messageDeleted`, `messageEdited`, `selectionChange` |  |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (9596.hash=3da76c6a0b1e195f.js) + 0 згадок у конфігах. Мінімізовані імена класів не наводяться.*

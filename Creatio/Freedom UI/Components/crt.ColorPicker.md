@@ -78,5 +78,18 @@ reuseStrategy: `Reuse`
 {type:"crt.ColorPicker",formControlConfig:{relatesTo:"control"},reuseStrategy:Y.B.Reuse}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.ColorPicker** → *BaseFormControl* → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.ColorPicker** (власні) | `colors`, `control`, `id`, `pickerConfig`, `pickerMode`, `selectedColor` | `selectedColorChange` |  |
+| *BaseFormControl* | `appearance`, `ariaLabel`, `disabled`, `label`, `labelPosition`, `placeholder`, `tooltip` | `blurred`, `focused`, `keyDown`, `keyUp` | поле форми: `label, ariaLabel, appearance, placeholder, disabled, tooltip, control, labelPosition`; події `keyUp, keyDown, blurred, focused`; зв'язок з FormControl (`_initControl`, required, disabled state) |
+| *BaseViewElement* | `classes`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (2781.hash=639f09a96afbb896.js) + 1 згадок у конфігах. Мінімізовані імена класів не наводяться.*

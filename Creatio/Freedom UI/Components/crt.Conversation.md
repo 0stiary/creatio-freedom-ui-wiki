@@ -79,5 +79,18 @@ Angular-селектор: `<crt-conversation>`
 {"type":"crt.Conversation","contentSlots":["actions","information","typing","tools","placeholder"]}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.Conversation** → *BaseContainer* → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.Conversation** (власні) | `actions`, `conversationEvent`, `conversationId`, `disableAutoScroll`, `hasPreviousMessages`, `information`, `isEmbeddedMode`, `isTyping`, `messages`, `placeholder`, `previewMessageId`, `searchFilter`, `tools`, `typing` | `conversationEventChange`, `loadPreviousMessages`, `messageEvent`, `paginationChange`, `previewMessageIdChange` |  |
+| *BaseContainer* | `borderRadius`, `color`, `elementResponsiveWidth`, `fitContent`, `items`, `padding`, `responsiveWidth`, `stretch`, `visiblePadding` | — | контейнер: `items, padding, visiblePadding, borderRadius, color, stretch, fitContent, responsiveWidth, elementResponsiveWidth`; класи padding/color/borderRadius, реакція на resize |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (2656.hash=2360e964a8a68b73.js) + 0 згадок у конфігах. Мінімізовані імена класів не наводяться.*

@@ -106,5 +106,17 @@ reuseStrategy: `Reuse`
 				}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.MultiSelect** → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.MultiSelect** (власні) | `disabled`, `enableAddRecord`, `isModalView`, `items`, `label`, `labelPosition`, `listItems`, `placeholder`, `readonly`, `required`, `tooltip`, `wrap` | `createRecord`, `deleteSelectedItems`, `paginationChange`, `selectedItemsChange`, `showList` |  |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (6981.hash=17627d4046752ff7.js) + 32 згадок у конфігах. Мінімізовані імена класів не наводяться.*

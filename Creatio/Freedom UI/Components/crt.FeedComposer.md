@@ -87,5 +87,18 @@ reuseStrategy: `Reuse`
 {type:"crt.FeedComposer",classes:["view-element"],sortedByColumn:"CreatedOn",data:{uId:"6d006667-3496-4e2d-adc0-3a42648dd97b",schemaType:"Feed",caption:"Feed",sortedByColumn:"CreatedOn",typeName:"crt.FeedComposer",icon:"feed-composer-icon"},feedType:"Record",primaryColumnValue:"$Id",cardState:"$CardState",entitySchemaName:"Account",dataSourceName:"PDS"}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.FeedComposer** → *BaseComposer* → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.FeedComposer** (власні) | `allowExternalPost`, `cardState`, `composerEvent`, `entitySchemaName`, `forExternal`, `forExternalDefault`, `message`, `messageId`, `parentMessageId`, `primaryColumnValue`, `schemaUId` | `messageChangesCanceled`, `messagePosted` |  |
+| *BaseComposer* | `disableSelectionOptions`, `selection` | `composerEventChange`, `selectionChange` | композер повідомлень: `selection, disableSelectionOptions`; події `composerEventChange, selectionChange`; фокус/клік по полю вводу |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (3789.hash=c07acffd1a475b43.js) + 16 згадок у конфігах. Мінімізовані імена класів не наводяться.*

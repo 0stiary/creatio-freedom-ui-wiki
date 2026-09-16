@@ -74,5 +74,17 @@ reuseStrategy: `Reuse`
 {type:"crt.Feed",feedType:"Record",primaryColumnValue:"$Id",cardState:"$CardState",dataSourceName:null,entitySchemaName:"#DataSourceEntityName()#"}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.Feed** → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.Feed** (власні) | `allowExternalPost`, `cardState`, `dataSourceName`, `disableSelectionOptions`, `entitySchemaName`, `feedMessages`, `feedMessagesPage`, `feedType`, `isReadOnly`, `offsetDate`, `primaryColumnValue`, `primaryDisplayColumnValue`, `readingMode`, `selection`, `showBlankSlate`, `sortColumn` | `feedMessagesChange`, `offsetDateChange`, `selectionChange`, `sortColumnChange` |  |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (9596.hash=3da76c6a0b1e195f.js) + 20 згадок у конфігах. Мінімізовані імена класів не наводяться.*

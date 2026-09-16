@@ -10,6 +10,7 @@ generated: 2026-09-16
 
 - [[Common view-element properties]] — спільні властивості, синтаксис біндінгів, `visible`/`crtIf`, `layoutConfig`, слоти.
 - [[Converters & Validators]] — усі зареєстровані `crt.*` конвертери та валідатори з сигнатурами.
+- [[Inheritance tree]] — дерево успадкування: хто від кого наслідує, що дає кожна абстрактна база.
 
 ## Layout
 

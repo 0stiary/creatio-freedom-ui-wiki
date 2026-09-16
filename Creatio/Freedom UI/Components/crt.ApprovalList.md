@@ -79,5 +79,18 @@ reuseStrategy: `Reuse`
 {name:"ApprovalList_"+c.N,type:"crt.ApprovalList",masterRecordColumnValue:"$Id",recordColumnName:"RecordId",layoutConfig:it(10)}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.ApprovalList** → [[crt.DataGrid]] → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.ApprovalList** (власні) | `recordId` | `reloadData` |  |
+| [[crt.DataGrid]] | `activeRow`, `bulkActions`, `columns`, `editingCells`, `features`, `fitContent`, `header`, `headerToolbarItems`, `hierarchicalColumnName`, `items`, `maxHeight`, `primaryColumnName`, `rowToolbarItems`, `selectedRows`, `selectionState`, `sorting`, `stretch`, `title`, `totalItemsCount` | `activeRowChange`, `cancelItemsChanges`, `columnsChange`, `createItem`, `deleteItem`, `paginationChange`, `rowDoubleClick`, `saveItemsChanges`, `selectedRowsChange`, `selectionStateChange`, `sortingChange` |  |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (5423.hash=0147d731c99b363a.js) + 4 згадок у конфігах. Мінімізовані імена класів не наводяться.*

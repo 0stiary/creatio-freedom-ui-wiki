@@ -63,5 +63,19 @@ reuseStrategy: `Reuse`
 {type:"crt.GaugeWidget",reuseStrategy:u.B.Reuse,renderStrategy:g.D.OnViewport,placeholderSize:{height:"98px"},compatibleAPIs:{[_.I.Filtration]:{enable:true,aggregation:true}}}
 ```
 
+## Успадкування
+
+Ланцюжок класів від компонента до кореня (Angular `extends`). Inputs/outputs успадковуються по всьому ланцюжку; імена абстрактних баз — описові, дані за їхніми властивостями (у коді вони мінімізовані), деталі — [[Inheritance tree]].
+
+**crt.GaugeWidget** → [[crt.IndicatorWidget]] → *BaseWidget* → *BaseViewElement* → *BaseComponent*
+
+| Рівень | Оголошує inputs | Оголошує outputs | Роль |
+|---|---|---|---|
+| **crt.GaugeWidget** (власні) | `config`, `isDesignTime` | — |  |
+| [[crt.IndicatorWidget]] | `data`, `drilldownEnabled` | — |  |
+| *BaseWidget* | `listConfig`, `listData`, `pagingConfig`, `searchValue`, `sectionBindingColumnRecordId`, `sortingConfig`, `toolbarMenuItems`, `userProfileData` | `columnsChange`, `drillDown`, `fullScreenStateChanged`, `getProfileColumns`, `paginationChange`, `resetToDefault`, `searchFilterChange`, `sortingChange` | віджет дашборда: `sectionBindingColumnRecordId, toolbarMenuItems, listConfig, userProfileData, listData, searchValue, pagingConfig, sortingConfig`; події `drillDown, paginationChange, columnsChange, resetToDefault, getProfileColumns, sortingChange, searchFilterChange, fullScreenStateChanged` |
+| *BaseViewElement* | `classes`, `id`, `loading`, `name`, `shape`, `styles`, `tabIndex` | — | спільний предок усіх view-елементів: inputs `name, id, tabIndex, styles, shape, classes, loading`; `getClasses()/setClasses()`, `setValuesFromConfig()`, `detectChanges()`, `isRtl()`, `focus()` |
+| *BaseComponent* | — | — | корінь: зберігає лише Angular `injector` |
+
 ---
 *Згенеровано з коду Shell Creatio 8.3.4.2753 (4223.hash=3d5a69794a1b3d08.js) + 0 згадок у конфігах. Мінімізовані імена класів не наводяться.*
