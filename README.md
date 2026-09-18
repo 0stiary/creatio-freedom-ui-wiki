@@ -24,19 +24,22 @@ Creatio/
 └── Dev Tools/                           # сторонні інструменти розробника в 8.x
     ├── README.md
     ├── Banza.DevHelper — виконання коду у Creatio 8.md
-    └── Samarasoft.SqlConsole — сортування результатів.md
+    └── Samarasoft.SqlConsole/
+        ├── Samarasoft.SqlConsole — сортування результатів.md
+        ├── SqlConsoleModule.md          # експорт схеми (JS + LESS)
+        └── SqlConsoleService.md         # експорт схеми (C# сервіс)
 ```
 
 ### Freedom UI — довідник компонентів
 
 Починати з [Freedom UI Components — Index](Creatio/Freedom%20UI/Freedom%20UI%20Components%20%E2%80%94%20Index.md) або з [README довідника](Creatio/Freedom%20UI/README.md).
 
-| Сторінка | Що там |
-|---|---|
+| Сторінка                                                                                     | Що там                                                                                                                                                                                                              |
+| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Common view-element properties](Creatio/Freedom%20UI/Common%20view-element%20properties.md) | Формат `viewConfigDiff`, базові inputs, `visible` / `visibilityStrategyMode`, `layoutConfig`, слоти, синтаксис біндінгів і конвертерів, події → запити, хто реально рендерить `classes` / `styles`, фічі-перемикачі |
-| [Inheritance tree](Creatio/Freedom%20UI/Inheritance%20tree.md) | Дерево успадкування компонентів; іменовані абстрактні бази (`BaseViewElement`, `BaseContainer`, `BaseFormControl`, …) і що вони дають нащадкам |
-| [Converters & Validators](Creatio/Freedom%20UI/Converters%20%26%20Validators.md) | Усі зареєстровані `crt.*` конвертери та валідатори з сигнатурами |
-| `Components/crt.*.md` | Для кожного компонента: селектор, слоти, inputs (зі значеннями та дефолтами), outputs, приховані властивості, вкладені структури, метадані Page Designer, приклад з реальної схеми, нотатки, ланцюжок успадкування |
+| [Inheritance tree](Creatio/Freedom%20UI/Inheritance%20tree.md)                               | Дерево успадкування компонентів; іменовані абстрактні бази (`BaseViewElement`, `BaseContainer`, `BaseFormControl`, …) і що вони дають нащадкам                                                                      |
+| [Converters & Validators](Creatio/Freedom%20UI/Converters%20&%20Validators.md)               | Усі зареєстровані `crt.*` конвертери та валідатори з сигнатурами                                                                                                                                                    |
+| `Components/crt.*.md`                                                                        | Для кожного компонента: селектор, слоти, inputs (зі значеннями та дефолтами), outputs, приховані властивості, вкладені структури, метадані Page Designer, приклад з реальної схеми, нотатки, ланцюжок успадкування  |
 
 Приклади сторінок: [crt.DataGrid](Creatio/Freedom%20UI/Components/crt.DataGrid.md), [crt.TabPanel](Creatio/Freedom%20UI/Components/crt.TabPanel.md), [crt.QuickFilter](Creatio/Freedom%20UI/Components/crt.QuickFilter.md), [crt.ComboBox](Creatio/Freedom%20UI/Components/crt.ComboBox.md), [crt.TemplateList](Creatio/Freedom%20UI/Components/crt.TemplateList.md).
 
@@ -58,7 +61,9 @@ Creatio/
 | Сторінка | Що там |
 |---|---|
 | [Banza.DevHelper — виконання коду у Creatio 8](Creatio/Dev%20Tools/Banza.DevHelper%20%E2%80%94%20%D0%B2%D0%B8%D0%BA%D0%BE%D0%BD%D0%B0%D0%BD%D0%BD%D1%8F%20%D0%BA%D0%BE%D0%B4%D1%83%20%D1%83%20Creatio%208.md) | Чому вкладка C# у `TsiDevESQDebugPage` падає у 8.x (`Files/*.cs` → окрема `Files/Bin/<Pkg>.dll` без `Location`) і патч `TsiDevDynamicCodeExecutor.cs` |
-| [Samarasoft.SqlConsole — сортування результатів](Creatio/Dev%20Tools/Samarasoft.SqlConsole%20%E2%80%94%20%D1%81%D0%BE%D1%80%D1%82%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F%20%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82%D1%96%D0%B2.md) | DataTables ігнорує `ORDER BY` і сортує дати як текст; `Terrasoft.Resources.CultureSettings` як аналог `CurrentUser.DateTimeFormat`; типи `sql-date` / `sql-num`; «Show query log» падає на PostgreSQL (MSSQL-SQL → `Select`-білдер) |
+| [Samarasoft.SqlConsole — сортування результатів](Creatio/Dev%20Tools/Samarasoft.SqlConsole/Samarasoft.SqlConsole%20%E2%80%94%20%D1%81%D0%BE%D1%80%D1%82%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F%20%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82%D1%96%D0%B2.md) | DataTables ігнорує `ORDER BY` і сортує дати як текст; `Terrasoft.Resources.CultureSettings` як аналог `CurrentUser.DateTimeFormat`; типи `sql-date` / `sql-num`; «Show query log» падає на PostgreSQL (MSSQL-SQL → `Select`-білдер) |
+| [SqlConsoleModule](Creatio/Dev%20Tools/Samarasoft.SqlConsole/SqlConsoleModule.md) | Оригінал схеми клієнтського модуля (JS + LESS) у форматі експорту — для звірки з патчами |
+| [SqlConsoleService](Creatio/Dev%20Tools/Samarasoft.SqlConsole/SqlConsoleService.md) | Оригінал схеми C# веб-сервісу (`ExecuteSqlScript`, `GetSqlConsoleLog`) |
 
 ## Як користуватись
 

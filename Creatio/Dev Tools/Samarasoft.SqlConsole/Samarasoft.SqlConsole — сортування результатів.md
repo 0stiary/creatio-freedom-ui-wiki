@@ -1,5 +1,11 @@
 ---
-tags: [creatio, dev-tools, sql-console, datatables, culture-settings, postgresql]
+tags:
+  - creatio
+  - dev-tools
+  - sql-console
+  - datatables
+  - culture-settings
+  - postgresql
 date: 2026-09-17
 ---
 # Samarasoft.SqlConsole — сортування результатів (ORDER BY ігнорується, дати сортуються як текст) + лог запитів на PostgreSQL
@@ -125,24 +131,7 @@ initDataTables: function() {
 
 Відображення й «Export to CSV» не змінюються — змінюється лише те, за чим DataTables порівнює комірки. Колонка з самих `NULL` отримає тип `sql-num` — на порядок не впливає.
 
-## Перевірка (Creatio 8.3.2, uk-UA)
-
-`SELECT "Id","CreatedOn","ProcessListeners","ResponseDate" FROM "Case" ORDER BY "CreatedOn" DESC`:
-
-```js
-var dt = $("#query-result-table0").DataTable();
-dt.settings()[0].aoColumns.map(c => c.sTitle + ":" + c.sType)
-// ["Id:string", "CreatedOn:sql-date", "ProcessListeners:sql-num", "ResponseDate:sql-date"]
-```
-
-- початковий порядок = порядок з БД, заголовок `Id` без `sorting_asc`;
-- asc/desc по `CreatedOn` — хронологічно; `NULL` у `ResponseDate` перший при asc.
-
-## Альтернатива (не робили)
-
-Серверно віддавати дати в ISO (`dt.ToString("yyyy-MM-dd HH:mm:ss.fff", InvariantCulture)`) і форматувати на фронті через `CultureSettings` у `columns[i].render` (DataTables orthogonal data). Плюс — незалежність від культури; мінус — зміна вигляду дат у таблиці та CSV.
-
-## «Show query log» падає на PostgreSQL
+## «Show query log» падає на PostgreSQL - SqlConsoleService.cs
 
 Кнопка **Show query log** → `SqlConsoleService/GetSqlConsoleLog` повертає:
 
@@ -180,3 +169,9 @@ public ExecuteSqlResult GetSqlConsoleLog() {
 `Select.GetSqlText()` віддає готовий текст із екранованими ідентифікаторами; параметрів у запиті немає. `using Terrasoft.Core.DB;` у файлі вже є.
 
 **Доставка.** Це схема `SqlConsoleService` (SourceCode), а не `Files/` — зберегти в дизайнері → **Compile** пакета. Кеш браузера тут не задіяний (серверний код).
+
+[[SqlConsoleModule]].md (js file)
+[[SqlConsoleService]].md (cs file)
+
+
+
