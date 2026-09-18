@@ -44,20 +44,20 @@ reuseStrategy: `Reuse`
 
 Властивості, які **не є inputs компонента**, але зустрічаються в реальних конфігах: їх читають препроцесори метаданих (`crtOnMetaDataInit` / `crtOnModelInit`), компілятор view (`crtIf`, `layoutConfig`) або дизайнер. Без них конфіг теж валідний, але поведінка буде «за замовчуванням».
 
-| Властивість | Значення | Що робить |
-|---|---|---|
-| `items` | `[]` | масив `crt.TabContainer` (слот) |
-| `mode` | `"toggle"`, `"tab"` | `"tab"` — класичні вкладки з хедером; `"toggle"` — панель без хедера, перемикається зовнішнім `crt.ButtonToggleGroup { for }` |
-| `bodyBackgroundColor` | `"primary-contrast-500"`, `"primary-contrast-100"` | колір тіла вкладок → `backgroundColor` кожного `crt.ToggleContainerItem` |
-| `selectedTabTitleColor` | `"auto"` | колір активного заголовка |
-| `tabTitleColor` | `"auto"` | колір заголовків (→ `TabPanelHeaderItem.titleColor`) |
-| `allowToggleClose` | `true`, `false` | toggle-режим: чи можна закрити панель повторним кліком (default `true`); → `ToggleContainerItem.allowToggleClose` і `ButtonToggleGroup.allowUntoggle` |
-| `fitContent` | `true`, `false` |  |
-| `stretch` | `true` |  |
-| `layoutConfig` | `{}` | спільна → [[Common view-element properties#layoutConfig]] |
-| `isToggleTabHeaderVisible` | `true`, `false` | **прихована**, toggle-режим, default `true`: показувати `tools` вкладки як заголовок |
-| `visible` | `true` | спільна → [[Common view-element properties#visible]] |
-| `visibilityStrategyMode` | `"hide"` | **прихована**: `"hide"` — при закритті toggle-панелі (`visible=false`) DOM ховається, а не знищується (потрібна фіча `UseHideVisibilityStrategy`) |
+| Властивість                | Значення                                           | Що робить                                                                                                                                             |
+| -------------------------- | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `items`                    | `[]`                                               | масив `crt.TabContainer` (слот)                                                                                                                       |
+| `mode`                     | `"toggle"`, `"tab"`                                | `"tab"` — класичні вкладки з хедером; `"toggle"` — панель без хедера, перемикається зовнішнім `crt.ButtonToggleGroup { for }`                         |
+| `bodyBackgroundColor`      | `"primary-contrast-500"`, `"primary-contrast-100"` | колір тіла вкладок → `backgroundColor` кожного `crt.ToggleContainerItem`                                                                              |
+| `selectedTabTitleColor`    | `"auto"`                                           | колір активного заголовка                                                                                                                             |
+| `tabTitleColor`            | `"auto"`                                           | колір заголовків (→ `TabPanelHeaderItem.titleColor`)                                                                                                  |
+| `allowToggleClose`         | `true`, `false`                                    | toggle-режим: чи можна закрити панель повторним кліком (default `true`); → `ToggleContainerItem.allowToggleClose` і `ButtonToggleGroup.allowUntoggle` |
+| `fitContent`               | `true`, `false`                                    |                                                                                                                                                       |
+| `stretch`                  | `true`                                             |                                                                                                                                                       |
+| `layoutConfig`             | `{}`                                               | спільна → [[Common view-element properties#layoutConfig]]                                                                                             |
+| `isToggleTabHeaderVisible` | `true`, `false`                                    | **прихована**, toggle-режим, default `true`: показувати `tools` вкладки як заголовок                                                                  |
+| `visible`                  | `true`                                             | спільна → [[Common view-element properties#visible]]                                                                                                  |
+| `visibilityStrategyMode`   | `"hide"`                                           | **прихована**: `"hide"` — при закритті toggle-панелі (`visible=false`) DOM ховається, а не знищується (потрібна фіча `UseHideVisibilityStrategy`)     |
 
 Додатково (з коду препроцесорів, у конфігах не зустрілись):
 

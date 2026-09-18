@@ -1,6 +1,6 @@
 # Creatio Freedom UI Wiki
 
-Obsidian-vault з довідником по клієнтській розробці в **Creatio 8.x (Freedom UI)**. Основна частина — згенерований з коду платформи довідник усіх view-елементів `crt.*`: inputs/outputs, приховані властивості, вкладені структури, успадкування, приклади з реальних схем. Друга частина — робочі нотатки по SDK (`@creatio-devkit/common`) з перевіреними сніпетами.
+Obsidian-vault з довідником по клієнтській розробці в **Creatio 8.x (Freedom UI)**. Основна частина — згенерований з коду платформи довідник усіх view-елементів `crt.*`: inputs/outputs, приховані властивості, вкладені структури, успадкування, приклади з реальних схем. Друга частина — робочі нотатки по SDK (`@creatio-devkit/common`) з перевіреними сніпетами. Третя — розбори сторонніх інструментів розробника (SQL-консоль, виконання C#) і того, що в них ламається у 8.x.
 
 Мова нотаток — українська (SDK-нотатки частково англійською). Ідентифікатори, властивості й приклади коду — як у Creatio.
 
@@ -15,12 +15,16 @@ Creatio/
 │   ├── Inheritance tree.md
 │   ├── Converters & Validators.md
 │   └── Components/crt.*.md              # по сторінці на компонент
-└── Js/Sdk (8 UI)/                       # нотатки по SDK з прикладами
-    ├── Grid/Row toolbar actions.md
-    ├── HandlerChainService/Global request listeners.md
-    ├── HttpService/Service.md
-    ├── crt.OpenSelectionWindowRequest/…
-    └── sdk.Model/sdk.Model - Filters Guide.md
+├── Js/Sdk (8 UI)/                       # нотатки по SDK з прикладами
+│   ├── Grid/Row toolbar actions.md
+│   ├── HandlerChainService/Global request listeners.md
+│   ├── HttpService/Service.md
+│   ├── crt.OpenSelectionWindowRequest/…
+│   └── sdk.Model/sdk.Model - Filters Guide.md
+└── Dev Tools/                           # сторонні інструменти розробника в 8.x
+    ├── README.md
+    ├── Banza.DevHelper — виконання коду у Creatio 8.md
+    └── Samarasoft.SqlConsole — сортування результатів.md
 ```
 
 ### Freedom UI — довідник компонентів
@@ -46,6 +50,15 @@ Creatio/
 ### SDK-нотатки
 
 Короткі перевірені рецепти: дії в тулбарі рядка гріда, глобальні слухачі запитів через `HandlerChainService`, виклик веб-сервісів через `HttpClientService`, фільтри у `crt.OpenSelectionWindowRequest`, побудова фільтрів для `sdk.Model`.
+
+### Dev Tools — сторонні інструменти в 8.x
+
+Точка входу — [README розділу](Creatio/Dev%20Tools/README.md).
+
+| Сторінка | Що там |
+|---|---|
+| [Banza.DevHelper — виконання коду у Creatio 8](Creatio/Dev%20Tools/Banza.DevHelper%20%E2%80%94%20%D0%B2%D0%B8%D0%BA%D0%BE%D0%BD%D0%B0%D0%BD%D0%BD%D1%8F%20%D0%BA%D0%BE%D0%B4%D1%83%20%D1%83%20Creatio%208.md) | Чому вкладка C# у `TsiDevESQDebugPage` падає у 8.x (`Files/*.cs` → окрема `Files/Bin/<Pkg>.dll` без `Location`) і патч `TsiDevDynamicCodeExecutor.cs` |
+| [Samarasoft.SqlConsole — сортування результатів](Creatio/Dev%20Tools/Samarasoft.SqlConsole%20%E2%80%94%20%D1%81%D0%BE%D1%80%D1%82%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F%20%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82%D1%96%D0%B2.md) | DataTables ігнорує `ORDER BY` і сортує дати як текст; `Terrasoft.Resources.CultureSettings` як аналог `CurrentUser.DateTimeFormat`; типи `sql-date` / `sql-num`; «Show query log» падає на PostgreSQL (MSSQL-SQL → `Select`-білдер) |
 
 ## Як користуватись
 
